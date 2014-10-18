@@ -1,13 +1,11 @@
 'use strict';
 
 var gulp = require('gulp'),
-    connect = require('gulp-connect'),
     jshint = require('gulp-jshint'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
     minifyCSS = require('gulp-minify-css'),
-    livereload = require('gulp-livereload'),
     browserSync = require('browser-sync'),
     rename = require('gulp-rename'),
     swig = require('gulp-swig');
@@ -50,7 +48,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default', ['browser-sync'], function() {
+gulp.task('default', ['browser-sync', 'css', 'js', 'img', 'html'], function() {
     gulp.watch(['css/*.css'], ['css']);
     gulp.watch("*.html", ['html', browserSync.reload]);
     gulp.watch('js/*.js', ['js', browserSync.reload]);
