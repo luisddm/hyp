@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('js', function () {
-    gulp.src('js/*.js')
+    return gulp.src('js/*.js')
         .pipe(jshint()) //busca errores
         //.pipe(jshint.reporter('default'))
         .pipe(uglify()) //lo minimiza (lo pone feo)
@@ -21,7 +21,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('html', function () {
-    gulp.src('*.html')
+    return gulp.src('*.html')
         .pipe(swig())
         .pipe(minifyHTML())
         .pipe(gulp.dest('build'))
@@ -29,7 +29,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('img', function () {
-    gulp.src('img/**')
+    return gulp.src('img/**')
         .pipe(gulp.dest('build/img'));
 });
 
