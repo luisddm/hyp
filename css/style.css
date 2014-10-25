@@ -110,12 +110,6 @@ footer {
     transition: 0.5s;
 }
 
-.portada-imagen:hover img {
-    -ms-transform: scale(1.1,1.1); /* IE 9 */
-    -webkit-transform: scale(1.1,1.1); /* Chrome, Safari, Opera */
-    transform: scale(1.1,1.1);
-}
-
 
 .portada-imagen div {
     position: absolute;
