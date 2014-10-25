@@ -4,109 +4,66 @@
 
 <section class="container-fluid" id="portada">
 
-<div class="row menu">
-        <div class="container">
+    {% include 'templates/menu.html' %}
 
-            <a href="index.html"><div class="col-xs-offset-3 col-xs-6 col-sm-offset-0 col-sm-4 col-md-2 col-lg-2"><img class="logo" src="img/logo.png"></div></a>
-
-            <nav class="col-xs-12 col-sm-8 col-md-8 col-lg-8 navbar navbar-default" role="navigation">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">MENU</a>
+    <div class="container">
+        <div class="row">
+            <a href="#">
+            <div class="col-lg-6 col-md-6 portada-imagen">
+                <img src="img/portada-1.jpg">
+                <div class="titulo">
+                    <h4>Construcción y mantenimiento de parques y jardines</h4>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Áreas de actuación <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Construcción y mantenimiento de parques y jardines</a></li>
-                                <li><a href="#">Restauración paisajística de grandes obras públicas y privadas</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Empresa <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Sobre nosotros</a></li>
-                                <li><a href="#">Recursos técnicos y humanos</a></li>
-                                <li><a href="politica-calidad.html">Calidad y medio ambiente</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Trabajos</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </nav>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-lg-6 col-md-6 portada-imagen">
+                <img src="img/portada-2.jpg">
+                <div class="titulo">
+                    <h4>Restauración paisajística de grandes obras públicas y privadas</h4>
+                </div>
+            </div>
+            </a>
         </div>
     </div>
 
+</section>
 
+<section class="container parrafos">
 
+    <div class="row">
 
-        <div class="container">
-            <div class="row">
-                <a href="#">
-                <div class="col-lg-6 col-md-6 portada-imagen">
-                    <img src="img/portada-1.jpg">
-                    <div class="titulo">
-                        <h4>Construcción y mantenimiento de parques y jardines</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="#">
-                <div class="col-lg-6 col-md-6 portada-imagen">
-                    <img src="img/portada-2.jpg">
-                    <div class="titulo">
-                        <h4>Restauración paisajística de grandes obras públicas y privadas</h4>
-                    </div>
-                </div>
-                </a>
-            </div>
+        <div class="col-lg-4 col-md-4">
+            <a href="#"><h1>Sobre nosotros</h1></a>
+            <p>HIDROSYPLANT busca soluciones, a través de la investigación y desarrollo, encaminadas a
+                lograr la integración de las obras dentro del paisaje, destacando especialmente en la técnica de la hidrosiembra. Esto
+                nos ha permitido participar en importantes proyectos, en los que hemos conseguido proteger grandes superficies de
+                los efectos de la erosión de una manera rápida. La hidrosiembra permite llegar a zonas difícilmente accesibles,
+                logrando que la vegetación arraigue rápidamente estabilizando el terreno e integrándolo en el paisaje.
+            </p>
+            <a href="#"><strong>Ver más ></strong></a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <a href="#"><h1>Recursos técnicos y humanos</h1></a>
+            <p>HIDROSYPLANT está formado por un equipo altamente cualificado y con una amplia experiencia. Contamos con los mejores
+                medios técnicos, lo que unido a la maquinaria más avanzada tecnológicamente y a los mejores productos del mercado
+                hacen que nuestra empresa ofrezca la garantía de la máxima calidad en todos sus trabajos.
+            </p>
+            <a href="#"><strong>Ver más ></strong></a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <a href="#"><h1>Calidad y medio ambiente</h1></a>
+            <p>Nuestro objetivo es ofrecer la mayor calidad y su reflejo está en el resultado final.
+                Este compromiso con el cliente es respaldado por la certificación del sistema de gestión de la calidad
+                ISO 9001:2008 y del sistema de gestión medioambiental ISO 14001:2004.
+                La política de calidad y medioambiente es cumplir nuestros objetivos y los de nuestros clientes, garantizando
+                el cumplimiento de la legislación vigente, la calidad de nuestros materiales y el comportamiento medioambiental.
+            </p>
+            <a href="#"><strong>Ver más ></strong></a>
         </div>
 
-    </section>
+    </div>
 
-    <section class="container parrafos">
+</section>
 
-        <div class="row">
-
-            <div class="col-lg-4 col-md-4">
-                <a href="#"><h1>Sobre nosotros</h1></a>
-                <p>HIDROSYPLANT busca soluciones, a través de la investigación y desarrollo, encaminadas a
-                    lograr la integración de las obras dentro del paisaje, destacando especialmente en la técnica de la hidrosiembra. Esto
-                    nos ha permitido participar en importantes proyectos, en los que hemos conseguido proteger grandes superficies de
-                    los efectos de la erosión de una manera rápida. La hidrosiembra permite llegar a zonas difícilmente accesibles,
-                    logrando que la vegetación arraigue rápidamente estabilizando el terreno e integrándolo en el paisaje.
-                </p>
-                <a href="#"><strong>Ver más ></strong></a>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <a href="#"><h1>Recursos técnicos y humanos</h1></a>
-                <p>HIDROSYPLANT está formado por un equipo altamente cualificado y con una amplia experiencia. Contamos con los mejores
-                    medios técnicos, lo que unido a la maquinaria más avanzada tecnológicamente y a los mejores productos del mercado
-                    hacen que nuestra empresa ofrezca la garantía de la máxima calidad en todos sus trabajos.
-                </p>
-                <a href="#"><strong>Ver más ></strong></a>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <a href="#"><h1>Calidad y medio ambiente</h1></a>
-                <p>Nuestro objetivo es ofrecer la mayor calidad y su reflejo está en el resultado final.
-                    Este compromiso con el cliente es respaldado por la certificación del sistema de gestión de la calidad
-                    ISO 9001:2008 y del sistema de gestión medioambiental ISO 14001:2004.
-                    La política de calidad y medioambiente es cumplir nuestros objetivos y los de nuestros clientes, garantizando
-                    el cumplimiento de la legislación vigente, la calidad de nuestros materiales y el comportamiento medioambiental.
-                </p>
-                <a href="#"><strong>Ver más ></strong></a>
-            </div>
-
-        </div>
-
-        </section>
-        {% endblock %}
+{% endblock %}
