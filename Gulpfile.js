@@ -13,9 +13,9 @@ var gulp = require('gulp'),
 
 gulp.task('js', function () {
     gulp.src('js/*.js')
-        .pipe(jshint())
+        .pipe(jshint()) //busca errores
         //.pipe(jshint.reporter('default'))
-        .pipe(uglify())
+        .pipe(uglify()) //lo minimiza (lo pone feo)
         .pipe(concat('zapp.js'))
         .pipe(gulp.dest('build/js'));
 });
@@ -29,7 +29,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('img', function () {
-    gulp.src('img/*')
+    gulp.src('img/**')
         .pipe(gulp.dest('build/img'));
 });
 
