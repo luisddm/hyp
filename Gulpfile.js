@@ -17,7 +17,7 @@ gulp.task('js', function () {
         //.pipe(jshint.reporter('default'))
         .pipe(uglify())
         .pipe(concat('zapp.js'))
-        .pipe(gulp.dest('build/js'))
+        .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('html', function () {
@@ -25,11 +25,12 @@ gulp.task('html', function () {
         .pipe(swig())
         .pipe(minifyHTML())
         .pipe(gulp.dest('build'))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('img', function () {
     gulp.src('img/*')
-        .pipe(gulp.dest('build/img'))
+        .pipe(gulp.dest('build/img'));
 });
 
 gulp.task('css', function() {
@@ -37,7 +38,7 @@ gulp.task('css', function() {
         .pipe(minifyCSS({keepBreaks:true}))
         .pipe(concat('style.css'))
         .pipe(gulp.dest('build/css'))
-        .pipe(browserSync.reload({stream:true})); // Make sure this is called!
+        .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('browser-sync', function() {
@@ -48,7 +49,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default', ['browser-sync', 'css', 'js', 'img', 'html'], function() {
+gulp.task('default', ['js', 'img', 'html', 'css', 'browser-sync'], function() {
     gulp.watch(['css/*.css'], ['css']);
     gulp.watch("*.html", ['html', browserSync.reload]);
     gulp.watch('js/*.js', ['js', browserSync.reload]);

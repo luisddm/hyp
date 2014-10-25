@@ -21,3 +21,4 @@ node_modules
 .lock-wscript
 # Ficheros construidos
 build
+.idea
