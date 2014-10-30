@@ -184,10 +184,6 @@ footer {
     padding-right: 40px;
 }
 
-.obras img {
-    width: 300px;
-}
-
 input[type=text],
 input[type=email],
 textarea {
@@ -197,4 +193,69 @@ textarea {
 
 input[type=submit] {
     color: #000000;
+}
+
+.obras .obra {
+    height: 150px;
+    width: 150px;
+    background-size: 130px 130px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.obras div.triangulo {
+    font-size: 80px;
+    color: #bcd15c;
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    margin-top: 15px;
+}
+
+.obras div.triangulo:hover {
+    color: #333;
+}
+
+.obras .activo {
+    background-color: #bcd15c;
+}
+
+.obra1 {
+    background-image: url('../img/autovia-a-66/a-antes-dsc02681.jpg');
+}
+
+.obra2 {
+    background-image: url('../img/autovia-a-66/a-despues-dsc03902.jpg');
+}
+
+.obra3 {
+    background-image: url('../img/autovia-a-66/b-antes.jpg');
+}
+
+.obra4 {
+    background-image: url('../img/autovia-a-66/b-despues.jpg');
+}
+
+.obra5 {
+    background-image: url('../img/autovia-a-66/c-antes.jpg');
+}
+
+.galeria div {
+    margin: 9px;
+    height: 80px;
+    width: 80px;
+    background-size: 80px 80px;
+    display: inline-block;
+}
+
+.obragrande div {
+    margin-top: 20px;
+    width: 100%;
+    height: 450px;
+    background-size: 100% 450px;
+
 }
