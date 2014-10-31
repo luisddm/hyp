@@ -1,4 +1,4 @@
 
-function cambiar(){
-    document.getElementById('fotogrande').src="foto";
+function cambiar(foto){
+    document.getElementById('fotogrande').src=foto;
 }
