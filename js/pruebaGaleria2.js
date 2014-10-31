@@ -1,4 +1,7 @@
+var elements = document.getElementsByClassName('thumb');
 
-function cambiar(foto){
-    document.getElementById('fotogrande').src=foto;
+for(var i = 0; i < elements.length; i++) {
+    elements[i].onclick = function() {
+        document.getElementById('fotogrande').src = this.getAttribute("data-foto");
+    };
 }
