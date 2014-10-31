@@ -203,7 +203,15 @@ input[type=submit] {
     background-position: center center;
     display: inline-block;
     background-color: transparent;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.obras .obra h3 {
+    color: white;
+    padding: 30px 20px;
+    text-shadow: 3px 3px 3px black;
+    text-align: center;
 }
 
 .obras div.triangulo {
@@ -216,11 +224,27 @@ input[type=submit] {
     margin-top: 15px;
 }
 
+.obras div.triangulo:first-child {
+    float: left;
+}
+
+.obras div.triangulo:last-child {
+    float: right;
+}
+
 .obras div.triangulo:hover {
     color: #333;
 }
 
+.obras .obra:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
 .obras .activo {
+    background-color: #bcd15c;
+}
+
+.obras .activo.obra:hover {
     background-color: #bcd15c;
 }
 
