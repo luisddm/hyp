@@ -1,56 +1,87 @@
-'use strict';
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var minifyCss = require('gulp-minify-css');
+var browserSync = require('browser-sync');
+var uglify = require('gulp-uglify');
+var swig = require('gulp-swig');
+var concat = require('gulp-concat');
+var uncss = require('gulp-uncss');
+var glob = require('glob');
+var changed = require('gulp-changed');
+var del = require('del');
 
-var gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    minifyHTML = require('gulp-minify-html'),
-    minifyCSS = require('gulp-minify-css'),
-    browserSync = require('browser-sync'),
-    rename = require('gulp-rename'),
-    swig = require('gulp-swig');
+// Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a build
+gulp.task('scss', function () {
+    gulp.src('scss/*.scss')
+        .pipe(sass())
+        .pipe(minifyCss({
+            keepSpecialComments: 0
+        }))
+        .pipe(concat('style.css'))
+        .pipe(gulp.dest('build/css'));
+});
 
+// Hago lo anterior, pero además elimino los estilos CSS que no se usan (OJO, esto tarda mucho en ejecutarse)
+gulp.task('scss-uncss', function () {
+    gulp.src('scss/*.scss')
+        .pipe(sass())
+        .pipe(uncss({
+            html: glob.sync('**/*.html')
+        }))
+        .pipe(minifyCss({
+            keepSpecialComments: 0
+        }))
+        .pipe(concat('style.css'))
+        .pipe(gulp.dest('build/css'));
+});
 
-gulp.task('js', function () {
-    return gulp.src('js/*.js')
-        .pipe(jshint()) //busca errores
-        //.pipe(jshint.reporter('default'))
-        .pipe(uglify()) //lo minimiza (lo pone feo)
-        .pipe(concat('zapp.js'))
+// Minimizo el javascript, lo concateno en app.js y lo copio a build
+gulp.task('javascript', function() {
+    gulp.src('js/*.js')
+        .pipe(uglify())
+        .pipe(concat('app.js'))
         .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('html', function () {
-    return gulp.src('*.html')
-        .pipe(swig())
-        .pipe(minifyHTML())
-        .pipe(gulp.dest('build'))
-        .pipe(browserSync.reload({stream:true}));
+// Construyo los HTML a partir de las plantillas Swig y las copio a build
+gulp.task('templates', function() {
+    gulp.src('*.html')
+        .pipe(swig({
+            defaults: {
+                cache: false
+            }
+        }))
+        .pipe(gulp.dest('build'));
 });
 
-gulp.task('img', function () {
-    return gulp.src('img/**')
+// Copio las imágenes a build
+gulp.task('images', function () {
+    gulp.src('img/**')
+        .pipe(changed('build/img'))
         .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('css', function() {
-    return gulp.src('css/*.css')
-        .pipe(minifyCSS({keepBreaks:true}))
-        .pipe(concat('style.css'))
-        .pipe(gulp.dest('build/css'))
-        .pipe(browserSync.reload({stream:true}));
-});
-
+// Mantengo un servidor httpd que hace que el navegador se recargue cuando detecta cambios
 gulp.task('browser-sync', function() {
-    browserSync.init(null, {
+    browserSync.init(["build/css/*.css", "build/js/*.js", "build/*.html", "build/img/**"], {
         server: {
-            baseDir: 'build'
+            baseDir: "build"
         }
     });
 });
 
-gulp.task('default', ['js', 'img', 'html', 'css', 'browser-sync'], function() {
-    gulp.watch(['css/*.css'], ['css']);
-    gulp.watch("*.html", ['html', browserSync.reload]);
-    gulp.watch('js/*.js', ['js', browserSync.reload]);
+// Elimino el contenido de la carpeta build
+gulp.task('clean', function() {
+    del(['build/**']);
 });
+
+// Tarea por defecto para desarrollo
+gulp.task('default', ['scss', 'javascript', 'templates', 'images', 'browser-sync'], function () {
+    gulp.watch("scss/*.scss", ['scss']);
+    gulp.watch("js/*.js", ['javascript']);
+    gulp.watch("*.html", ['templates']);
+});
+
+// Tarea para generar el codigo en build que se enviará al FTP
+gulp.task('build', ['clean', 'scss-uncss', 'javascript', 'templates', 'images']);
+

@@ -192,61 +192,70 @@ textarea {
 }
 
 input[type=submit] {
-    color: #000000;
+    color: black;
 }
 
-.obras .obra {
-    height: 150px;
-    width: 150px;
-    background-size: 130px 130px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: inline-block;
-    background-color: transparent;
-    margin-bottom: 25px;
-    cursor: pointer;
+.obras {
+
+    .obra {
+        height: 150px;
+        width: 150px;
+        background-size: 130px 130px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: inline-block;
+        background-color: transparent;
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+
+    .obra h3 {
+        color: white;
+        padding: 30px 20px;
+        text-shadow: 3px 3px 3px black;
+        text-align: center;
+
+    }
+
+    div.triangulo {
+        font-size: 80px;
+        color: #bcd15c;
+        background: none;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: top;
+        margin-top: 15px;
+    }
+
+
+    div.triangulo:first-child {
+        float: left;
+    }
+
+    div.triangulo:last-child {
+        float: right;
+    }
+
+    div.triangulo:hover {
+        color: #333;
+    }
+
+    .obra:hover {
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .activo {
+        background-color: #bcd15c;
+    }
+
+    .activo.obra:hover {
+        background-color: #bcd15c;
+    }
+
 }
 
-.obras .obra h3 {
-    color: white;
-    padding: 30px 20px;
-    text-shadow: 3px 3px 3px black;
-    text-align: center;
-}
 
-.obras div.triangulo {
-    font-size: 80px;
-    color: #bcd15c;
-    background: none;
-    display: inline-block;
-    cursor: pointer;
-    vertical-align: top;
-    margin-top: 15px;
-}
 
-.obras div.triangulo:first-child {
-    float: left;
-}
-
-.obras div.triangulo:last-child {
-    float: right;
-}
-
-.obras div.triangulo:hover {
-    color: #333;
-}
-
-.obras .obra:hover {
-    background-color: rgba(0,0,0,0.7);
-}
-
-.obras .activo {
-    background-color: #bcd15c;
-}
-
-.obras .activo.obra:hover {
-    background-color: #bcd15c;
-}
 
 .obra1 {
     background-image: url('../img/autovia-A-66/A-66-foto-01.JPG');
