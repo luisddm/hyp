@@ -145,11 +145,21 @@ footer {
 input[type=text],
 input[type=email],
 textarea {
-  border: solid 1px #eee;
-  background-color: black; }
+  border: none;
+  background-color: #bcd15c;
+  padding: 5px;
+  color: #222222;
+  width: 100%; }
 
-input[type=submit] {
-  color: black; }
+input[type=submit], button {
+  color: #222222;
+  padding: 5px;
+  background: #eee;
+  border: none;
+  margin: 10px 0; }
+
+label {
+  padding: 20px 0 5px 0; }
 
 .obras .obra {
   height: 150px;
@@ -200,7 +210,7 @@ input[type=submit] {
   background-image: url("../img/autovia-A-66/thumbnail-foto-04.jpg"); }
 
 .obra5 {
-  background-image: url("../img/autovia-A-66/thumbnail-foto-0.jpg"); }
+  background-image: url("../img/autovia-A-66/thumbnail-foto-05.jpg"); }
 
 .galeria div {
   margin: 5px;

@@ -172,11 +172,21 @@ footer {
 input[type=text],
 input[type=email],
 textarea {
-    border: solid 1px $color-texto-blanco;
-    background-color: black;
+    border: none;
+    background-color: $color-titulos;
+    padding: 5px;
+    color: $color-texto;
+    width: 100%;
 }
-input[type=submit] {
-    color: black;
+input[type=submit], button {
+    color: $color-texto;
+    padding: 5px;
+    background: $color-texto-blanco;
+    border: none;
+    margin: 10px 0;
+}
+label {
+    padding: 20px 0 5px 0;
 }
 .obras {
     .obra {
