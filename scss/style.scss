@@ -1,295 +1,284 @@
+$color-titulos: #bcd15c;
+$color-enlaces: #388ad1;
+$color-texto: #222222;
+$color-texto-blanco: #eee;
+
 body {
-    font-family: 'Maven Pro', sans-serif;
-    background-color: #222;
-
+    font-family: 'Maven Pro', Arial, sans-serif;
+    background-color: $color-texto;
 }
-
 h1 {
-    color: #bcd15c;
+    color: $color-titulos;
 }
-
-.parrafos h1:hover {
-    color: #d7ef69;
-}
-
-.parrafos h1:hover:after {
-    content: ' >';
-}
-
-
-a:hover {
+a {
+    color: $color-enlaces;
     text-decoration: none;
-    color: #2aa9cf;
+    &:hover {
+        color: lighten($color-enlaces, 20%);
+        text-decoration: none;
+    }
 }
-
+.parrafos h1 {
+    &:hover {
+        color: lighten($color-titulos, 15%);
+    }
+    &:hover:after {
+        content: ' >';
+    }
+}
 #portada {
     background: url('../img/grass-wallpaper-green-spring-summer-bokeh.jpg') no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
-
 .menu {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(black, 0.7);
     margin-bottom: 40px;
     margin-top: 30px;
     padding: 10px;
 }
-
 .navbar {
     background-color: transparent;
     border: 0;
     border-radius: 0;
     margin-top: 40px;
 }
-
-.navbar-default .navbar-nav > li > a {
-    color: #bbb;
-    font-size: 1.5em;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+.navbar-default .navbar-nav {
+    > li > a {
+        color: #ccc;
+        font-size: 1.5em;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        &:focus {
+            color: #ccc;
+        }
+        &:hover {
+            color: #eee;
+        }
+    }
+    > .open {
+        background-color: $color-titulos;
+        color: $color-texto;
+        border-radius: 4px 4px 0 0;
+        > a,
+        > a:hover,
+        > a:focus {
+            background-color: transparent;
+            color: $color-texto;
+        }
+    }
+    > li > .dropdown-menu {
+        right: auto;
+        left: 0;
+        background-color: lighten($color-titulos, 10%);
+        border: none;
+        border-radius: 0 4px 4px 4px;
+        > li > a {
+            color: $color-texto;
+            font-size: 1.2em;
+            &:hover, &:focus {
+                color: $color-texto;
+                text-decoration: none;
+                background-color: $color-texto-blanco;
+            }
+        }
+    }
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: white;
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    background-color: transparent;
-    color: white;
-}
-
-.dropdown-menu {
-    background-color: #bcd15c;
-    border: none;
-}
-
-.dropdown-menu > li > a {
-    color: #222;
-}
-
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-    color: #262626;
-    text-decoration: none;
-    background-color: #eee;
-}
-
-img.logo {
+.logo {
     width: 100%;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    &:hover {
+        -webkit-transform: scale(1.05, 1.05);
+        -ms-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05);
+    }
 }
-
-img.logo:hover{
-    -webkit-transform: scale(1.1,1.1);
-    -ms-transform: scale(1.1,1.1);
-    transform: scale(1.1,1.1);
-}
-
 footer {
     background-color: #000;
-    color: #eee;
+    color: $color-texto-blanco;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-top: solid 10px #bcd15c;
+    border-top: solid 10px $color-titulos;
 }
-
 .portada-imagen {
     position: relative;
     margin-bottom: 40px;
     overflow: hidden;
-
+    img {
+        width: 100%;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+    div {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        height: 100%;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        background-color: rgba(black, 0.2);
+        h4 {
+            font-size: 1.6em;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            text-shadow: 0 0 5px #000;
+            font-weight: 700;
+            margin: 30px;
+            vertical-align: middle;
+        }
+    }
+    &:hover div {
+        background-color: rgba(black, 0.5);
+        height: 100%;
+    }
 }
-
-.portada-imagen img {
-    width: 100%;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-}
-
-
-.portada-imagen div {
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    right: 15px;
-    height: 100%;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    background-color: rgba(0,0,0,0.2);
-}
-
-.portada-imagen:hover div {
-    background-color: rgba(0,0,0,0.5);
-    height: 100%;
-}
-
-.portada-imagen div h4 {
-    font-size: 1.6em;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    text-shadow: 0 0 15px #000;
-}
-
-.portada-imagen:hover div > h4:after {
-    content: ' >';
-}
-
 .parrafos {
     color: #eee;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-
-
 .titulo {
     top: 0;
     position: relative;
     font-size: 1.5em;
     padding: 15px;
     background-color: black;
-    color: #eee;
+    color: $color-texto-blanco;
     overflow: hidden;
 }
-
-.fondo-texto{
-    background-color: rgba(0,0,0,0.7);
-	color: white;
-	padding-bottom: 20px;
+.fondo-texto {
+    background-color: rgba(black, 0.7);
+    color: $color-texto-blanco;
+    padding-bottom: 20px;
+    li {
+        line-height: 2em;
+        list-style-type: square;
+        ul li {
+            list-style-type: none;
+            margin-left: -20px;
+            &:before{
+                content: '- ';
+            }
+        }
+    }
 }
-
-.fondo-texto li{
-	line-height: 2em;
-}
-
-.fondo-texto li ul li{
-	list-style-type: none;
-	margin-left:  -20px;
-}
-
-.fondo-texto li ul li:before{
-	content: '- ';
-}
-
-.fondo-texto li{
-	list-style-type: square;
-}
-
-.margen-texto{
+.margen-texto {
 	padding-left: 40px;
     padding-right: 40px;
 }
-
 input[type=text],
 input[type=email],
 textarea {
-    border: solid 1px white;
+    border: solid 1px $color-texto-blanco;
     background-color: black;
 }
-
 input[type=submit] {
     color: black;
 }
-
 .obras {
-
     .obra {
         height: 150px;
         width: 150px;
         background-size: 130px 130px;
         background-repeat: no-repeat;
         background-position: center center;
+        background-color: black;
+        margin-bottom: 40px;
         display: inline-block;
-        background-color: transparent;
-        margin-bottom: 25px;
         cursor: pointer;
+        h3 {
+            color: $color-texto-blanco;
+            padding: 30px 20px;
+            text-shadow: 3px 3px 3px black;
+            text-align: center;
+        }
+        &:hover {
+            background-color: rgba(black, 0.7);
+        }
     }
-
-    .obra h3 {
-        color: white;
-        padding: 30px 20px;
-        text-shadow: 3px 3px 3px black;
-        text-align: center;
-
-    }
-
     div.triangulo {
         font-size: 80px;
-        color: #bcd15c;
+        color: $color-titulos;
         background: none;
         display: inline-block;
         cursor: pointer;
         vertical-align: top;
         margin-top: 15px;
+        &:first-child {
+            float: left;
+        }
+        &:last-child {
+            float: right;
+        }
+        &:hover {
+            color: #333;
+        }
     }
-
-
-    div.triangulo:first-child {
-        float: left;
-    }
-
-    div.triangulo:last-child {
-        float: right;
-    }
-
-    div.triangulo:hover {
-        color: #333;
-    }
-
-    .obra:hover {
-        background-color: rgba(0,0,0,0.7);
-    }
-
     .activo {
-        background-color: #bcd15c;
+        background-color: $color-titulos;
     }
-
     .activo.obra:hover {
-        background-color: #bcd15c;
+        background-color: $color-titulos;
     }
-
 }
-
-
-
-
 .obra1 {
-    background-image: url('../img/autovia-A-66/A-66-foto-01.JPG');
+    background-image: url('../img/autovia-A-66/thumbnail-foto-01.jpg');
 }
-
 .obra2 {
-    background-image: url('../img/autovia-A-66/A-66-foto-02.JPG');
+    background-image: url('../img/autovia-A-66/thumbnail-foto-02.jpg');
 }
-
 .obra3 {
-    background-image: url('../img/autovia-A-66/A-66-foto-03.JPG');
+    background-image: url('../img/autovia-A-66/thumbnail-foto-03.jpg');
 }
-
 .obra4 {
-    background-image: url('../img/autovia-A-66/A-66-foto-04.JPG');
+    background-image: url('../img/autovia-A-66/thumbnail-foto-04.jpg');
 }
-
 .obra5 {
-    background-image: url('../img/autovia-A-66/A-66-foto-05.JPG');
+    background-image: url('../img/autovia-A-66/thumbnail-foto-05.jpg');
+}
+.galeria {
+    div {
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+        background-size: 100px 100px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    p {
+        margin: 15px 0 25px 0;
+    }
 }
 
-.galeria div {
-    margin: 9px;
-    height: 80px;
-    width: 80px;
-    background-size: 80px 80px;
-    display: inline-block;
-    cursor: pointer;
+.mini {
+    background-color: $color-titulos;
 }
 
-.obragrande div {
-    margin-top: 20px;
-    width: 100%;
-    height: 450px;
-    background-size: 100% 450px;
-
+.obragrande {
+    height: 500px;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+    div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        #bbb {
+            display: none;
+            position: relative;
+            top: -40px;
+            left: -40px;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(black, 0.7);
+            border-radius: 10px;
+        }
+    }
 }

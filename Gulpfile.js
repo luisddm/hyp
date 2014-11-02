@@ -4,6 +4,7 @@
 
     var gulp = require('gulp');
     var sass = require('gulp-sass');
+    var compass = require('gulp-compass');
     var minifyCss = require('gulp-minify-css');
     var browserSync = require('browser-sync');
     var uglify = require('gulp-uglify');
@@ -83,7 +84,7 @@
     gulp.task('default', ['scss', 'javascript', 'templates', 'images', 'browser-sync'], function () {
         gulp.watch("scss/*.scss", ['scss']);
         gulp.watch("js/*.js", ['javascript']);
-        gulp.watch("*.html", ['templates']);
+        gulp.watch(["*.html", "templates/*.html"], ['templates']);
     });
 
     // Tarea para generar el codigo en build que se enviará al FTP

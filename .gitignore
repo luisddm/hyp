@@ -22,3 +22,5 @@ node_modules
 # Ficheros construidos
 build
 .idea
+bower_components
+.sass-cache
