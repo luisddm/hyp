@@ -1,7 +1,6 @@
-$color-titulos: #bcd15c;
-$color-enlaces: #388ad1;
-$color-texto: #222222;
-$color-texto-blanco: #eee;
+@import "variables";
+@import "bootstrap";
+//@import "font-awesome";
 
 body {
     font-family: 'Maven Pro', Arial, sans-serif;
@@ -28,7 +27,6 @@ a {
 }
 #portada {
     background: url('../img/grass-wallpaper-green-spring-summer-bokeh.jpg') no-repeat;
-    -webkit-background-size: cover;
     background-size: cover;
 }
 .menu {
@@ -47,7 +45,6 @@ a {
     > li > a {
         color: #ccc;
         font-size: 1.5em;
-        -webkit-transition: 0.5s;
         transition: 0.5s;
         &:focus {
             color: #ccc;
@@ -87,11 +84,8 @@ a {
 
 .logo {
     width: 100%;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     &:hover {
-        -webkit-transform: scale(1.05, 1.05);
-        -ms-transform: scale(1.05, 1.05);
         transform: scale(1.05, 1.05);
     }
 }
@@ -117,12 +111,10 @@ footer {
         left: 15px;
         right: 15px;
         height: 100%;
-        -webkit-transition: 0.3s;
         transition: 0.3s;
         background-color: rgba(black, 0.2);
         h4 {
             font-size: 1.6em;
-            -webkit-transition: 0.3s;
             transition: 0.3s;
             text-shadow: 0 0 5px #000;
             font-weight: 700;
@@ -166,7 +158,7 @@ footer {
     }
 }
 .margen-texto {
-	padding-left: 40px;
+    padding-left: 40px;
     padding-right: 40px;
 }
 input[type=text],
@@ -192,10 +184,10 @@ label {
     .obra {
         height: 150px;
         width: 150px;
-        background-size: 130px 130px;
         background-repeat: no-repeat;
         background-position: center center;
         background-color: black;
+        background-size: 130px 130px;
         margin-bottom: 40px;
         display: inline-block;
         cursor: pointer;

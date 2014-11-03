@@ -3,7 +3,7 @@
     "use strict";
 
     var gulp = require('gulp');
-    var sass = require('gulp-sass');
+    var sass = require('gulp-ruby-sass');
     var compass = require('gulp-compass');
     var minifyCss = require('gulp-minify-css');
     var browserSync = require('browser-sync');
@@ -14,11 +14,23 @@
     var glob = require('glob');
     var changed = require('gulp-changed');
     var del = require('del');
+    var plumber = require('gulp-plumber');
+    var autoprefixer = require('gulp-autoprefixer');
+
 
     // Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a build
     gulp.task('scss', function () {
-        gulp.src('scss/*.scss')
-            .pipe(sass())
+        gulp.src('scss/style.scss')
+            .pipe(plumber())
+            .pipe(sass({
+                style: 'compressed',
+                loadPath: [
+                    'scss',
+                    'bower_components/bootstrap-sass-official/assets/stylesheets',
+                    'bower_components/fontawesome/scss'
+                ]
+            }))
+            .pipe(autoprefixer())
             .pipe(minifyCss({
                 keepSpecialComments: 0
             }))
@@ -42,7 +54,13 @@
 
     // Minimizo el javascript, lo concateno en app.js y lo copio a build
     gulp.task('javascript', function () {
-        gulp.src('js/*.js')
+        gulp.src([
+            "bower_components/jquery/dist/jquery.js",
+            "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
+            "bower_components/spinjs/spin.js",
+            "bower_components/spinjs/jquery.spin.js",
+            "js/*.js"
+        ])
             .pipe(uglify())
             .pipe(concat('app.js'))
             .pipe(gulp.dest('build/js'));
