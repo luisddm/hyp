@@ -7,10 +7,10 @@
 
         $('#bbb').show().spin();
 
-        //fotogrande.hide();
+        fotogrande.hide();
         var imgaux = $('<img />').attr('src', foto).load(function() {
             fotogrande.attr('src', imgaux.attr('src'));
-            //fotogrande.fadeIn();
+            fotogrande.fadeIn();
 
             $('#bbb').hide().spin(false);
 
