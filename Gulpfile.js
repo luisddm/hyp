@@ -68,7 +68,7 @@
 
     // Construyo los HTML a partir de las plantillas Swig y las copio a build
     gulp.task('templates', function () {
-        gulp.src('*.html')
+        gulp.src('templates/*.html')
             .pipe(swig({
                 defaults: {
                     cache: false
@@ -102,7 +102,7 @@
     gulp.task('default', ['scss', 'javascript', 'templates', 'images', 'browser-sync'], function () {
         gulp.watch("scss/*.scss", ['scss']);
         gulp.watch("js/*.js", ['javascript']);
-        gulp.watch(["*.html", "templates/*.html"], ['templates']);
+        gulp.watch("templates/**", ['templates']);
     });
 
     // Tarea para generar el codigo en build que se enviará al FTP
