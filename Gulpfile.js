@@ -2,20 +2,20 @@
 
     "use strict";
 
-    var gulp = require('gulp');
-    var sass = require('gulp-ruby-sass');
-    var compass = require('gulp-compass');
-    var minifyCss = require('gulp-minify-css');
-    var browserSync = require('browser-sync');
-    var uglify = require('gulp-uglify');
-    var swig = require('gulp-swig');
-    var concat = require('gulp-concat');
-    var uncss = require('gulp-uncss');
-    var glob = require('glob');
-    var changed = require('gulp-changed');
-    var del = require('del');
-    var plumber = require('gulp-plumber');
-    var autoprefixer = require('gulp-autoprefixer');
+    var gulp = require('gulp'),
+        sass = require('gulp-ruby-sass'),
+        compass = require('gulp-compass'),
+        minifyCss = require('gulp-minify-css'),
+        browserSync = require('browser-sync'),
+        uglify = require('gulp-uglify'),
+        swig = require('gulp-swig'),
+        concat = require('gulp-concat'),
+        uncss = require('gulp-uncss'),
+        glob = require('glob'),
+        changed = require('gulp-changed'),
+        del = require('del'),
+        plumber = require('gulp-plumber'),
+        autoprefixer = require('gulp-autoprefixer');
 
 
     // Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a build
@@ -70,6 +70,8 @@
     gulp.task('templates', function () {
         gulp.src('templates/*.html')
             .pipe(swig({
+                load_json: true,
+                json_path: 'templates',
                 defaults: {
                     cache: false
                 }
