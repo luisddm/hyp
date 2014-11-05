@@ -5,6 +5,7 @@
 body {
     font-family: 'Maven Pro', Arial, sans-serif;
     background-color: $color-texto;
+    font-size: 16px;
 }
 h1 {
     color: $color-titulos;
@@ -92,8 +93,8 @@ a {
 footer {
     background-color: #000;
     color: $color-texto-blanco;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-top: solid 10px $color-titulos;
 }
 .portada-imagen {
@@ -104,6 +105,7 @@ footer {
         width: 100%;
         -webkit-transition: 0.5s;
         transition: 0.5s;
+        border: 4px solid $color-texto;
     }
     div {
         position: absolute;
@@ -128,9 +130,26 @@ footer {
     }
 }
 .parrafos {
+    margin-top: 20px;
     color: #eee;
     padding-top: 20px;
     padding-bottom: 20px;
+    ul {
+        padding-left: 0;
+        list-style: none;
+        li {
+            padding-left: 1em;
+            text-indent: -1em;
+            margin-top: 10px;
+            &:before {
+                content: "■ ";
+                color: $color-enlaces;
+            }
+        }
+    }
+    strong {
+        color: white;
+    }
 }
 .titulo {
     top: 0;
@@ -144,7 +163,9 @@ footer {
 .fondo-texto {
     background-color: rgba(black, 0.7);
     color: $color-texto-blanco;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-bottom: 40px;
     li {
         line-height: 2em;
         list-style-type: square;
@@ -163,10 +184,11 @@ footer {
 }
 input[type=text],
 input[type=email],
+input[type=tel],
 textarea {
-    border: none;
-    background-color: $color-titulos;
-    padding: 5px;
+    border: 4px solid $color-texto;
+    background-color: rgba($color-texto-blanco, 0.7);
+    padding: 6px 12px;
     color: $color-texto;
     width: 100%;
 }
@@ -242,7 +264,7 @@ label {
     background-image: url('../img/autovia-A-66/thumbnail-foto-05.jpg');
 }
 .galeria {
-    div {
+    img.mini {
         margin: 5px;
         height: 100px;
         width: 100px;
@@ -253,10 +275,6 @@ label {
     p {
         margin: 15px 0 25px 0;
     }
-}
-
-.mini {
-    background-color: $color-titulos;
 }
 
 .obragrande {
@@ -283,4 +301,36 @@ label {
             border-radius: 10px;
         }
     }
+}
+
+.boton-seccion {
+    padding: 5px 15px;
+    background-color: $color-enlaces;
+    color: white;
+    font-weight: 700;
+    margin: 20px 0;
+    transition: 0.3s;
+    display: inline-block;
+    &:hover {
+        background-color: $color-titulos;
+        color: black;
+    }
+}
+
+.hidrosiembra {
+    margin-top: 0px;
+    border: 4px solid $color-titulos;
+    background-color: black;
+    color: $color-texto-blanco;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 45px solid $color-titulos;
+    margin: 0 auto;
 }

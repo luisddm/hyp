@@ -1,11 +1,27 @@
-{
+{"obras": [{
     "name" : "Autovía A-66",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
-    "thumbnails" : [
-        {"index" : 1, "img" : "img/autovia-A-66/A-66-foto-01.JPG"},
-        {"index" : 2, "img" : "img/autovia-A-66/A-66-foto-02.JPG"},
-        {"index" : 3, "img" : "img/autovia-A-66/A-66-foto-03.JPG"},
-        {"index" : 4, "img" : "img/autovia-A-66/A-66-foto-04.JPG"},
-        {"index" : 5, "img" : "img/autovia-A-66/A-66-foto-05.JPG"}
+    "images" : [
+        {"index" : 1, "img" : "img/autovia-A-66/A-66-foto-01.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-01.jpg"},
+        {"index" : 2, "img" : "img/autovia-A-66/A-66-foto-02.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-02.jpg"},
+        {"index" : 3, "img" : "img/autovia-A-66/A-66-foto-03.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-03.jpg"},
+        {"index" : 4, "img" : "img/autovia-A-66/A-66-foto-04.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-04.jpg"},
+        {"index" : 5, "img" : "img/autovia-A-66/A-66-foto-05.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-05.jpg"}
     ]
-}
+},
+{
+    "name" : "Autovía VA-30",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+    "images" : [
+        {"index" : 1, "img" : "img/autovia-VA-30/foto-01.jpg"},
+        {"index" : 2, "img" : "img/autovia-VA-30/foto-02.jpg"},
+        {"index" : 3, "img" : "img/autovia-VA-30/foto-03.jpg"},
+        {"index" : 4, "img" : "img/autovia-VA-30/foto-04.jpg"},
+        {"index" : 5, "img" : "img/autovia-VA-30/foto-05.jpg"},
+        {"index" : 6, "img" : "img/autovia-VA-30/foto-06.jpg"},
+        {"index" : 7, "img" : "img/autovia-VA-30/foto-07.jpg"},
+        {"index" : 8, "img" : "img/autovia-VA-30/foto-08.jpg"},
+        {"index" : 9, "img" : "img/autovia-VA-30/foto-09.jpg", "thumbnail" : "img/autovia-VA-30/thumbnail-foto-09.jpg"},
+        {"index" : 10, "img" : "img/autovia-VA-30/foto-10.jpg", "thumbnail" : "img/autovia-VA-30/thumbnail-foto-10.jpg"}
+    ]
+}]}

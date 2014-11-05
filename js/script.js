@@ -2,27 +2,36 @@
 
     "use strict";
 
-    var ponerFoto = function (foto) {
-        var fotogrande = $('#fotogrande');
+    var ponerFoto = function (row, foto) {
+        var fotogrande = row.find('.fotogrande');
 
-        $('#bbb').show().spin();
+        row.find('.bbb').show().spin();
 
         fotogrande.hide();
-        var imgaux = $('<img />').attr('src', foto).load(function() {
+        var imgaux = $('<img />').attr('src', foto).on("load", function() {
             fotogrande.attr('src', imgaux.attr('src'));
             fotogrande.fadeIn();
 
-            $('#bbb').hide().spin(false);
+            row.find('.bbb').hide().spin(false);
 
         });
         return false;
     };
 
-    ponerFoto("img/autovia-A-66/A-66-foto-01.JPG");
+    //ponerFoto("img/autovia-A-66/A-66-foto-01.JPG", null);
 
     $('.mini').on("click", function() {
-        ponerFoto($(this).data('foto'));
+        ponerFoto($(this).closest(".row"), $(this).data('foto'));
     });
+
+    $(".mostrar").hide();
+
+    $('.obra').on("click", function() {
+        var index = $(this).index();
+        $(".mostrar").hide();
+        $(".mostrar").eq(index).show();
+    });
+
 
 
 })();

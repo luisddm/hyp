@@ -10,14 +10,13 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 obras">
 
-                <div class="triangulo">◄</div>
-                <div class="obra obra1 activo"><h3>{{ name }}</h3></div>
-                <div class="obra"><h3>Lorem Ipsum</h3></div>
-                <div class="obra"><h3>Lorem Ipsum</h3></div>
-                <div class="obra"><h3>Lorem Ipsum</h3></div>
-                <div class="obra"><h3>Lorem Ipsum</h3></div>
-                <div class="obra"><h3>Lorem Ipsum</h3></div>
-                <div class="triangulo">►</div>
+                <!--<div class="triangulo">◄</div>-->
+
+                {% for obra in obras %}
+                <div class="obra obra1 activo"><h3>{{ obra.name }}</h3></div>
+                {% endfor %}
+
+                <!--<div class="triangulo">►</div>-->
 
             </div>
         </div>
@@ -27,21 +26,23 @@
 
 <section class="container parrafos">
 
-    <div class="row">
+    {% for obra in obras %}
+    <div class="row mostrar">
         <div class="col-lg-4 col-md-4 galeria">
-            <h1>Autovía A-66</h1>
-            <p>{{ description }}</p>
-            {% for thumbnail in thumbnails %}
-            <div class="mini obra{{ thumbnail.index }}" data-foto={{ thumbnail.img }}></div>
+            <h1>{{ obra.name }}</h1>
+            <p>{{ obra.description }}</p>
+            {% for image in obra.images %}
+            <img src="{{ image.thumbnail }}" class="mini" data-foto="{{ image.img }}">
             {% endfor %}
         </div>
         <div class="col-lg-8 col-md-8 obragrande">
-            <img id="fotogrande">
+            <img class="fotogrande">
             <div>
-                <div id="bbb"></div>
+                <div class="bbb"></div>
             </div>
         </div>
     </div>
+    {% endfor %}
 
 </section>
 

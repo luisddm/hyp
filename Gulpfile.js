@@ -15,8 +15,30 @@
         changed = require('gulp-changed'),
         del = require('del'),
         plumber = require('gulp-plumber'),
-        autoprefixer = require('gulp-autoprefixer');
+        autoprefixer = require('gulp-autoprefixer'),
+        ftpdeploy = require('ftp-deploy');
 
+
+
+    gulp.task('deploy', function() {
+
+        var ftpDeploy = new ftpdeploy();
+
+        var config = {
+            username: "hidrosyp",
+            host: "ftp.hidrosyplant.es",
+            port: 21,
+            localRoot: "build",
+            remoteRoot: "/public_html/beta/",
+            exclude: ['.DS_Store']
+        };
+
+        ftpDeploy.deploy(config, function(err) {
+            if (err) console.log(err)
+            else console.log('finished');
+        });
+
+    });
 
     // Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a build
     gulp.task('scss', function () {
@@ -82,7 +104,7 @@
     // Copio las imágenes a build
     gulp.task('images', function () {
         gulp.src('img/**')
-            .pipe(changed('build/img'))
+            .pipe(changed('build/img/**'))
             .pipe(gulp.dest('build/img'));
     });
 
