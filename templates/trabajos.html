@@ -13,7 +13,12 @@
                 <!--<div class="triangulo">◄</div>-->
 
                 {% for obra in obras %}
-                <div class="obra obra1 activo"><h3>{{ obra.name }}</h3></div>
+                <div class="obra">
+                    <img src="{{ obra.imagenPrincipal }}">
+                    <div>
+                        <h3>{{ obra.name }}</h3>
+                    </div>
+                </div>
                 {% endfor %}
 
                 <!--<div class="triangulo">►</div>-->

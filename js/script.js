@@ -4,21 +4,20 @@
 
     var ponerFoto = function (row, foto) {
         var fotogrande = row.find('.fotogrande');
+        var spinner = row.find('.bbb');
 
-        row.find('.bbb').show().spin();
+        spinner.show().spin();
 
         fotogrande.hide();
         var imgaux = $('<img />').attr('src', foto).on("load", function() {
             fotogrande.attr('src', imgaux.attr('src'));
             fotogrande.fadeIn();
 
-            row.find('.bbb').hide().spin(false);
+            spinner.hide().spin(false);
 
         });
         return false;
     };
-
-    //ponerFoto("img/autovia-A-66/A-66-foto-01.JPG", null);
 
     $('.mini').on("click", function() {
         ponerFoto($(this).closest(".row"), $(this).data('foto'));
@@ -27,11 +26,14 @@
     $(".mostrar").hide();
 
     $('.obra').on("click", function() {
+        $('.obra').removeClass("activo");
+        $(this).addClass("activo");
         var index = $(this).index();
-        $(".mostrar").hide();
-        $(".mostrar").eq(index).show();
+        var mostrar = $(".mostrar");
+        var actual = mostrar.eq(index);
+        mostrar.hide();
+        mostrar.eq(index).show();
+        ponerFoto(actual, actual.find(".mini").eq(0).data('foto'));
     });
-
-
 
 })();

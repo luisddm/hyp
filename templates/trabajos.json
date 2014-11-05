@@ -1,5 +1,6 @@
 {"obras": [{
     "name" : "Autovía A-66",
+    "imagenPrincipal" : "img/autovia-A-66/thumbnail-foto-01.jpg",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
     "images" : [
         {"index" : 1, "img" : "img/autovia-A-66/A-66-foto-01.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-01.jpg"},
@@ -11,6 +12,7 @@
 },
 {
     "name" : "Autovía VA-30",
+    "imagenPrincipal" : "img/autovia-VA-30/thumbnail-foto-10.jpg",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
     "images" : [
         {"index" : 1, "img" : "img/autovia-VA-30/foto-01.jpg"},
