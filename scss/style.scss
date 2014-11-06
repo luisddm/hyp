@@ -18,12 +18,12 @@ a {
         text-decoration: none;
     }
 }
+.w100 {
+    width: 100%
+}
 .parrafos h1 {
     &:hover {
         color: lighten($color-titulos, 15%);
-    }
-    &:hover:after {
-        content: ' >';
     }
 }
 #portada {
@@ -41,12 +41,47 @@ a {
     border: 0;
     border-radius: 0;
     margin-top: 40px;
+    @media (max-width: $screen-md-max) {
+        margin-top: 25px;
+    }
+    @media (max-width: $screen-xs-max) {
+        background-color: $color-texto;
+        border-radius: 4px;
+        border: 1px solid $color-texto-blanco;
+    }
+    .navbar-brand, .dropdown a {
+        color: $color-texto-blanco;
+    }
+    .navbar-header {
+        cursor: pointer;
+    }
+}
+.dropdown-menu > li > a {
+    @media (max-width: $screen-xs-max) {
+        white-space: normal;
+    }
+}
+.navbar-default .navbar-toggle {
+    border: none;
+    margin-right: 0;
+    &:hover {
+        background-color: $color-texto;
+    }
+    .icon-bar {
+        background-color: $color-texto-blanco;
+    }
 }
 .navbar-default .navbar-nav {
     > li > a {
         color: #ccc;
         font-size: 1.5em;
         transition: 0.5s;
+        @media (max-width: $screen-xs-max) {
+            color: $color-texto-blanco;
+            &:focus {
+                color: $color-texto-blanco;
+            }
+        }
         &:focus {
             color: #ccc;
         }
@@ -82,7 +117,6 @@ a {
         }
     }
 }
-
 .logo {
     width: 100%;
     transition: 0.5s;
@@ -116,12 +150,15 @@ footer {
         transition: 0.3s;
         background-color: rgba(black, 0.15);
         h4 {
-            font-size: 1.6em;
+            font-size: 35px;
             transition: 0.3s;
             text-shadow: 0 0 5px #000;
             font-weight: 700;
             margin: 30px;
             vertical-align: middle;
+            @media (max-width: $screen-sm-max) {
+                font-size: 25px;
+            }
         }
     }
     &:hover div {
@@ -154,7 +191,6 @@ footer {
 .titulo {
     top: 0;
     position: relative;
-    font-size: 1.5em;
     padding: 15px;
     background-color: black;
     color: $color-texto-blanco;
