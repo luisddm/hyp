@@ -1,0 +1,26 @@
+body {
+    font-family: 'Maven Pro', Arial, sans-serif;
+    background-color: $color-texto;
+    font-size: 16px;
+}
+h1 {
+    color: $color-titulos;
+}
+a {
+    color: $color-enlaces;
+    text-decoration: none;
+    &:hover {
+        color: lighten($color-enlaces, 20%);
+        text-decoration: none;
+    }
+}
+.w100 {
+    width: 100%
+}
+footer {
+    background-color: #000;
+    color: $color-texto-blanco;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: solid 10px $color-titulos;
+}

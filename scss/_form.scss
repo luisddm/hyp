@@ -1,0 +1,21 @@
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    border: 4px solid $color-texto;
+    background-color: rgba($color-texto-blanco, 0.8);
+    padding: 6px 12px;
+    color: $color-texto;
+    width: 100%;
+}
+input[type=submit], button {
+    color: $color-texto;
+    padding: 5px;
+    background: $color-texto-blanco;
+    border: none;
+    margin: 10px 0;
+}
+label {
+    font-weight: 400;
+    padding: 20px 5px 5px 5px;
+}
