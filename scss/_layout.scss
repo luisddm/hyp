@@ -15,7 +15,15 @@ a {
     }
 }
 .w100 {
-    width: 100%
+    width: 100%;
+    @media (max-width: $screen-sm-max) {
+        margin-top: 20px;
+    }
+}
+.pull-right-sm {
+    @media (max-width: $screen-sm-max) {
+        float: right;
+    }
 }
 footer {
     background-color: #000;
