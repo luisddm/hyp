@@ -26,7 +26,8 @@
     $(".mostrar").hide();
 
     $('.obra').on("click", function() {
-        $('.obra').removeClass("activo");
+        //window.location.search="";
+        $('.obra').removeClass("activo").addClass("small").removeClass("big");
         $(this).addClass("activo");
         var index = $(this).index();
         var mostrar = $(".mostrar");
@@ -35,5 +36,10 @@
         mostrar.eq(index).show();
         ponerFoto(actual, actual.find(".mini").eq(0).data('foto'));
     });
+
+    var hash = window.location.search.substring(1);
+    if(hash) {
+        $(".obra").eq(hash).trigger("click");
+    }
 
 })();

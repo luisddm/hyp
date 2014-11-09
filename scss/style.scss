@@ -146,41 +146,78 @@
 .obras {
     margin-bottom: 40px;
     .obra {
-        height: 150px;
-        width: 150px;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        display: inline-block;
-        float: left;
-        border: 10px solid rgba(black, 0);
-        margin-left: 10px;
-        margin-right: 10px;
-        transition: 0.5s;
-        &.activo {
-            border: 10px solid $color-titulos;
-        }
-        &:hover {
-            background-color: rgba($color-texto, 0.5);
-        }
-        img {
-            width: 100%;
-        }
-        div {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background-color: transparent;
-            h3 {
-                color: $color-texto-blanco;
-                text-shadow: 3px 3px 3px black;
-                text-align: center;
-                padding: 20px 10px;
+        &.small {
+            height: 150px;
+            width: 150px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: inline-block;
+            float: left;
+            border: 10px solid rgba(black, 0);
+            margin-left: 10px;
+            margin-right: 10px;
+            transition: 0.5s;
+            &.activo {
+                border: 10px solid $color-titulos;
+            }
+            &:hover {
+                background-color: rgba($color-texto, 0.5);
+            }
+            img {
+                width: 100%;
+            }
+            div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: transparent;
+                h3 {
+                    color: $color-texto-blanco;
+                    text-shadow: 3px 3px 3px black;
+                    text-align: center;
+                    padding: 20px 10px;
+                }
+                p.desc, p.boton-seccion {
+                    display: none;
+                }
             }
         }
-
+        &.big {
+            cursor: pointer;
+            background-color: rgba(black, 0.8);
+            width: 48%;
+            float: left;
+            margin: 1%;
+            padding: 20px;
+            img {
+                width: 30%;
+                float: left;
+            }
+            div {
+                width: 70%;
+                float: left;
+                padding: 0 30px;
+                margin-top: -25px;
+                h3 {
+                    color: $color-texto-blanco;
+                    text-shadow: 3px 3px 3px black;
+                    text-align: left;
+                    color: $color-titulos;
+                    font-size: 28px;
+                }
+                p.desc {
+                    font-size: 13px;
+                    color: $color-texto-blanco;
+                }
+                p.boton-seccion {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
     }
     div.triangulo {
         font-size: 80px;
