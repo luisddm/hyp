@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "homepage": "https://github.com/vynith/hyp",
   "authors": [
-    "Luis de Dios Martín <luisddm@gmail.com>",
+    "Luis de Dios Martín <luisddm@gmail.com>",
     "Meritxell Gómez Bonet <gomezbonet@gmail.com>"
   ],
   "description": "Hidrosyplant",
@@ -17,10 +17,11 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass-official": "~3.3.0",
+    "bootstrap-sass-official": "~3.3.1",
     "fancybox": "~2.1.5",
     "fontawesome": "~4.2.0",
     "spinjs": "~2.0.1",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "jquery-validation": "~1.13.1"
   }
 }

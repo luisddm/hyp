@@ -191,16 +191,39 @@
             width: 48%;
             float: left;
             margin: 1%;
-            padding: 20px;
+            padding: 20px 0 20px 20px;
+            @media (max-width: $screen-sm-max) {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 20px;
+            }
             img {
                 width: 30%;
                 float: left;
+                @media (max-width: $screen-sm-max) {
+                    width: 25%;
+                }
+                @media (max-width: 550px) {
+                    width: 35%;
+                }
+                @media (max-width: $screen-xs) {
+                    width: 200px;
+                }
             }
             div {
                 width: 70%;
                 float: left;
                 padding: 0 30px;
                 margin-top: -25px;
+                @media (max-width: $screen-sm-max) {
+                    width: 75%;
+                }
+                @media (max-width: 550px) {
+                    width: 65%;
+                }
+                @media (max-width: $screen-xs) {
+                    width: 100%;
+                }
                 h3 {
                     color: $color-texto-blanco;
                     text-shadow: 3px 3px 3px black;
@@ -253,7 +276,7 @@
 }
 
 .obragrande {
-    height: 500px;
+    height: 100%;
     position: relative;
     margin-bottom: 40px;
     margin-top: 30px;
