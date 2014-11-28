@@ -3,7 +3,7 @@
     "use strict";
 
     var gulp = require('gulp'),
-        sass = require('gulp-ruby-sass'),
+        sass = require('gulp-sass'),
         compass = require('gulp-compass'),
         minifyCss = require('gulp-minify-css'),
         browserSync = require('browser-sync'),
@@ -15,38 +15,15 @@
         changed = require('gulp-changed'),
         del = require('del'),
         plumber = require('gulp-plumber'),
-        autoprefixer = require('gulp-autoprefixer'),
-        ftpdeploy = require('ftp-deploy');
-
-
-
-    gulp.task('deploy', function() {
-
-        var ftpDeploy = new ftpdeploy();
-
-        var config = {
-            username: "hidrosyp",
-            host: "ftp.hidrosyplant.es",
-            port: 21,
-            localRoot: "build",
-            remoteRoot: "/public_html/beta/",
-            exclude: ['.DS_Store']
-        };
-
-        ftpDeploy.deploy(config, function(err) {
-            if (err) console.log(err)
-            else console.log('finished');
-        });
-
-    });
+        autoprefixer = require('gulp-autoprefixer');
+        
 
     // Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a build
     gulp.task('scss', function () {
         gulp.src('scss/style.scss')
             .pipe(plumber())
             .pipe(sass({
-                style: 'compressed',
-                loadPath: [
+                includePaths: [
                     'scss',
                     'bower_components/bootstrap-sass-official/assets/stylesheets',
                     'bower_components/fontawesome/scss'
@@ -81,6 +58,7 @@
             "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
             "bower_components/spinjs/spin.js",
             "bower_components/spinjs/jquery.spin.js",
+            "bower_components/jquery-validation/dist/jquery.validate.min.js",
             "js/*.js"
         ])
             .pipe(uglify())

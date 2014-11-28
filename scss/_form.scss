@@ -2,20 +2,33 @@ input[type=text],
 input[type=email],
 input[type=tel],
 textarea {
-    border: 4px solid $color-texto;
-    background-color: rgba($color-texto-blanco, 0.8);
+    border: 1px solid $color-titulos;
+    background-color: $color-texto;
     padding: 6px 12px;
-    color: $color-texto;
     width: 100%;
-}
-input[type=submit], button {
-    color: $color-texto;
-    padding: 5px;
-    background: $color-texto-blanco;
-    border: none;
-    margin: 10px 0;
+    color: $color-texto-blanco;
 }
 label {
     font-weight: 400;
-    padding: 20px 5px 5px 5px;
+}
+/*
+input[type=checkbox] {
+    display: none;
+}
+*/
+input[type=checkbox] + label
+{
+    background: #999;
+    display: inline-block;
+    padding: 0;
+}
+input[type=checkbox]:checked + label
+{
+    background: #0080FF;
+    display: inline-block;
+    padding: 0;
+}
+
+label.error {
+    color: red;
 }

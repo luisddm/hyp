@@ -301,7 +301,7 @@
     }
 }
 
-.boton-seccion {
+.boton-seccion, input[type=submit], button {
     padding: 5px 15px;
     background-color: $color-enlaces;
     color: white;
@@ -309,6 +309,7 @@
     margin: 20px 0;
     transition: 0.3s;
     display: inline-block;
+    border: 0;
     &:hover {
         background-color: $color-titulos;
         color: black;
@@ -332,3 +333,10 @@
     border-bottom: 45px solid $color-titulos;
     margin: 0 auto;
 }
+
+.modal-content {
+    background-color: $color-texto;
+    border: solid 2px $color-titulos;
+}
+
+

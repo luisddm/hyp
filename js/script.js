@@ -26,7 +26,6 @@
     $(".mostrar").hide();
 
     $('.obra').on("click", function() {
-        //window.location.search="";
         $('.obra').removeClass("activo").addClass("small").removeClass("big");
         $(this).addClass("activo");
         var index = $(this).index();
@@ -41,5 +40,42 @@
     if(hash) {
         $(".obra").eq(hash).trigger("click");
     }
+
+    $(".modal-content").find(".acepto").on("click", function(){
+        $("#condiciones").prop("checked", true);
+    });
+
+    $("#contact-form").validate({
+        rules: {
+            telefono: {
+                number: true
+            },
+            condiciones: {
+                required: true
+            }
+        },
+        messages: {
+            nombre: {
+                required: "Introduce tu nombre"
+            },
+            texto: {
+                required: "Introduce tu comentario o consulta"
+            },
+            telefono: {
+                number: "El teléfono no es válido"
+            },
+            email: {
+                required: "Introduce tu dirección de email",
+                email: "El email no es válido"
+            }
+        },
+        submitHandler: function(form) {
+            alert('valid form');
+            return false;
+        }
+    });
+
+    $(".error").tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 
 })();
