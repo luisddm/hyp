@@ -41,6 +41,9 @@
         $(".obra").eq(hash).trigger("click");
     }
 
+
+    // FORM
+
     $(".modal-content").find(".acepto").on("click", function(){
         $("#condiciones").prop("checked", true);
     });
@@ -77,5 +80,55 @@
 
     $(".error").tooltip();
     $('[data-toggle="tooltip"]').tooltip();
+
+
+
+    // SCROLL
+
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      if(scrollTop < 20) {
+
+        $(".menu").css("margin-top", 20-scrollTop);
+        $(".menu").css({"background-color": "rgba(0,0,0,0.8)", "border-bottom": "2px solid rgba(188,209,92,0)"});
+        $(".logo").css({"height" : 111});
+        $(".menu").find(".navbar").css({"margin-top": "35px", "margin-bottom": "35px"});
+
+
+      } else if(scrollTop > 20 && scrollTop < 90) {
+
+        $(".menu").css("margin-top", 0);
+        var x = (scrollTop/(-2))+45;
+        $(".menu").find(".navbar").css({"margin-top": x, "margin-bottom": x});
+        var trans = (scrollTop*0.00286)+0.743;
+        var transBorder = (scrollTop-20)*0.01428;
+        $(".menu").css({"background-color": "rgba(0,0,0,"+trans+")", "border-bottom": "2px solid rgba(188,209,92,"+transBorder+")"}); //bcd15c 188 209 92
+        $(".logo").css({"height" : 140-scrollTop});
+
+      } else if(scrollTop > 90){
+
+        $(".menu").find(".navbar").css({"margin-top": "0px", "margin-bottom": "0px"});
+        $(".menu").css("margin-top", 0);
+        $(".logo").css({"height" : 50});
+        $(".menu").css({"background-color": "rgba(0,0,0,1)", "border-bottom": "2px solid rgba(188,209,92,1)"});
+
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })();
