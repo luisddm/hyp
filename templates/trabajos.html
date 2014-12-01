@@ -39,7 +39,10 @@
             <h1>{{ obra.name }}</h1>
             <p>{{ obra.description }}</p>
             {% for image in obra.images %}
-            <img src="{{ image.thumbnail }}" class="mini" data-foto="{{ image.img }}">
+            <div>
+                <img src="{{ image.thumbnail }}" class="mini" data-foto="{{ image.img }}">
+                <div class="mini-maximize"></div>
+            </div>
             {% endfor %}
         </div>
         <div class="col-lg-8 col-md-8 obragrande">

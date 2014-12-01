@@ -19,8 +19,9 @@
         return false;
     };
 
-    $('.mini').on("click", function() {
-        ponerFoto($(this).closest(".row"), $(this).data('foto'));
+    $('.mini').parent("div").on("click", function() {
+        var $self = $(this).children(".mini");
+        ponerFoto($self.closest(".row"), $self.data('foto'));
     });
 
     $(".mostrar").hide();
