@@ -1,70 +1,52 @@
 {"obras": [{
     "name" : "Autovía A-66",
-    "imagenPrincipal" : "img/autovia-A-66/thumbnail-foto-01.jpg",
+    "imagenPrincipal" : "img/A66/A66_mini.jpg",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
     "images" : [
-        {"index" : 1, "img" : "img/autovia-A-66/A-66-foto-01.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-01.jpg"},
-        {"index" : 2, "img" : "img/autovia-A-66/A-66-foto-02.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-02.jpg"},
-        {"index" : 3, "img" : "img/autovia-A-66/A-66-foto-03.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-03.jpg"},
-        {"index" : 4, "img" : "img/autovia-A-66/A-66-foto-04.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-04.jpg"},
-        {"index" : 5, "img" : "img/autovia-A-66/A-66-foto-05.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-05.jpg"}
+        {"index" : 1, "img" : "img/A66/A66_001.jpg", "thumbnail" : "img/A66/A66_001_mini.jpg"},
+        {"index" : 2, "img" : "img/A66/A66_002.jpg", "thumbnail" : "img/A66/A66_002_mini.jpg"},
+        {"index" : 3, "img" : "img/A66/A66_003.jpg", "thumbnail" : "img/A66/A66_003_mini.jpg"},
+        {"index" : 4, "img" : "img/A66/A66_004.jpg", "thumbnail" : "img/A66/A66_004_mini.jpg"},
+        {"index" : 5, "img" : "img/A66/A66_005.jpg", "thumbnail" : "img/A66/A66_005_mini.jpg"},
+        {"index" : 6, "img" : "img/A66/A66_006.jpg", "thumbnail" : "img/A66/A66_006_mini.jpg"}
     ]
 },
 {
     "name" : "Autovía VA-30",
-    "imagenPrincipal" : "img/autovia-VA-30/thumbnail-foto-10.jpg",
+    "imagenPrincipal" : "img/VA30/VA30_mini.jpg",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
     "images" : [
-        {"index" : 1, "img" : "img/autovia-VA-30/foto-01.jpg"},
-        {"index" : 2, "img" : "img/autovia-VA-30/foto-02.jpg"},
-        {"index" : 3, "img" : "img/autovia-VA-30/foto-03.jpg"},
-        {"index" : 4, "img" : "img/autovia-VA-30/foto-04.jpg"},
-        {"index" : 5, "img" : "img/autovia-VA-30/foto-05.jpg"},
-        {"index" : 6, "img" : "img/autovia-VA-30/foto-06.jpg"},
-        {"index" : 7, "img" : "img/autovia-VA-30/foto-07.jpg"},
-        {"index" : 8, "img" : "img/autovia-VA-30/foto-08.jpg"},
-        {"index" : 9, "img" : "img/autovia-VA-30/foto-09.jpg", "thumbnail" : "img/autovia-VA-30/thumbnail-foto-09.jpg"},
-        {"index" : 10, "img" : "img/autovia-VA-30/foto-10.jpg", "thumbnail" : "img/autovia-VA-30/thumbnail-foto-10.jpg"}
+        {"index" : 1, "img" : "img/VA30/VA30_001.jpg", "thumbnail" : "img/VA30/VA30_001_mini.jpg"},
+        {"index" : 2, "img" : "img/VA30/VA30_002.jpg", "thumbnail" : "img/VA30/VA30_002_mini.jpg"},
+        {"index" : 3, "img" : "img/VA30/VA30_003.jpg", "thumbnail" : "img/VA30/VA30_003_mini.jpg"},
+        {"index" : 4, "img" : "img/VA30/VA30_004.jpg", "thumbnail" : "img/VA30/VA30_004_mini.jpg"},
+        {"index" : 5, "img" : "img/VA30/VA30_005.jpg", "thumbnail" : "img/VA30/VA30_005_mini.jpg"},
+        {"index" : 6, "img" : "img/VA30/VA30_006.jpg", "thumbnail" : "img/VA30/VA30_006_mini.jpg"},
+        {"index" : 7, "img" : "img/VA30/VA30_007.jpg", "thumbnail" : "img/VA30/VA30_007_mini.jpg"},
+        {"index" : 8, "img" : "img/VA30/VA30_008.jpg", "thumbnail" : "img/VA30/VA30_008_mini.jpg"},
+        {"index" : 9, "img" : "img/VA30/VA30_009.jpg", "thumbnail" : "img/VA30/VA30_009_mini.jpg"},
+        {"index" : 10, "img" : "img/VA30/VA30_010.jpg", "thumbnail" : "img/VA30/VA30_010_mini.jpg"}
     ]
 },
 {
-    "name" : "Autovía A-66",
-    "imagenPrincipal" : "img/autovia-A-66/thumbnail-foto-01.jpg",
-    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
-    "images" : [
-        {"index" : 1, "img" : "img/autovia-A-66/A-66-foto-01.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-01.jpg"},
-        {"index" : 2, "img" : "img/autovia-A-66/A-66-foto-02.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-02.jpg"},
-        {"index" : 3, "img" : "img/autovia-A-66/A-66-foto-03.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-03.jpg"},
-        {"index" : 4, "img" : "img/autovia-A-66/A-66-foto-04.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-04.jpg"},
-        {"index" : 5, "img" : "img/autovia-A-66/A-66-foto-05.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-05.jpg"}
-    ]
+  "name" : "Autovía A-50",
+  "imagenPrincipal" : "img/A50/A50_mini.jpg",
+  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "images" : [
+    {"index" : 1, "img" : "img/A50/A50_001.jpg", "thumbnail" : "img/A50/A50_001_mini.jpg"},
+    {"index" : 2, "img" : "img/A50/A50_002.jpg", "thumbnail" : "img/A50/A50_002_mini.jpg"}
+  ]
 },
 {
-    "name" : "Autovía VA-30",
-    "imagenPrincipal" : "img/autovia-VA-30/thumbnail-foto-10.jpg",
+    "name" : "Ciudad Rodrigo",
+    "imagenPrincipal" : "img/CiudadRodrigo/ciudad_rodrigo_mini.jpg",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
     "images" : [
-        {"index" : 1, "img" : "img/autovia-VA-30/foto-01.jpg"},
-        {"index" : 2, "img" : "img/autovia-VA-30/foto-02.jpg"},
-        {"index" : 3, "img" : "img/autovia-VA-30/foto-03.jpg"},
-        {"index" : 4, "img" : "img/autovia-VA-30/foto-04.jpg"},
-        {"index" : 5, "img" : "img/autovia-VA-30/foto-05.jpg"},
-        {"index" : 6, "img" : "img/autovia-VA-30/foto-06.jpg"},
-        {"index" : 7, "img" : "img/autovia-VA-30/foto-07.jpg"},
-        {"index" : 8, "img" : "img/autovia-VA-30/foto-08.jpg"},
-        {"index" : 9, "img" : "img/autovia-VA-30/foto-09.jpg", "thumbnail" : "img/autovia-VA-30/thumbnail-foto-09.jpg"},
-        {"index" : 10, "img" : "img/autovia-VA-30/foto-10.jpg", "thumbnail" : "img/autovia-VA-30/thumbnail-foto-10.jpg"}
+        {"index" : 1, "img" : "img/CiudadRodrigo/ciudad_rodrigo_001.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_001_mini.jpg"},
+        {"index" : 2, "img" : "img/CiudadRodrigo/ciudad_rodrigo_002.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_002_mini.jpg"},
+        {"index" : 3, "img" : "img/CiudadRodrigo/ciudad_rodrigo_003.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_003_mini.jpg"},
+        {"index" : 4, "img" : "img/CiudadRodrigo/ciudad_rodrigo_004.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_004_mini.jpg"}
     ]
-},
-{
-    "name" : "Autovía A-66",
-    "imagenPrincipal" : "img/autovia-A-66/thumbnail-foto-01.jpg",
-    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
-    "images" : [
-        {"index" : 1, "img" : "img/autovia-A-66/A-66-foto-01.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-01.jpg"},
-        {"index" : 2, "img" : "img/autovia-A-66/A-66-foto-02.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-02.jpg"},
-        {"index" : 3, "img" : "img/autovia-A-66/A-66-foto-03.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-03.jpg"},
-        {"index" : 4, "img" : "img/autovia-A-66/A-66-foto-04.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-04.jpg"},
-        {"index" : 5, "img" : "img/autovia-A-66/A-66-foto-05.JPG", "thumbnail" : "img/autovia-A-66/thumbnail-foto-05.jpg"}
-    ]
-}]}
+}
+
+]}
