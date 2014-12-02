@@ -1,11 +1,17 @@
 body {
     font-family: 'Maven Pro', Arial, sans-serif;
-    background-color: $color-texto;
+    background-color: black;
     font-size: 16px;
 }
 
 section div.container {
   margin-top: 180px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 235px;
+  }
+  @media (max-width: $screen-xs-max) {
+      margin-top: 300px;
+  }
 }
 
 h1 {

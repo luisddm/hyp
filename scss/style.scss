@@ -13,6 +13,9 @@
     background: url('../img/grass-wallpaper-green-spring-summer-bokeh.jpg') no-repeat;
     background-size: 100%;
     background-attachment: fixed;
+    @media (max-width: $screen-sm-max) {
+      background-size: auto 100%;
+    }
 }
 .portada-imagen {
     position: relative;
@@ -225,6 +228,7 @@
                 }
                 @media (max-width: $screen-xs) {
                     width: 100%;
+                    padding: 20px 10px 10px 0;
                 }
                 h3 {
                     color: $color-texto-blanco;

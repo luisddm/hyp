@@ -29,7 +29,7 @@
     $('.obra').on("click", function() {
         $('.obra').removeClass("activo").addClass("small").removeClass("big");
         $(this).addClass("activo");
-        var index = $(this).index();
+        var index = $(this).index(".obra");
         var mostrar = $(".mostrar");
         var actual = mostrar.eq(index);
         mostrar.hide();
@@ -86,43 +86,64 @@
 
     // SCROLL
 
-    var $menu = $(".menu");
-    var $logo = $(".logo");
+    menu();
 
-    $(window).scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      if(scrollTop < 20) {
-
-        $menu
-          .css({"background-color": "rgba(0,0,0,0.8)", "border-bottom": "2px solid rgba(188,209,92,0)", "margin-top": 20-scrollTop})
-          .find(".navbar").css({"margin-top": "35px", "margin-bottom": "35px"});
-
-        $logo.css({"height" : 111});
-
-
-      } else if(scrollTop > 20 && scrollTop < 90) {
-
-        var x = (scrollTop/(-2))+45;
-        var trans = (scrollTop*0.00286)+0.743;
-        var transBorder = (scrollTop-20)*0.01428;
-
-        $menu
-          .css({"background-color": "rgba(0,0,0,"+trans+")", "border-bottom": "2px solid rgba(188,209,92,"+transBorder+")", "margin-top": 0})
-          .find(".navbar").css({"margin-top": x, "margin-bottom": x});
-
-        $logo.css({"height" : 140-scrollTop});
-
-      } else if(scrollTop > 90){
-
-        $menu
-          .css({"background-color": "rgba(0,0,0,1)", "border-bottom": "2px solid rgba(188,209,92,1)", "margin-top": 0})
-          .find(".navbar").css({"margin-top": "0px", "margin-bottom": "0px"});
-
-        $logo.css({"height" : 50});
-
-      }
+    $(window).on("resize", function(){
+      menu();
     });
 
+    function menu() {
+
+        if($(window).width()>768) {
+
+            var $menu = $(".menu");
+            var $logo = $(".logo");
+
+            $(window).on("scroll", function () {
+              var scrollTop = $(window).scrollTop();
+
+              if(scrollTop < 20) {
+
+                $menu
+                  .css({"background-color": "rgba(0,0,0,0.8)", "border-bottom": "2px solid rgba(188,209,92,0)", "margin-top": 20-scrollTop})
+                  .find(".navbar").css({"margin-top": "35px", "margin-bottom": "35px"});
+
+                $logo
+                  .css({"height" : 111})
+                  .attr("src", "img/logo.png");
+
+
+              } else if(scrollTop > 20 && scrollTop < 90) {
+
+                var x = (scrollTop / (-2)) + 45;
+                var trans = (scrollTop * 0.00286) + 0.743;
+                var transBorder = (scrollTop - 20) * 0.01428;
+
+                $menu
+                  .css({"background-color": "rgba(0,0,0,"+trans+")", "border-bottom": "2px solid rgba(188,209,92,"+transBorder+")", "margin-top": 0})
+                  .find(".navbar").css({"margin-top": x, "margin-bottom": x});
+
+                $logo
+                  .css({"height" : 140-scrollTop})
+                  .attr("src", "img/logo.png");
+
+              } else if(scrollTop > 90){
+
+                $menu
+                  .css({"background-color": "rgba(0,0,0,1)", "border-bottom": "2px solid rgba(188,209,92,1)", "margin-top": 0})
+                  .find(".navbar").css({"margin-top": "0px", "margin-bottom": "0px"});
+
+                $logo
+                  .css({"height" : 50})
+                  .attr("src", "img/hoja.png");
+
+              }
+            });
+        }
+        else {
+          $(window).unbind("scroll");
+        }
+    }
 
 
 
