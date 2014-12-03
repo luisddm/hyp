@@ -2,7 +2,9 @@
 
     "use strict";
 
-    var ponerFoto = function (row, foto) {
+    $(document).ready(function(){
+
+      var ponerFoto = function (row, foto) {
         var fotogrande = row.find('.fotogrande');
         var spinner = row.find('.bbb');
 
@@ -10,23 +12,23 @@
 
         fotogrande.hide();
         var imgaux = $('<img />').attr('src', foto).on("load", function() {
-            fotogrande.attr('src', imgaux.attr('src'));
-            fotogrande.fadeIn();
+          fotogrande.attr('src', imgaux.attr('src'));
+          fotogrande.fadeIn();
 
-            spinner.hide().spin(false);
+          spinner.hide().spin(false);
 
         });
         return false;
-    };
+      };
 
-    $('.mini').parent("div").on("click", function() {
+      $('.mini').parent("div").on("click", function() {
         var $self = $(this).children(".mini");
         ponerFoto($self.closest(".row"), $self.data('foto'));
-    });
+      });
 
-    $(".mostrar").hide();
+      $(".mostrar").hide();
 
-    $('.obra').on("click", function() {
+      $('.obra').on("click", function() {
         $('.obra').removeClass("activo").addClass("small").removeClass("big");
         $(this).addClass("activo");
         var index = $(this).index(".obra");
@@ -35,66 +37,71 @@
         mostrar.hide();
         mostrar.eq(index).show();
         ponerFoto(actual, actual.find(".mini").eq(0).data('foto'));
-    });
+      });
 
-    var hash = window.location.search.substring(1);
-    if(hash) {
+      var hash = window.location.search.substring(1);
+      if(hash) {
         $(".obra").eq(hash).trigger("click");
-    }
+      }
 
 
-    // FORM
+      // FORM
 
-    $(".modal-content").find(".acepto").on("click", function(){
+      $(".modal-content").find(".acepto").on("click", function(){
         $("#condiciones").prop("checked", true);
-    });
+      });
 
-    $("#contact-form").validate({
+      $("#contact-form").validate({
         rules: {
-            telefono: {
-                number: true
-            },
-            condiciones: {
-                required: true
-            }
+          telefono: {
+            number: true
+          },
+          condiciones: {
+            required: true
+          }
         },
         messages: {
-            nombre: {
-                required: "Introduce tu nombre"
-            },
-            texto: {
-                required: "Introduce tu comentario o consulta"
-            },
-            telefono: {
-                number: "El teléfono no es válido"
-            },
-            email: {
-                required: "Introduce tu dirección de email",
-                email: "El email no es válido"
-            }
+          nombre: {
+            required: "Introduce tu nombre"
+          },
+          texto: {
+            required: "Introduce tu comentario o consulta"
+          },
+          telefono: {
+            number: "El teléfono no es válido"
+          },
+          email: {
+            required: "Introduce tu dirección de email",
+            email: "El email no es válido"
+          }
         },
         submitHandler: function(form) {
-            alert('valid form');
-            return false;
+          alert('valid form');
+          return false;
         }
-    });
+      });
 
-    $(".error").tooltip();
-    $('[data-toggle="tooltip"]').tooltip();
+      $(".error").tooltip();
+      $('[data-toggle="tooltip"]').tooltip();
 
 
 
-    // SCROLL
+      // SCROLL
 
-    menu();
-
-    $(window).on("resize", function(){
       menu();
+
+      $(window).on("resize", function(){
+        menu();
+      });
+
+
     });
+
+
 
     function menu() {
 
-        if($(window).width()>768) {
+        if($(window).width() >= 768) {
 
             var $menu = $(".menu");
             var $logo = $(".logo");
@@ -144,20 +151,6 @@
           $(window).unbind("scroll");
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 })();

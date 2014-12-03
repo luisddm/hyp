@@ -9,22 +9,20 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-1 triangulo">◄</div>
-            <div class="col-lg-10 col-md-12 obras">
+            <div class="col-lg-12 col-md-12 obras">
 
-                {% for obra in obras %}
-                <div class="obra big">
-                    <img src="{{ obra.imagenPrincipal }}">
-                    <div>
-                        <h3>{{ obra.name }}</h3>
-                        <p class="desc">{{ obra.description }}</p>
-                        <p class="boton-seccion">Ver obra ></p>
-                    </div>
+              {% for obra in obras %}
+              <div class="obra big">
+                <img src="{{ obra.imagenPrincipal }}">
+                <div>
+                  <h3>{{ obra.name }}</h3>
+                  <p class="desc">{{ obra.description }}</p>
+                  <p class="boton-seccion">Ver obra ></p>
                 </div>
-                {% endfor %}
+              </div>
+              {% endfor %}
 
             </div>
-            <div class="col-lg-1 triangulo">►</div>
 
         </div>
     </div>

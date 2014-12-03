@@ -151,25 +151,27 @@
     margin-bottom: 40px;
     .obra {
         &.small {
-            height: 165px;
-            width: 165px;
+            box-sizing: content-box;
+            height: 105px;
+            width: 18.55%;
             position: relative;
             overflow: hidden;
             cursor: pointer;
             display: inline-block;
             float: left;
-            border: 10px solid rgba(black, 0);
-            margin-left: 5px;
-            margin-right: 5px;
+            border: 8px solid rgba(black, 0);
+            margin: 0;
+            padding: 0;
             transition: 0.5s;
             &.activo {
-                border: 10px solid $color-titulos;
+                border: 8px solid $color-titulos;
             }
             &:hover {
                 background-color: rgba($color-texto, 0.5);
             }
             img {
                 width: 100%;
+                margin-top: -20px;
             }
             div {
                 position: absolute;
@@ -177,12 +179,18 @@
                 height: 100%;
                 left: 0;
                 top: 0;
+                height: 105px;
                 background-color: transparent;
+                display: table;
                 h3 {
                     color: $color-texto-blanco;
                     text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
                     text-align: center;
-                    padding: 20px 5px;
+                    height: 105px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 0;
+                    margin: 0;
                     font-weight: 700;
                 }
                 p.desc, p.boton-seccion {
@@ -246,24 +254,6 @@
                     margin-bottom: 5px;
                 }
             }
-        }
-    }
-    div.triangulo {
-        font-size: 80px;
-        color: $color-titulos;
-        background: none;
-        display: inline-block;
-        cursor: pointer;
-        vertical-align: top;
-        margin-top: 15px;
-        &:first-child {
-            float: left;
-        }
-        &:last-child {
-            float: right;
-        }
-        &:hover {
-            color: #333;
         }
     }
 }
