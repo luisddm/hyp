@@ -103,7 +103,7 @@
 
         if($(window).width() >= 768) {
 
-            var $menu = $(".menu");
+            var $menu = $("header");
             var $logo = $(".logo");
 
             $(window).on("scroll", function () {

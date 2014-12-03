@@ -154,6 +154,12 @@
             box-sizing: content-box;
             height: 105px;
             width: 18.55%;
+            @media (max-width: $screen-md-max) {
+              width: 18.2%;
+            }
+            @media (max-width: $screen-sm-max) {
+              width: 17.7%;
+            }
             position: relative;
             overflow: hidden;
             cursor: pointer;
@@ -192,6 +198,9 @@
                     padding: 0;
                     margin: 0;
                     font-weight: 700;
+                    @media (max-width: $screen-sm-max) {
+                      font-size: 21px;
+                    }
                 }
                 p.desc, p.boton-seccion {
                     display: none;

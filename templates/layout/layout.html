@@ -22,6 +22,51 @@
     <![endif]-->
 </head>
 <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-offset-3 col-xs-6 col-sm-offset-0 col-sm-3 col-md-2 col-lg-2">
+            <a href="index.html"><img class="logo" src="img/logo.png"></a>
+          </div>
+
+          <nav class="col-xs-12 col-sm-8 col-md-9 col-lg-8 navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">MENÚ</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Áreas de actuación <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Construcción y mantenimiento de parques y jardines</a></li>
+                    <li><a href="#">Restauración paisajística de grandes obras públicas y privadas</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Empresa <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="recursos.html">Recursos técnicos y humanos</a></li>
+                    <li><a href="calidad-medio-ambiente.html">Calidad y medio ambiente</a></li>
+                  </ul>
+                </li>
+                <li><a href="trabajos.html">Trabajos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav>
+        </div>
+      </div>
+    </header>
 
     {% block content %}{% endblock %}
 
