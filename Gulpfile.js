@@ -37,18 +37,13 @@
             .pipe(gulp.dest('build/css'));
     });
 
-    // Hago lo anterior, pero además elimino los estilos CSS que no se usan (OJO, esto tarda mucho en ejecutarse)
-    gulp.task('scss-uncss', function () {
-        gulp.src('scss/*.scss')
-            .pipe(sass())
-            .pipe(uncss({
-                html: glob.sync('templates/**/*.html')
-            }))
-            .pipe(minifyCss({
-                keepSpecialComments: 0
-            }))
-            .pipe(concat('style.css'))
-            .pipe(gulp.dest('build/css'));
+    // Elimino los estilos CSS que no se usan (OJO, esto tarda mucho en ejecutarse)
+    gulp.task('uncss', function() {
+      gulp.src('build/css/style.css')
+      .pipe(uncss({
+        html: glob.sync('build/*.html')
+      }))
+      .pipe(gulp.dest('build/css'));
     });
 
     // Minimizo el javascript, lo concateno en app.js y lo copio a build

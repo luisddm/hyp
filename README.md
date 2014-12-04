@@ -18,4 +18,4 @@ Se abrirá el navegador web predeterminado con el código "compilado" y minimiza
 
 - Las imágenes no sufren ningún tipo de procesado en Gulp, simplemente se copian del directorio de desarrollo a build. Debido a lo costoso de hacer esto cada vez que se arranca Gulp, es necesario hacer un `gulp images` de forma manual cada vez que se añadan o eliminen imágenes.
 - Para limpiar la carpeta build, ejecutar `gulp clean'.
-- Para generar la versión de la web que se enviará a producción, ejecutar `gulp build`. Además de hacer todo lo que hace Gulp, este comando genera una hoja de estilos limpia, eliminando las reglas que no se usan y por tanto aligerando su tamaño en gran medida. Eso sí, es EXPERIMENTAL, no se garantiza el funcionamiento perfecto con esto.
+- Para generar la hoja de estilos de la web que se enviará a producción, ejecutar `gulp uncss`. Este comando genera una hoja de estilos limpia, eliminando las reglas que no se usan y por tanto aligerando su tamaño en gran medida. Eso sí, es EXPERIMENTAL, no se garantiza el funcionamiento perfecto con esto.
