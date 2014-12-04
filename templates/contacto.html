@@ -15,50 +15,33 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label for="nombre">Nombre / Empresa (*)</label>
+                                <label for="nombre">Nombre / Empresa</label>
                                 <input type="text" id="nombre" name="nombre" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email (*)</label>
+                                <label for="email">Email</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="telefono">Teléfono</label>
                                 <input type="tel" id="telefono" name="telefono">
                             </div>
-                            <div class="checkbox">
-                                <input type="checkbox" class="checkbox" name="condiciones" id="condiciones" required>
-                                <label for="condiciones">He leído y acepto la <a data-toggle="modal" data-target="#myModal">política de privacidad</a></label>
-                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <label for="email">Comentario o sugerencia</label>
-                            <textarea id="texto" name="texto" rows="10" required></textarea>
+                            <label for="email">Consulta o sugerencia</label>
+                            <textarea id="texto" name="texto" rows="9" required></textarea>
                         </div>
+                        <div class="checkbox col-lg-6 col-md-6">
+                          <input type="checkbox" class="checkbox" name="condiciones" id="condiciones" required>
+                          <label for="condiciones">He leído y acepto la <a id="show-privacy">política de privacidad</a></label>
+                        </div>
+                    </div>
+                    <div class="alert alert-info alert-dismissible" role="alert">
+                      <p>HIDROSYPLANT se compromete explícitamente a mantener estos datos bajo la máxima confidencialidad y a no suministrarlos nunca a terceros.</p>
+                      <p>En cumplimento de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, podrá en cualquier momento ejercitar los derechos de acceso, rectificación y cancelación de sus datos poniéndose en contacto con nosotros.</p>
                     </div>
                     <input type="submit" class="boton-seccion" value="Enviar" />
                 </form>
-
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Política de privacidad</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>HIDROSYPLANT se compromete explícitamente a mantener estos datos bajo la máxima confidencialidad y a no suministrarlos nunca a terceros.</p>
-                                <p>En cumplimento de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, podrá en cualquier momento ejercitar
-                                los derechos de acceso, rectificación y cancelación de sus datos poniéndose en contacto con nosotros.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" data-dismiss="modal">Cerrar</button>
-                                <button type="button" data-dismiss="modal" class="boton-seccion acepto">Acepto la política de privacidad</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
@@ -66,5 +49,33 @@
     </div>
 
 </section>
+
+<section class="container parrafos">
+
+  <div class="row">
+    <div class="col-lg-5 col-md-5 col-sm-12">
+
+      <address>
+        <p><span class="title">Polígono Industrial El Brizo</span><br>
+        C/ Chopo, parcela 73, nave 5 CD 74<br>
+        47162 Aldeamayor de San Martín (Valladolid)</p>
+        <p><span class="title">(+34) 983 528 841</span></p>
+        <p><a href="mailto:hyp@hidrosyplant.es"><span class="title">hyp@hidrosyplant.es</span></a></p>
+      </address>
+
+      <a target="_blank" href="https://www.google.es/maps/place/41%C2%B032%2720.1%22N+4%C2%B039%2744.7%22W/@41.538149,-4.663311,3a,75y,90t/data=!3m5!1e2!3m3!1s79893706!2e1!3e10!4m2!3m1!1s0x0:0x0">
+        <img class="w100" src="img/poligono-el-brizo-aldeamayor-de-san-martin.jpg">
+      </a>
+
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-12">
+
+      <div id="map-canvas"></div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
 {% endblock %}

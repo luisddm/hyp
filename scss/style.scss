@@ -10,7 +10,7 @@
     }
 }
 #portada {
-    background: url('../img/grass-wallpaper-green-spring-summer-bokeh.jpg') no-repeat;
+    background: url('../img/background.jpg') no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     @media (max-width: $screen-sm-max) {
@@ -338,7 +338,7 @@
     }
 }
 
-.boton-seccion, input[type=submit], button {
+.boton-seccion, input[type=submit] {
     padding: 5px 15px;
     background-color: $color-enlaces;
     color: white;

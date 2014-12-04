@@ -17,7 +17,8 @@ section div.container {
 h1 {
     color: $color-titulos;
 }
-a {
+a, a:active, a:visited, a:focus {
+    cursor: pointer;
     color: $color-enlaces;
     text-decoration: none;
     &:hover {

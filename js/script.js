@@ -52,6 +52,16 @@
       });
 
       $("#contact-form").validate({
+        highlight: function(element) {
+          $(element).css({"background-color": "#ecc"});
+        },
+        unhighlight: function(element) {
+          $(element).css({"background-color": "#ddd"});
+        },
+        errorPlacement: function(error, element) {
+          var $label = element.parent("div").find("label");
+          error.insertAfter($label);
+        },
         rules: {
           telefono: {
             number: true
@@ -62,17 +72,20 @@
         },
         messages: {
           nombre: {
-            required: "Introduce tu nombre"
+            required: "Introduce tu nombre o el de tu empresa"
           },
           texto: {
-            required: "Introduce tu comentario o consulta"
+            required: "Introduce tu consulta o sugerencia"
           },
           telefono: {
-            number: "El teléfono no es válido"
+            number: "Introduce un teléfono válido o deja el campo vacío"
           },
           email: {
-            required: "Introduce tu dirección de email",
-            email: "El email no es válido"
+            required: "Introduce tu email",
+            email: "Email inválido"
+          },
+          condiciones: {
+            required: "Acepta la política de privacidad"
           }
         },
         submitHandler: function(form) {
@@ -81,7 +94,6 @@
         }
       });
 
-      $(".error").tooltip();
       $('[data-toggle="tooltip"]').tooltip();
 
 
@@ -93,6 +105,32 @@
       $(window).on("resize", function(){
         menu();
       });
+
+
+      // SCROLL ANCHORS
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 800);
+            return false;
+          }
+        }
+      });
+
+
+      // SHOW PRIVACY
+      $("#show-privacy").click(function() {
+        $(".alert").slideToggle("slow");
+      });
+
+
+      // MAPS
+      google.maps.event.addDomListener(window, 'load', initialize);
 
 
     });
@@ -150,6 +188,21 @@
         else {
           $(window).unbind("scroll");
         }
+    }
+
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(41.538924, -4.662409);
+      var mapOptions = {
+        zoom: 11,
+        center: myLatlng
+      };
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Hello World!'
+      });
     }
 
 
