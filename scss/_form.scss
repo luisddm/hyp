@@ -42,20 +42,21 @@ label.error {
   background: #922;
   float: right;
   font-size: 11px;
-  padding: 1px 6px;
+  padding: 2px 6px;
   border-radius: 0 2px 2px 0;
+  height: 20px;
   &:after {
     right: 100%;
     top: 0;
     border: solid transparent;
     content: " ";
-    height: 0;
+    height: 20px;
     width: 0;
     position: absolute;
     pointer-events: none;
     border-right-color: #922;
-    border-width: 9px;
-    margin-left: -9px;
+    border-width: 10px;
+    margin-left: -10px;
   }
 }
 

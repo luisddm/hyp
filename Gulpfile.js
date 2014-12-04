@@ -16,7 +16,7 @@
         del = require('del'),
         plumber = require('gulp-plumber'),
         autoprefixer = require('gulp-autoprefixer');
-        
+
 
     // Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a build
     gulp.task('scss', function () {
@@ -42,7 +42,7 @@
         gulp.src('scss/*.scss')
             .pipe(sass())
             .pipe(uncss({
-                html: glob.sync('**/*.html')
+                html: glob.sync('templates/**/*.html')
             }))
             .pipe(minifyCss({
                 keepSpecialComments: 0

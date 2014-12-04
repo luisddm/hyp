@@ -150,7 +150,7 @@
               if(scrollTop < 20) {
 
                 $menu
-                  .css({"background-color": "rgba(0,0,0,0.8)", "border-bottom": "2px solid rgba(188,209,92,0)", "margin-top": 20-scrollTop})
+                  .css({"background-color": "rgba(10,10,10,0.8)", "border-bottom": "2px solid rgba(188,209,92,0)", "margin-top": 20-scrollTop, "box-shadow": "none"})
                   .find(".navbar").css({"margin-top": "35px", "margin-bottom": "35px"});
 
                 $logo
@@ -165,7 +165,7 @@
                 var transBorder = (scrollTop - 20) * 0.01428;
 
                 $menu
-                  .css({"background-color": "rgba(0,0,0,"+trans+")", "border-bottom": "2px solid rgba(188,209,92,"+transBorder+")", "margin-top": 0})
+                  .css({"background-color": "rgba(10,10,10,"+trans+")", "border-bottom": "2px solid rgba(188,209,92,"+transBorder+")", "margin-top": 0, "box-shadow": "none"})
                   .find(".navbar").css({"margin-top": x, "margin-bottom": x});
 
                 $logo
@@ -175,7 +175,7 @@
               } else if(scrollTop > 90){
 
                 $menu
-                  .css({"background-color": "rgba(0,0,0,1)", "border-bottom": "2px solid rgba(188,209,92,1)", "margin-top": 0})
+                  .css({"background-color": "rgba(20,20,20,1)", "border-bottom": "2px solid rgba(188,209,92,1)", "margin-top": 0, "box-shadow": "0 0 15px 5px #222"})
                   .find(".navbar").css({"margin-top": "0px", "margin-bottom": "0px"});
 
                 $logo

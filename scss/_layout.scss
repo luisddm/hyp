@@ -28,6 +28,7 @@ a, a:active, a:visited, a:focus {
 }
 .w100 {
     width: 100%;
+    margin: 10px 0;
     @media (max-width: $screen-sm-max) {
         margin-top: 20px;
     }
@@ -43,4 +44,13 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: solid 10px $color-titulos;
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+    }
+    .line {
+      @media (max-width: $screen-xs-max) {
+        clear: both;
+        display: block;
+      }
+    }
 }
