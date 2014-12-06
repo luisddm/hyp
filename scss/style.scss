@@ -1,10 +1,12 @@
 @import "bootstrap";
+@import "font-awesome";
 @import "variables";
 @import "layout";
 @import "menu";
 @import "form";
 
 .parrafos h1 {
+    margin-bottom: 15px;
     &:hover {
         color: lighten($color-titulos, 15%);
     }
@@ -106,6 +108,15 @@
             &:before {
                 content: "■ ";
                 color: $color-enlaces;
+            }
+            li {
+              padding-left: 1em;
+              text-indent: -1em;
+              margin-top: 10px;
+              &:before {
+                content: "• ";
+                color: $color-titulos;
+              }
             }
         }
     }
@@ -266,7 +277,7 @@
         }
     }
 }
-  .galeria {
+.galeria {
     p {
       margin: 15px 0 30px 0;
     }
@@ -308,6 +319,10 @@
   }
 
 
+}
+
+.mostrar-galeria {
+  display: none;
 }
 
 .obragrande {
@@ -374,4 +389,9 @@
 .modal-content {
     background-color: $color-texto;
     border: solid 2px $color-titulos;
+}
+
+
+img + p {
+  margin-top: 10px;
 }

@@ -29,6 +29,8 @@
       $(".mostrar").hide();
 
       $('.obra').on("click", function() {
+        $(".mostrar-galeria").show();
+        $(window).scrollTop(0);
         $('.obra').removeClass("activo").addClass("small").removeClass("big");
         $(this).addClass("activo");
         var index = $(this).index(".obra");
@@ -89,12 +91,40 @@
           }
         },
         submitHandler: function(form) {
-          alert('valid form');
-          return false;
+          submitForm($("form").serialize());
         }
       });
 
-      $('[data-toggle="tooltip"]').tooltip();
+
+
+
+      // SUBMIT FORM
+      function submitForm(form) {
+        // show that something is loading
+        $('h1').html("<b>Enviando...</b>");
+
+        $.ajax ({
+          type: "POST",
+          dataType: 'json',
+          url: "mail.php",
+          data: form
+        }).done(function(data){
+
+          // show the response
+          $('h1').html("<b>OK!</b>");
+
+        })
+        .fail(function() {
+
+          // just in case posting your form failed
+          alert( "Posting failed." );
+
+        });
+
+
+        // to prevent refreshing the whole page page
+        return false;
+      }
 
 
 

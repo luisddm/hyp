@@ -9,6 +9,10 @@ textarea {
     color: $color-texto;
     font-family: Helvetica, Arial, sans-serif;
     border-radius: 1px;
+    &:focus {
+      outline: $color-enlaces solid 2px;
+      background-color: $color-texto-blanco;
+    }
 }
 label {
     font-weight: 400;

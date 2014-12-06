@@ -81,6 +81,13 @@
             .pipe(gulp.dest('build/img'));
     });
 
+    // Copio las fuentes a build
+    gulp.task('fonts', function () {
+      gulp.src('bower_components/fontawesome/fonts/**')
+      .pipe(changed('build/fonts/**'))
+      .pipe(gulp.dest('build/fonts'));
+    });
+
     // Mantengo un servidor httpd que hace que el navegador se recargue cuando detecta cambios
     gulp.task('browser-sync', function () {
         browserSync.init(["build/css/*.css", "build/js/*.js", "build/*.html", "build/img/**"], {
