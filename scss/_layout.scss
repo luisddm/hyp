@@ -7,10 +7,10 @@ body {
 section div.container {
   margin-top: 180px;
   @media (max-width: $screen-sm-max) {
-    margin-top: 215px;
+    margin-top: 225px;
   }
   @media (max-width: $screen-xs-max) {
-      margin-top: 270px;
+      margin-top: 40px;
   }
 }
 
