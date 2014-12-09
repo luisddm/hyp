@@ -10,10 +10,10 @@
 
         spinner.show().spin();
 
-        fotogrande.hide();
+        fotogrande.css("opacity", 0);
         var imgaux = $('<img />').attr('src', foto).on("load", function() {
           fotogrande.attr('src', imgaux.attr('src'));
-          fotogrande.fadeIn();
+          fotogrande.animate({"opacity": 1}, 500);
 
           spinner.hide().spin(false);
 
