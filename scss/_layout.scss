@@ -23,6 +23,19 @@ a, a:active, a:visited, a:focus {
         margin-top: 20px;
     }
 }
+.margin-img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
 .pull-right-sm {
     @media (max-width: $screen-sm-max) {
         float: right;

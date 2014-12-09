@@ -30,7 +30,10 @@
 
       $('.obra').on("click", function() {
         $(".mostrar-galeria").show();
-        $(window).scrollTop(0);
+        //$(window).scrollTop(0);
+        $("html,body").animate({
+          scrollTop: $(".mostrar-galeria").offset().top
+        }, 700);
         $('.obra').removeClass("activo").addClass("small").removeClass("big");
         $(this).addClass("activo");
         var index = $(this).index(".obra");
