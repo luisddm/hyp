@@ -13,10 +13,17 @@
 }
 #portada {
     background: url('../img/background.jpg') no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
+    padding-top: 180px;
+    padding-bottom: 20px;
     @media (max-width: $screen-sm-max) {
-      background-size: auto 100%;
+      padding-top: 160px;
+      padding-bottom: 10px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding-top: 15px;
+      padding-bottom: 10px;
     }
 }
 .portada-imagen {
@@ -137,7 +144,6 @@
     color: $color-texto-blanco;
     padding-bottom: 30px;
     padding-top: 30px;
-    margin-bottom: 40px;
     li {
         line-height: 2em;
         list-style-type: square;
