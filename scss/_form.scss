@@ -3,7 +3,7 @@ input[type=email],
 input[type=tel],
 textarea {
     border: 0;
-    background-color: #bbb;
+    background-color: darken($color-texto-blanco, 20%);
     padding: 6px 12px;
     width: 100%;
     color: $color-texto;
@@ -43,7 +43,7 @@ input[type=checkbox]:checked + label
 
 label.error {
   position: relative;
-  background: #922;
+  background: $color-error;
   float: right;
   font-size: 11px;
   padding: 2px 6px;
@@ -58,7 +58,7 @@ label.error {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #922;
+    border-right-color: $color-error;
     border-width: 10px;
     margin-left: -10px;
   }

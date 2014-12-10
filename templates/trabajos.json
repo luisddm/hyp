@@ -3,7 +3,7 @@
 {
   "name" : "Autovía A-66",
   "imagenPrincipal" : "img/A66/A66_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Autovía  de la Plata (N-630) Gijón - Sevilla. Tramo: Salamanca Sur-Cuatro Calzadas (Salamanca). || Autovía de la Plata (N-630) Gijón - Sevilla. Tramo: Cuatro Calzadas-Montejo (Salamanca)",
   "images" : [
     {"index" : 1, "img" : "img/A66/A66_001.jpg", "thumbnail" : "img/A66/A66_001_mini.jpg"},
     {"index" : 2, "img" : "img/A66/A66_002.jpg", "thumbnail" : "img/A66/A66_002_mini.jpg"},
@@ -16,7 +16,7 @@
 {
   "name" : "Autovía VA-30",
   "imagenPrincipal" : "img/VA30/VA30_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Circunvalación de Valladolid. Tramo: Ctra. CL-601. Autovía A-62 de Castilla (Valladolid). || Circunvalación de Valladolid. Tramo: 1041. Conexión Ronda Sur-Ronda Este (Valladolid).",
   "images" : [
     {"index" : 1, "img" : "img/VA30/VA30_001.jpg", "thumbnail" : "img/VA30/VA30_001_mini.jpg"},
     {"index" : 2, "img" : "img/VA30/VA30_002.jpg", "thumbnail" : "img/VA30/VA30_002_mini.jpg"},
@@ -33,7 +33,7 @@
 {
   "name" : "Autovía A-50",
   "imagenPrincipal" : "img/A50/A50_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Tramo: Narros del Castillo – Peñaranda de Bracamonte – Villar de Gallimazo (Ávila – Salamanca).",
   "images" : [
     {"index" : 1, "img" : "img/A50/A50_001.jpg", "thumbnail" : "img/A50/A50_001_mini.jpg"},
     {"index" : 2, "img" : "img/A50/A50_002.jpg", "thumbnail" : "img/A50/A50_002_mini.jpg"}
@@ -42,7 +42,7 @@
 {
   "name" : "Ciudad Rodrigo",
   "imagenPrincipal" : "img/CiudadRodrigo/ciudad_rodrigo_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Autovía de Castilla (A-62). Tramo Ciudad Rodrigo – Fuentes de Oñoro (Salamanca).",
   "images" : [
     {"index" : 1, "img" : "img/CiudadRodrigo/ciudad_rodrigo_001.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_001_mini.jpg"},
     {"index" : 2, "img" : "img/CiudadRodrigo/ciudad_rodrigo_002.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_002_mini.jpg"},
@@ -53,7 +53,7 @@
 {
   "name" : "Payuelos",
   "imagenPrincipal" : "img/Payuelos/payuelos_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Canal bajo de los Payuelos. Fase II (León).",
   "images" : [
     {"index" : 1, "img" : "img/Payuelos/payuelos_001.jpg", "thumbnail" : "img/Payuelos/payuelos_001_mini.jpg"},
     {"index" : 2, "img" : "img/Payuelos/payuelos_002.jpg", "thumbnail" : "img/Payuelos/payuelos_002_mini.jpg"},
@@ -64,7 +64,7 @@
 {
   "name" : "Palanquinos",
   "imagenPrincipal" : "img/Palanquinos/palanquinos_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Corredor norte-noroeste de alta velocidad. Tramo Palencia-León. Subtramo Palanquinos-Onzonilla (León).",
   "images" : [
     {"index" : 1, "img" : "img/Palanquinos/palanquinos_001.jpg", "thumbnail" : "img/Palanquinos/palanquinos_001.jpg"},
     {"index" : 2, "img" : "img/Palanquinos/palanquinos_002.jpg", "thumbnail" : "img/Palanquinos/palanquinos_002.jpg"},
@@ -77,7 +77,7 @@
 {
   "name" : "Parque tecnológico",
   "imagenPrincipal" : "img/ParqueTecnologico/parque_tecnologico_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Ampliación Parque Tecnológico de Boecillo. Recinto III.",
   "images" : [
     {"index" : 1, "img" : "img/ParqueTecnologico/parque_tecnologico_001.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_001_mini.jpg"},
     {"index" : 2, "img" : "img/ParqueTecnologico/parque_tecnologico_002.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_002_mini.jpg"},
@@ -91,7 +91,7 @@
 {
   "name" : "Pinar de Antequera",
   "imagenPrincipal" : "img/PinarAntequera/pinar_antequera_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Nuevo acceso ferroviario al norte y noroeste de España: Madrid-Segovia-Valladolid / Medina del Campo. Tramo: accesos a Valladolid e integración urbana de su RAF. Subtramo: río Duero – Túnel Pinar de Antequera.",
   "images" : [
     {"index" : 1, "img" : "img/PinarAntequera/pinar_antequera_001.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_001_mini.jpg"},
     {"index" : 2, "img" : "img/PinarAntequera/pinar_antequera_002.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_002_mini.jpg"},
@@ -103,7 +103,7 @@
 {
   "name" : "Ponferrada",
   "imagenPrincipal" : "img/Ponferrada/ponferrada_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Recuperación del entorno del Castillo, Foso y Calle Gil y Carrasco en Ponferrada (León).",
   "images" : [
     {"index" : 1, "img" : "img/Ponferrada/ponferrada_001.jpg", "thumbnail" : "img/Ponferrada/ponferrada_001_mini.jpg"},
     {"index" : 2, "img" : "img/Ponferrada/ponferrada_002.jpg", "thumbnail" : "img/Ponferrada/ponferrada_002_mini.jpg"},
@@ -118,7 +118,7 @@
 {
   "name" : "Ronda Este",
   "imagenPrincipal" : "img/RondaEste/ronda_este_mini.jpg",
-  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ullamcorper libero. Sed non vestibulum nisi. Etiam blandit semper nisl, vel eleifend tellus mattis vitae. Donec id viverra nisl, a bibendum libero.",
+  "description" : "Autovía VA-30. Circunvalación de Valladolid. Tramo: conexión Autovía del Duero (A-11) y Autovía de Castilla (A-62).",
   "images" : [
     {"index" : 1, "img" : "img/RondaEste/ronda_este_001.jpg", "thumbnail" : "img/RondaEste/ronda_este_001_mini.jpg"},
     {"index" : 2, "img" : "img/RondaEste/ronda_este_002.jpg", "thumbnail" : "img/RondaEste/ronda_este_002_mini.jpg"},

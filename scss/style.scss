@@ -51,10 +51,10 @@
         right: 15px;
         height: 100%;
         transition: 0.3s;
-        background-color: rgba(black, 0.1);
+        background-color: rgba($black, 0.1);
         @media (max-width: $screen-xs-max) {
             margin-left: 200px;
-            background-color: rgba(black, 0.6);
+            background-color: rgba($black, 0.6);
         }
         @media (max-width: $screen-xs) {
             margin-left: 105px;
@@ -62,7 +62,7 @@
         }
         @media (max-width: 379px) {
             margin: 0;
-            background-color: rgba(black, 0.2);
+            background-color: rgba($black, 0.2);
         }
         h4 {
             font-size: 35px;
@@ -91,13 +91,13 @@
         }
     }
     &:hover div {
-        background-color: rgba(black, 0.5);
+        background-color: rgba($black, 0.5);
         height: 100%;
     }
 }
 .parrafos {
     margin-top: 20px;
-    color: #eee;
+    color: $color-texto-blanco;
     padding-top: 20px;
     padding-bottom: 20px;
     ul {
@@ -123,24 +123,24 @@
         }
     }
     strong {
-        color: white;
+        color: $white;
     }
 }
 .titulo {
     top: 0;
     position: relative;
     padding: 15px;
-    background-color: black;
+    background-color: $black;
     color: $color-texto-blanco;
     overflow: hidden;
 }
 .fondo-texto {
-    background-color: rgba(black, 0.8);
+    background-color: rgba($black, 0.8);
     color: $color-texto-blanco;
     padding-bottom: 30px;
     padding-top: 30px;
     @media (max-width: $screen-xs-max) {
-      background-color: rgba(black, 0.6);
+      background-color: rgba($black, 0.6);
     }
     li {
         line-height: 2em;
@@ -165,7 +165,7 @@
 .fondo-obras {
   @media (max-width: $screen-xs-max) {
     padding: 15px;
-    background-color: rgba(black, 0.6);
+    background-color: rgba($black, 0.6);
   }
 }
 .obras {
@@ -184,9 +184,9 @@
               width: 100%;
               height: 80px;
               border: 0;
-              background-color: rgba(black, 0.8);
+              background-color: rgba($black, 0.8);
               &:nth-child(even) {
-                background-color: lighten(rgba(black, 0.8), 15%);
+                background-color: lighten(rgba($black, 0.8), 15%);
               }
             }
             position: relative;
@@ -194,7 +194,7 @@
             cursor: pointer;
             display: inline-block;
             float: left;
-            border: 8px solid rgba(black, 0);
+            border: 8px solid rgba($black, 0);
             margin: 0;
             padding: 0;
             transition: 0.5s;
@@ -258,7 +258,7 @@
         }
         &.big {
             cursor: pointer;
-            background-color: rgba(black, 0.8);
+            background-color: rgba($black, 0.8);
             width: 48%;
             float: left;
             margin: 1%;
@@ -272,11 +272,11 @@
               width: 100%;
               height: 80px;
               border: 0;
-              background-color: rgba(black, 0.8);
+              background-color: rgba($black, 0.8);
               padding: 0;
               margin: 0;
               &:nth-child(even) {
-                background-color: lighten(rgba(black, 0.8), 15%);
+                background-color: lighten(rgba($black, 0.8), 15%);
               }
             }
             img {
@@ -306,7 +306,7 @@
                 }
                 h3 {
                     color: $color-texto-blanco;
-                    text-shadow: 3px 3px 3px black;
+                    text-shadow: 3px 3px 3px $black;
                     text-align: left;
                     color: $color-titulos;
                     font-size: 28px;
@@ -390,7 +390,7 @@
         left: 0;
         opacity: 0;
         transition: opacity 0.4s;
-        background: rgba(255,255,255,0.4) url('../img/maximize.png') no-repeat center center;
+        background: rgba($white, 0.4) url('../img/maximize.png') no-repeat center center;
         background-size: 100%;
       }
 
@@ -427,7 +427,7 @@
             left: -40px;
             width: 80px;
             height: 80px;
-            background-color: rgba(black, 0.8);
+            background-color: rgba($black, 0.8);
             border-radius: 10px;
         }
     }
@@ -436,7 +436,7 @@
 .boton-seccion, input[type=submit] {
     padding: 5px 15px;
     background-color: $color-enlaces;
-    color: white;
+    color: $white;
     font-weight: 700;
     margin: 20px 0;
     transition: 0.3s;
@@ -444,16 +444,16 @@
     border: 0;
     &:hover {
         background-color: $color-titulos;
-        color: black;
+        color: $black;
     }
 }
 
 
 
-.hidrosiembra { position: relative; background: #222; border: 4px solid #bcd15c; padding: 20px; margin: 40px 0;}
+.hidrosiembra { position: relative; background: $color-texto; border: 4px solid $color-titulos; padding: 20px; margin: 40px 0;}
 .hidrosiembra:after, .hidrosiembra:before { bottom: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
-.hidrosiembra:after { border-color: rgba(34, 34, 34, 0); border-bottom-color: #222; border-width: 20px; margin-left: -20px; }
-.hidrosiembra:before { border-color: rgba(188, 209, 92, 0); border-bottom-color: #bcd15c; border-width: 26px; margin-left: -26px; }
+.hidrosiembra:after { border-color: rgba($color-texto, 0); border-bottom-color: $color-texto; border-width: 20px; margin-left: -20px; }
+.hidrosiembra:before { border-color: rgba($color-titulos, 0); border-bottom-color: $color-titulos; border-width: 26px; margin-left: -26px; }
 
 
 
