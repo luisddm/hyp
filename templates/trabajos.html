@@ -7,10 +7,10 @@
     <div class="container fondo-obras">
         <div class="row">
 
-            <div class="col-lg-12 col-md-12 obras">
+            <div class="col-lg-12 col-md-12 obras big">
 
               {% for obra in obras %}
-              <div class="obra big">
+              <div class="obra">
                 <img src="{{ obra.imagenPrincipal }}">
                 <div>
                   <h3>{{ obra.name }}</h3>
@@ -42,7 +42,7 @@
             {% endfor %}
         </div>
         <div class="col-lg-8 col-md-8 obragrande">
-            <img class="fotogrande">
+            <img src="img/placeholder.png" class="fotogrande">
             <div>
                 <div class="bbb"></div>
             </div>

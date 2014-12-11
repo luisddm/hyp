@@ -29,19 +29,31 @@
       $(".mostrar").hide();
 
       $('.obra').on("click", function() {
+        var $self = $(this);
+
+        if($(this).parent().hasClass("big")) {
+          $(this).parent().addClass("small").removeClass("big");
+        }
+
+        var index = $self.index(".obra");
+        var $mostrar = $(".mostrar");
+        var $actual = $mostrar.eq(index);
+
+        $('.obra').removeClass("activo");
+        $self.addClass("activo");
+
+        $mostrar.hide();
+        var fotogrande = $mostrar.find('.fotogrande');
+        fotogrande.attr('src', 'img/placeholder.png');
+        $mostrar.eq(index).show();
+
         $(".mostrar-galeria").show();
-        //$(window).scrollTop(0);
         $("html,body").animate({
           scrollTop: $(".mostrar-galeria").offset().top
-        }, 700);
-        $('.obra').removeClass("activo").addClass("small").removeClass("big");
-        $(this).addClass("activo");
-        var index = $(this).index(".obra");
-        var mostrar = $(".mostrar");
-        var actual = mostrar.eq(index);
-        mostrar.hide();
-        mostrar.eq(index).show();
-        ponerFoto(actual, actual.find(".mini").eq(0).data('foto'));
+        }, 700, function(){
+          ponerFoto($actual, $actual.find(".mini").eq(0).data('foto'));
+        });
+
       });
 
       var hash = window.location.search.substring(1);

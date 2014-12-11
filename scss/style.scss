@@ -169,8 +169,8 @@
   }
 }
 .obras {
-    .obra {
-        &.small {
+    &.small {
+        .obra {
             box-sizing: content-box;
             height: 105px;
             width: 18.55%;
@@ -242,8 +242,9 @@
                     padding: 0;
                     margin: 0;
                     font-weight: 700;
+                    font-size: 22px;
                     @media (max-width: $screen-sm-max) {
-                      font-size: 21px;
+                      font-size: 20px;
                     }
                     @media (max-width: $screen-xs-max) {
                       text-align: left;
@@ -256,7 +257,9 @@
                 }
             }
         }
-        &.big {
+    }
+    &.big {
+        .obra {        
             cursor: pointer;
             background-color: rgba($black, 0.8);
             width: 48%;

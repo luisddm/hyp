@@ -40,7 +40,7 @@
   ]
 },
 {
-  "name" : "Ciudad Rodrigo",
+  "name" : "Autovía de Castilla",
   "imagenPrincipal" : "img/CiudadRodrigo/ciudad_rodrigo_mini.jpg",
   "description" : "Autovía de Castilla (A-62). Tramo Ciudad Rodrigo – Fuentes de Oñoro (Salamanca).",
   "images" : [
@@ -51,7 +51,7 @@
   ]
 },
 {
-  "name" : "Payuelos",
+  "name" : "Canal Bajo de los Payuelos",
   "imagenPrincipal" : "img/Payuelos/payuelos_mini.jpg",
   "description" : "Canal bajo de los Payuelos. Fase II (León).",
   "images" : [
@@ -62,7 +62,7 @@
   ]
 },
 {
-  "name" : "Palanquinos",
+  "name" : "Corredor Norte-Noroeste",
   "imagenPrincipal" : "img/Palanquinos/palanquinos_mini.jpg",
   "description" : "Corredor norte-noroeste de alta velocidad. Tramo Palencia-León. Subtramo Palanquinos-Onzonilla (León).",
   "images" : [
@@ -75,7 +75,7 @@
   ]
 },
 {
-  "name" : "Parque tecnológico",
+  "name" : "Parque Tecnológico de Boecillo",
   "imagenPrincipal" : "img/ParqueTecnologico/parque_tecnologico_mini.jpg",
   "description" : "Ampliación Parque Tecnológico de Boecillo. Recinto III.",
   "images" : [
@@ -89,7 +89,7 @@
   ]
 },
 {
-  "name" : "Pinar de Antequera",
+  "name" : "Nuevo Acceso Ferroviario a Valladolid",
   "imagenPrincipal" : "img/PinarAntequera/pinar_antequera_mini.jpg",
   "description" : "Nuevo acceso ferroviario al norte y noroeste de España: Madrid-Segovia-Valladolid / Medina del Campo. Tramo: accesos a Valladolid e integración urbana de su RAF. Subtramo: río Duero – Túnel Pinar de Antequera.",
   "images" : [
@@ -101,7 +101,7 @@
   ]
 },
 {
-  "name" : "Ponferrada",
+  "name" : "Recuperación del entorno del Castillo de Ponferrada",
   "imagenPrincipal" : "img/Ponferrada/ponferrada_mini.jpg",
   "description" : "Recuperación del entorno del Castillo, Foso y Calle Gil y Carrasco en Ponferrada (León).",
   "images" : [
@@ -116,7 +116,7 @@
   ]
 },
 {
-  "name" : "Ronda Este",
+  "name" : "Autovía VA-30",
   "imagenPrincipal" : "img/RondaEste/ronda_este_mini.jpg",
   "description" : "Autovía VA-30. Circunvalación de Valladolid. Tramo: conexión Autovía del Duero (A-11) y Autovía de Castilla (A-62).",
   "images" : [
