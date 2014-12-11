@@ -21,7 +21,7 @@
     "fancybox": "~2.1.5",
     "fontawesome": "~4.2.0",
     "spinjs": "~2.0.1",
-    "jquery": "~2.1.1",
+    "jquery": "~1",
     "jquery-validation": "~1.13.1"
   }
 }

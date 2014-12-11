@@ -12,7 +12,9 @@
     }
 }
 #portada {
-    background: url('../img/background.jpg') no-repeat;
+    background-color: $color-titulos;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     padding-top: 160px;
@@ -25,6 +27,9 @@
     position: relative;
     margin-bottom: 40px;
     overflow: hidden;
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 0;      
+    }
     img {
         width: 100%;
         -webkit-transition: 0.5s;
@@ -135,6 +140,7 @@
     overflow: hidden;
 }
 .fondo-texto {
+    background-color: $black; //ie8 fallback
     background-color: rgba($black, 0.8);
     color: $color-texto-blanco;
     padding-bottom: 30px;
@@ -259,7 +265,7 @@
         }
     }
     &.big {
-        .obra {        
+        .obra {
             cursor: pointer;
             background-color: rgba($black, 0.8);
             width: 48%;
@@ -477,4 +483,9 @@
 
 img + p {
   margin-top: 10px;
+}
+
+.enviar-msg {
+  display: none;
+  padding-left: 15px;
 }

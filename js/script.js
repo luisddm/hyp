@@ -2,11 +2,11 @@
 
     "use strict";
 
-    $(document).ready(function(){
+    jQuery(document).ready(function($){
 
-      var ponerFoto = function (row, foto) {
-        var fotogrande = row.find('.fotogrande');
-        var spinner = row.find('.bbb');
+      var ponerFoto = function (mostrar, foto) {
+        var fotogrande = mostrar.find('.fotogrande');
+        var spinner = mostrar.find('.bbb');
 
         spinner.show().spin();
 
@@ -23,7 +23,7 @@
 
       $('.mini').parent("div").on("click", function() {
         var $self = $(this).children(".mini");
-        ponerFoto($self.closest(".row"), $self.data('foto'));
+        ponerFoto($self.closest(".mostrar"), $self.data('foto'));
       });
 
       $(".mostrar").hide();
@@ -31,8 +31,9 @@
       $('.obra').on("click", function() {
         var $self = $(this);
 
-        if($(this).parent().hasClass("big")) {
+        if($(this).parent().hasClass("big") && $(window).width() >= 768) {
           $(this).parent().addClass("small").removeClass("big");
+          $(window).scrollTop(0);
         }
 
         var index = $self.index(".obra");
@@ -49,8 +50,8 @@
 
         $(".mostrar-galeria").show();
         $("html,body").animate({
-          scrollTop: $(".mostrar-galeria").offset().top
-        }, 700, function(){
+          scrollTop: $(".mostrar-galeria").offset().top - 25
+        }, 600, function(){
           ponerFoto($actual, $actual.find(".mini").eq(0).data('foto'));
         });
 
@@ -115,8 +116,11 @@
 
       // SUBMIT FORM
       function submitForm(form) {
+
+        var $enviarMsg = $('.enviar-msg');
+        var $enviarBoton = $('.enviar-boton');
         // show that something is loading
-        $('h1').html("<b>Enviando...</b>");
+        $enviarMsg.show();
 
         $.ajax ({
           type: "POST",
@@ -126,13 +130,14 @@
         }).done(function(data){
 
           // show the response
-          $('h1').html("<b>OK!</b>");
+          $enviarMsg.html('<i class="fa fa-check"></i> Enviado');
+          $enviarBoton.attr("disabled", "disabled");
 
         })
         .fail(function() {
 
           // just in case posting your form failed
-          alert( "Posting failed." );
+          $enviarMsg.html('¡Error!');
 
         });
 
@@ -161,7 +166,7 @@
           if (target.length) {
             $('html,body').animate({
               scrollTop: target.offset().top
-            }, 800);
+            }, 600);
             return false;
           }
         }
@@ -185,7 +190,7 @@
     function menu() {
 
         var $menu = $("header");
-        var $logo = $(".logo");
+        var $logo = $menu.find(".logo");
 
         if($(window).width() >= 768) {
 
@@ -312,15 +317,6 @@
           "visibility": "off"
         }
         ]
-      },
-      {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "off"
-        }
-        ]
       }
       ]						;
 
@@ -328,9 +324,9 @@
       // as well as the name to be displayed on the map type control.
       var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
-      var myLatlng = new google.maps.LatLng(41.538924, -4.662409);
+      var myLatlng = new google.maps.LatLng(41.542187, -4.663383);
       var mapOptions = {
-        zoom: 11,
+        zoom: 14,
         center: myLatlng,
         scrollwheel: false,
         mapTypeControlOptions: {
