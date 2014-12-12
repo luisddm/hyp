@@ -245,86 +245,9 @@
 
     function initialize() {
 
-      // Create an array of styles.
-      var styles = [
-      {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "on"
-        },
-        {
-          "color": "#46bcec"
-        }
-        ]
-      },
-      {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-        {
-          "color": "#f2f2f2"
-        }
-        ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-        {
-          "saturation": -100
-        },
-        {
-          "lightness": 45
-        }
-        ]
-      },
-      {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "simplified"
-        }
-        ]
-      },
-      {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-        {
-          "visibility": "off"
-        }
-        ]
-      },
-      {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-        {
-          "color": "#444444"
-        }
-        ]
-      },
-      {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "off"
-        }
-        ]
-      }
-      ]						;
-
-      // Create a new StyledMapType object, passing it the array of styles,
-      // as well as the name to be displayed on the map type control.
-      var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
-
       var myLatlng = new google.maps.LatLng(41.542187, -4.663383);
       var mapOptions = {
-        zoom: 14,
+        zoom: 15,
         center: myLatlng,
         scrollwheel: false,
         mapTypeControlOptions: {
@@ -332,10 +255,6 @@
         }
       };
       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-      //Associate the styled map with the MapTypeId and set it to display.
-      map.mapTypes.set('map_style', styledMap);
-      map.setMapTypeId('map_style');
 
       var marker = new google.maps.Marker({
         position: myLatlng,
