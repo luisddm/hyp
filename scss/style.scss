@@ -28,7 +28,7 @@
     margin-bottom: 40px;
     overflow: hidden;
     @media (max-width: $screen-xs-max) {
-      margin-bottom: 0;      
+      margin-bottom: 0;
     }
     img {
         width: 100%;
@@ -352,6 +352,10 @@
     }
 }
 .galeria {
+  margin-top: 25px;
+    h1 {
+      margin-top: 5px;
+    }
     p {
       margin: 15px 0 30px 0;
     }
@@ -359,35 +363,44 @@
     div {
       height: 100px;
       width: 100px;
+      margin: 3px;
+      &.maquinaria {
+        height: 80px;
+        width: 80px;
+        margin: 1px;
+      }
       display: inline-block;
       cursor: pointer;
       position: relative;
-      margin: 3px;
       @media (max-width: $screen-md-max) {
         width: 90px;
         height: 90px;
         margin: 0;
+        &.maquinaria {
+          height: 67px;
+          width: 67px;
+        }
       }
       @media (max-width: $screen-sm-max) {
         width: 80px;
         height: 80px;
         margin: 0;
+        &.maquinaria {
+          height: 65px;
+          width: 65px;
+        }
       }
       .mini {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: 100%;
         margin: 3px;
         @media (max-width: $screen-md-max) {
-          width: 90px;
-          height: 90px;
           margin: 0;
         }
         @media (max-width: $screen-sm-max) {
-          width: 80px;
-          height: 80px;
           margin: 0;
         }
       }
@@ -406,9 +419,7 @@
       &:hover .mini-maximize {
         opacity: 1;
       }
-
     }
-
 }
 
 .mostrar-galeria {

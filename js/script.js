@@ -26,8 +26,6 @@
         ponerFoto($self.closest(".mostrar"), $self.data('foto'));
       });
 
-      $(".mostrar").hide();
-
       $('.obra').on("click", function() {
         var $self = $(this);
 
@@ -50,7 +48,7 @@
 
         $(".mostrar-galeria").show();
         $("html,body").animate({
-          scrollTop: $(".mostrar-galeria").offset().top - 25
+          scrollTop: $(".mostrar-galeria").offset().top - 20
         }, 600, function(){
           ponerFoto($actual, $actual.find(".mini").eq(0).data('foto'));
         });
