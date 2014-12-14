@@ -125,6 +125,21 @@
     {"index" : 3, "img" : "img/RondaEste/ronda_este_003.jpg", "thumbnail" : "img/RondaEste/ronda_este_003_mini.jpg"},
     {"index" : 4, "img" : "img/RondaEste/ronda_este_004.jpg", "thumbnail" : "img/RondaEste/ronda_este_004_mini.jpg"}
   ]
+},
+{
+  "name" : "Villa del Prado",
+  "imagenPrincipal" : "img/VillaDelPrado/villadelprado_mini.jpg",
+  "description" : "<strong>Villa del Prado.</strong>",
+  "images" : [
+    {"index" : 1, "img" : "img/VillaDelPrado/villadelprado_001.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_001_mini.jpg"},
+    {"index" : 2, "img" : "img/VillaDelPrado/villadelprado_002.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_002_mini.jpg"},
+    {"index" : 3, "img" : "img/VillaDelPrado/villadelprado_003.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_003_mini.jpg"},
+    {"index" : 4, "img" : "img/VillaDelPrado/villadelprado_004.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_004_mini.jpg"},
+    {"index" : 5, "img" : "img/VillaDelPrado/villadelprado_005.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_005_mini.jpg"},
+    {"index" : 6, "img" : "img/VillaDelPrado/villadelprado_006.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_006_mini.jpg"},
+    {"index" : 7, "img" : "img/VillaDelPrado/villadelprado_007.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_007_mini.jpg"},
+    {"index" : 8, "img" : "img/VillaDelPrado/villadelprado_008.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_008_mini.jpg"}
+  ]
 }
 
 ]}
