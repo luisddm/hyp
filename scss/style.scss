@@ -334,15 +334,19 @@
                     }
                 }
                 p.desc {
-                    font-size: 13px;
+                    strong {
+                      font-size: 14px;
+                      font-weight: 700;
+                    }
+                    font-size: 12px;
                     color: $color-texto-blanco;
                     @media (max-width: $screen-xs-max) {
                       display: none;
                     }
                 }
                 p.boton-seccion {
-                    margin-top: 5px;
-                    margin-bottom: 5px;
+                    margin-top: 3px;
+                    margin-bottom: 3px;
                     @media (max-width: $screen-xs-max) {
                       display: none;
                     }
@@ -454,7 +458,8 @@
 }
 
 .boton-seccion, input[type=submit] {
-    padding: 5px 15px;
+    font-size: 14px;
+    padding: 4px 13px;
     background-color: $color-enlaces;
     color: $white;
     font-weight: 700;
