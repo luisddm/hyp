@@ -42,23 +42,23 @@
 
       // SWIPE en imagen grande
       $(".fotogrande-div").swipe({
-        swipe: function(event, direction, distance, duration, fingerCount) {
+        swipeLeft: function() {
           var $galeria = $(this).closest(".galeria-row");
           var $fotograndeImg = $(this).find(".fotogrande-img");
           var maxIndex = $galeria.find(".mini-img").length - 1;
 
-          var nextIndex;
-          if(direction == "left") {
-            nextIndex = +$fotograndeImg.data("index") - 1;
-            if(nextIndex < 0) nextIndex = maxIndex;
-            ponerFoto($galeria, $galeria.find(".mini-img").eq(nextIndex));
+          var nextIndex = +$fotograndeImg.data("index") - 1;
+          if(nextIndex < 0) nextIndex = maxIndex;
+          ponerFoto($galeria, $galeria.find(".mini-img").eq(nextIndex));
+        },
+        swipeRight: function() {
+          var $galeria = $(this).closest(".galeria-row");
+          var $fotograndeImg = $(this).find(".fotogrande-img");
+          var maxIndex = $galeria.find(".mini-img").length - 1;
 
-          } else if(direction == "right") {
-            nextIndex = +$fotograndeImg.data("index") + 1;
-            if(nextIndex > maxIndex) nextIndex = 0;
-            ponerFoto($galeria, $galeria.find(".mini-img").eq(nextIndex));
-
-          }
+          var nextIndex = +$fotograndeImg.data("index") + 1;
+          if(nextIndex > maxIndex) nextIndex = 0;
+          ponerFoto($galeria, $galeria.find(".mini-img").eq(nextIndex));
         }
       });
 
