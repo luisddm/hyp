@@ -4,34 +4,8 @@
 
     jQuery(document).ready(function($){
 
-      var ponerFoto = function (galeriaSection, miniImg) {
-        var index = miniImg.parent(".mini-div").index();
-        var link = miniImg.data('foto');
-        var fotogrande = galeriaSection.find('.fotogrande-img');
-        var spinner = galeriaSection.find('.loading');
-
-        spinner.show().spin();
-
-        fotogrande.css("opacity", 0);
-        var imgaux = $('<img />').attr('src', link).on("load", function() {
-          fotogrande.attr('src', imgaux.attr('src'));
-          fotogrande.animate({"opacity": 1}, 500);
-          fotogrande.data("index", index);
-
-          spinner.hide().spin(false);
-
-        });
-        return false;
-      };
-
-      $('.mini-img').parent("div").on("click", function() {
-        var $self = $(this).children(".mini-img");
-        $(".mini-img").removeAttr("style");
-        $self.css("border", "solid 4px white");
-        ponerFoto($self.closest(".galeria-row"), $self);
-      });
-
-      $('.obra').on("click", function() {
+      // CLICK en galería de obras
+      $(".obra").on("click", function() {
         var $self = $(this);
 
         if($(this).parent().hasClass("big") && $(window).width() >= 768) {
@@ -55,30 +29,46 @@
         $("html,body").animate({
           scrollTop: $(".galeria-section").offset().top - 20
         }, 600, function(){
-          $actual.find(".mini-img").eq(0).css("border", "solid 4px white");
           ponerFoto($actual, $actual.find(".mini-img").eq(0));
         });
 
       });
 
+      // CLICK en galería de imágenes
+      $(".mini-div").on("click", function() {
+        var $self = $(this).children(".mini-img");
+        ponerFoto($self.closest(".galeria-row"), $self);
+      });
+
+      // SWIPE en imagen grande
       $(".fotogrande-div").swipe({
-        swipe:function(event, direction, distance, duration, fingerCount) {
-          if(direction=="left") {
-            $("h1").text("izqda" + $(this).find(".fotogrande-img").data("index"));
-          } else if(direction=="right") {
-            $("h1").text("dcha" + $(this).find(".fotogrande-img").data("index"));
+        swipe: function(event, direction, distance, duration, fingerCount) {
+          var $galeria = $(this).closest(".galeria-row");
+          var $fotograndeImg = $(this).find(".fotogrande-img");
+          var maxIndex = $galeria.find(".mini-img").length - 1;
+
+          var nextIndex;
+          if(direction == "left") {
+            nextIndex = +$fotograndeImg.data("index") - 1;
+            if(nextIndex < 0) nextIndex = maxIndex;
+            ponerFoto($galeria, $galeria.find(".mini-img").eq(nextIndex));
+
+          } else if(direction == "right") {
+            nextIndex = +$fotograndeImg.data("index") + 1;
+            if(nextIndex > maxIndex) nextIndex = 0;
+            ponerFoto($galeria, $galeria.find(".mini-img").eq(nextIndex));
+
           }
         }
       });
 
+      // HASH
       var hash = window.location.search.substring(1);
       if(hash) {
         $(".obra").eq(hash).trigger("click");
       }
 
-
       // FORM
-
       $("#contact-form").validate({
         highlight: function(element) {
           $(element).css({"background-color": "#ecc"});
@@ -121,54 +111,7 @@
         }
       });
 
-
-
-
-      // SUBMIT FORM
-      function submitForm(form) {
-
-        var $enviarMsg = $('.enviar-msg');
-        var $enviarBoton = $('.enviar-boton');
-        // show that something is loading
-        $enviarMsg.show();
-
-        $.ajax ({
-          type: "POST",
-          dataType: 'json',
-          url: "mail.php",
-          data: form
-        }).done(function(data){
-
-          // show the response
-          $enviarMsg.html('<i class="fa fa-check"></i> Enviado');
-          $enviarBoton.attr("disabled", "disabled");
-
-        })
-        .fail(function() {
-
-          // just in case posting your form failed
-          $enviarMsg.html('¡Error!');
-
-        });
-
-
-        // to prevent refreshing the whole page page
-        return false;
-      }
-
-
-
-      // SCROLL
-
-      menu();
-
-      $(window).on("resize", function(){
-        menu();
-      });
-
-
-      // SCROLL ANCHORS
-
+      // SCROLL anchors
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
@@ -182,21 +125,25 @@
         }
       });
 
-
-      // SHOW PRIVACY
+      // SHOW OR HIDE privacy message
       $("#show-privacy").click(function() {
         $(".alert").slideToggle("slow");
       });
 
+      // SCROLL menubar
+      menu();
 
-      // MAPS
+      $(window).on("resize", function(){
+        menu();
+      });
+
+      // GOOGLE MAPS loading
       google.maps.event.addDomListener(window, 'load', initialize);
-
 
     });
 
 
-
+    // MENU behaviour with scroll
     function menu() {
 
         var $menu = $("header");
@@ -254,7 +201,7 @@
     }
 
 
-
+    // GOOGLE MAPS initialize function
     function initialize() {
 
       var myLatlng = new google.maps.LatLng(41.542187, -4.663383);
@@ -273,6 +220,63 @@
         map: map,
         title: 'Hello World!'
       });
+    }
+
+    // CAMBIAR la foto grande en respuesta a loads, clicks o swipes
+    function ponerFoto(galeriaSection, miniImg) {
+
+      galeriaSection.find(".mini-img").removeAttr("style");
+      miniImg.css("border", "solid 4px white");
+
+      var index = miniImg.data("index");
+      var link = miniImg.data('foto');
+      var fotogrande = galeriaSection.find('.fotogrande-img');
+      var spinner = galeriaSection.find('.loading');
+
+      spinner.show().spin();
+
+      fotogrande.css("opacity", 0);
+      var imgaux = $('<img />').attr('src', link).on("load", function() {
+        fotogrande.attr('src', imgaux.attr('src'));
+        fotogrande.animate({"opacity": 1}, 500);
+        fotogrande.data("index", index);
+
+        spinner.hide().spin(false);
+
+      });
+      return false;
+    }
+
+
+    // SUBMIT form
+    function submitForm(form) {
+
+      var $enviarMsg = $('.enviar-msg');
+      var $enviarBoton = $('.enviar-boton');
+      // show that something is loading
+      $enviarMsg.show();
+
+      $.ajax ({
+        type: "POST",
+        dataType: 'json',
+        url: "mail.php",
+        data: form
+      }).done(function(data){
+
+        // show the response
+        $enviarMsg.html('<i class="fa fa-check"></i> Enviado');
+        $enviarBoton.attr("disabled", "disabled");
+
+      })
+      .fail(function() {
+
+        // just in case posting your form failed
+        $enviarMsg.html('¡Error!');
+
+      });
+
+      // to prevent refreshing the whole page page
+      return false;
     }
 
 

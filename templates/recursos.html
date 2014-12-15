@@ -34,7 +34,7 @@
     <div class="col-lg-4 col-md-4 galeria">
       {% for item in maquinaria %}
       <div class="maquinaria mini-div">
-        <img src="{{ item.thumbnail }}" class="mini-img maquinaria" data-foto="{{ item.img }}">
+        <img src="{{ item.thumbnail }}" class="mini-img maquinaria" data-foto="{{ item.img }}" data-index="{{ item.index }}">
         <div class="mini-maximize"></div>
       </div>
       {% endfor %}
