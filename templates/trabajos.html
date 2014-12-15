@@ -27,25 +27,25 @@
 
 </section>
 
-<section class="container parrafos mostrar-galeria">
+<section class="container parrafos galeria-section">
 
     {% for obra in obras %}
-    <div class="row mostrar">
+    <div class="row galeria-row">
         <div class="col-lg-4 col-md-4 galeria">
             <h1>{{ obra.name }}</h1>
             <p>{{ obra.description|raw }}</p>
             {% for image in obra.images %}
-            <div>
-                <img src="{{ image.thumbnail }}" class="mini" data-foto="{{ image.img }}">
+            <div class="mini-div">
+                <img src="{{ image.thumbnail }}" class="mini-img" data-foto="{{ image.img }}" data-index="{{ image.index }}">
                 <div class="mini-maximize"></div>
             </div>
             {% endfor %}
             <p><a href="#portada"><i class="fa fa-th"></i> Ver más obras</a></p>
         </div>
-        <div class="col-lg-8 col-md-8 obragrande">
-            <img src="img/placeholder.png" class="fotogrande">
+        <div class="col-lg-8 col-md-8 fotogrande-div">
+            <img src="img/placeholder.png" class="fotogrande-img" data-index="0">
             <div>
-                <div class="bbb"></div>
+                <div class="loading"></div>
             </div>
         </div>
     </div>

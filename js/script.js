@@ -4,16 +4,19 @@
 
     jQuery(document).ready(function($){
 
-      var ponerFoto = function (mostrar, foto) {
-        var fotogrande = mostrar.find('.fotogrande');
-        var spinner = mostrar.find('.bbb');
+      var ponerFoto = function (galeriaSection, miniImg) {
+        var index = miniImg.parent(".mini-div").index();
+        var link = miniImg.data('foto');
+        var fotogrande = galeriaSection.find('.fotogrande-img');
+        var spinner = galeriaSection.find('.loading');
 
         spinner.show().spin();
 
         fotogrande.css("opacity", 0);
-        var imgaux = $('<img />').attr('src', foto).on("load", function() {
+        var imgaux = $('<img />').attr('src', link).on("load", function() {
           fotogrande.attr('src', imgaux.attr('src'));
           fotogrande.animate({"opacity": 1}, 500);
+          fotogrande.data("index", index);
 
           spinner.hide().spin(false);
 
@@ -21,9 +24,11 @@
         return false;
       };
 
-      $('.mini').parent("div").on("click", function() {
-        var $self = $(this).children(".mini");
-        ponerFoto($self.closest(".mostrar"), $self.data('foto'));
+      $('.mini-img').parent("div").on("click", function() {
+        var $self = $(this).children(".mini-img");
+        $(".mini-img").removeAttr("style");
+        $self.css("border", "solid 4px white");
+        ponerFoto($self.closest(".galeria-row"), $self);
       });
 
       $('.obra').on("click", function() {
@@ -35,24 +40,35 @@
         }
 
         var index = $self.index(".obra");
-        var $mostrar = $(".mostrar");
+        var $mostrar = $(".galeria").parent();
         var $actual = $mostrar.eq(index);
 
         $('.obra').removeClass("activo");
         $self.addClass("activo");
 
         $mostrar.hide();
-        var fotogrande = $mostrar.find('.fotogrande');
+        var fotogrande = $mostrar.find('.fotogrande-img');
         fotogrande.attr('src', 'img/placeholder.png');
         $mostrar.eq(index).show();
 
-        $(".mostrar-galeria").show();
+        $(".galeria-section").show();
         $("html,body").animate({
-          scrollTop: $(".mostrar-galeria").offset().top - 20
+          scrollTop: $(".galeria-section").offset().top - 20
         }, 600, function(){
-          ponerFoto($actual, $actual.find(".mini").eq(0).data('foto'));
+          $actual.find(".mini-img").eq(0).css("border", "solid 4px white");
+          ponerFoto($actual, $actual.find(".mini-img").eq(0));
         });
 
+      });
+
+      $(".fotogrande-div").swipe({
+        swipe:function(event, direction, distance, duration, fingerCount) {
+          if(direction=="left") {
+            $("h1").text("izqda" + $(this).find(".fotogrande-img").data("index"));
+          } else if(direction=="right") {
+            $("h1").text("dcha" + $(this).find(".fotogrande-img").data("index"));
+          }
+        }
       });
 
       var hash = window.location.search.substring(1);
@@ -62,10 +78,6 @@
 
 
       // FORM
-
-      $(".modal-content").find(".acepto").on("click", function(){
-        $("#condiciones").prop("checked", true);
-      });
 
       $("#contact-form").validate({
         highlight: function(element) {

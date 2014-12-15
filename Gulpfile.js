@@ -54,6 +54,7 @@
             "bower_components/spinjs/spin.js",
             "bower_components/spinjs/jquery.spin.js",
             "bower_components/jquery-validation/dist/jquery.validate.min.js",
+            "bower_components/jquery-touchswipe/jquery.touchSwipe.min.js",
             "js/*.js"
         ])
             .pipe(uglify())

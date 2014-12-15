@@ -30,19 +30,19 @@
   <h1>Maquinaria</h1>
   <p>Fruto del estudio de mercado y del asesoramiento son los medios técnicos que ofrece nuestra empresa. Disponemos de la <strong>maquinaria</strong> más innovadora y más avanzada tecnológicamente lo que nos permite ofrecer una amplia variedad de soluciones en trabajos como estabilización y protección de taludes, hidrosiembra, mantenimiento de zonas verdes, sistemas de riego, etc.</p>
 
-  <div class="row mostrar">
+  <div class="row galeria-row">
     <div class="col-lg-4 col-md-4 galeria">
       {% for item in maquinaria %}
-      <div class="maquinaria">
-        <img src="{{ item.thumbnail }}" class="mini maquinaria" data-foto="{{ item.img }}">
+      <div class="maquinaria mini-div">
+        <img src="{{ item.thumbnail }}" class="mini-img maquinaria" data-foto="{{ item.img }}">
         <div class="mini-maximize"></div>
       </div>
       {% endfor %}
     </div>
-    <div class="col-lg-8 col-md-8 obragrande">
-      <img src="img/Maquinaria/maquinaria_022.jpg" class="fotogrande">
+    <div class="col-lg-8 col-md-8 fotogrande-div">
+      <img src="img/Maquinaria/maquinaria_022.jpg" class="fotogrande-img" data-index="0">
       <div>
-        <div class="bbb"></div>
+        <div class="loading"></div>
       </div>
     </div>
   </div>

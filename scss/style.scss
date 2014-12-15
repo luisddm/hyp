@@ -394,7 +394,7 @@
           width: 65px;
         }
       }
-      .mini {
+      .mini-img {
         position: absolute;
         top: 0;
         left: 0;
@@ -426,11 +426,11 @@
     }
 }
 
-.mostrar-galeria {
+.galeria-section {
   display: none;
 }
 
-.obragrande {
+.fotogrande-div {
     position: relative;
     margin-bottom: 40px;
     margin-top: 30px;
@@ -444,7 +444,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        .bbb {
+        .loading {
             display: none;
             position: relative;
             top: -40px;
