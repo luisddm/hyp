@@ -5,6 +5,61 @@
 @import "menu";
 @import "form";
 
+.ppal .texto1 {
+  transition: 1s;
+  position: absolute;
+  padding: 10px 20px;
+  text-align: right;
+  bottom: 0;
+  right: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+  background-color: rgba($color-texto-blanco, 0.7);
+}
+
+.ppal .texto2 {
+  transition: 1s;
+  position: absolute;
+  padding: 10px 20px;
+  text-align: left;
+  top: 0;
+  left: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+  background-color: rgba($color-texto-blanco, 0.7);
+}
+
+.ppal {
+  transition: 1s;
+  .container {
+    height: 500px;
+    position: relative;
+  }
+}
+
+.xxx {
+  transform: translate(0, -100px);
+  opacity: 0;
+}
+
+.yyy {
+  transform: translate(0, 100px);
+  opacity: 0;
+}
+
+.diapo1 {
+  background-image: url('../img/portada-1.jpg');
+}
+
+.diapo2 {
+  background-image: url('../img/portada-2.jpg');
+}
+
+
+
+
 .parrafos h1 {
     margin-bottom: 15px;
     @media (max-width: $screen-xs-max) {
@@ -14,9 +69,14 @@
         color: lighten($color-titulos, 15%);
     }
 }
+.area-icon {
+  margin: 0 auto;
+  text-align: center;
+  height: 110px;
+}
 #portada {
     background-color: $color-titulos;
-    background-image: url('../img/background.jpg');
+    //background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -25,6 +85,9 @@
     @media (max-width: $screen-xs-max) {
       padding: 0;
     }
+}
+.background {
+  background-image: url('../img/background.jpg');
 }
 .portada-imagen {
     position: relative;

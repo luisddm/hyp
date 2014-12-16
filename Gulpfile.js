@@ -50,6 +50,7 @@
     gulp.task('javascript', function () {
         gulp.src([
             "bower_components/jquery/dist/jquery.js",
+            //"bower_components/jqueryui/jquery-ui.js",
             "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
             "bower_components/spinjs/spin.js",
             "bower_components/spinjs/jquery.spin.js",

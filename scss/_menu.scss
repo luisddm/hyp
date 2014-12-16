@@ -1,8 +1,8 @@
 header {
   position: fixed;
   width: 100%;
-  background-color: $black; //fallback
-  background-color: rgba($black, 0.8);
+  background-color: #000; //fallback
+  background-color: rgba(#000, 0.8);
   margin-bottom: 40px;
   margin-top: 20px;
   z-index: 999;
