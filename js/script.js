@@ -4,34 +4,49 @@
 
     jQuery(document).ready(function($){
 
-      // CLICK en galería de obras
+      // CLICK en una de las obras de la galería de obras
       $(".obra").on("click", function() {
         var $self = $(this);
+        var $obras = $self.parent();
+        var index = $self.index(".obra");
+        var $galeriaRow = $(".galeria-row");
+        var $fotogrande = $galeriaRow.find('.fotogrande-img');
+        var $actual = $galeriaRow.eq(index);
 
-        if($(this).parent().hasClass("big") && $(window).width() >= 768) {
-          $(this).parent().addClass("small").removeClass("big");
-          $(window).scrollTop(0);
+        if($obras.hasClass("big")){
+          if($(window).width() >= 768) {
+            $obras.hide(500, function(){
+              $("body,html").animate({scrollTop: 0}, 0, function(){
+                $obras.addClass("small").removeClass("big").show(500, function() {
+                  $("body,html").animate({scrollTop: 430}, 500);
+                });
+              });
+            });
+          } else {
+            $obras.addClass("small").removeClass("big").show(500, function() {
+              $("body,html").animate({scrollTop: 1200}, 500);
+            });
+          }
         }
 
-        var index = $self.index(".obra");
-        var $mostrar = $(".galeria").parent();
-        var $actual = $mostrar.eq(index);
+        if($(window).width() >= 768) {
+          $("body,html").animate({scrollTop: 430}, 500);
+        } else {
+          $("body,html").animate({scrollTop: 1200}, 500);
+        }
+
+        $galeriaRow.hide();
+        $actual.show();
+
+        // Mostrar sección de galerías
+        $(".galeria-section").show();
 
         $('.obra').removeClass("activo");
         $self.addClass("activo");
 
-        $mostrar.hide();
-        var fotogrande = $mostrar.find('.fotogrande-img');
-        fotogrande.attr('src', 'img/placeholder.png');
-        $mostrar.eq(index).show();
+        $fotogrande.attr('src', 'img/placeholder.png');
 
-        $(".galeria-section").show();
-        $("html,body").animate({
-          scrollTop: $(".galeria-section").offset().top - 20
-        }, 600, function(){
-          ponerFoto($actual, $actual.find(".mini-img").eq(0));
-        });
-
+        ponerFoto($actual, $actual.find(".mini-img").eq(0));
       });
 
       // CLICK en galería de imágenes
@@ -223,25 +238,25 @@
     }
 
     // CAMBIAR la foto grande en respuesta a loads, clicks o swipes
-    function ponerFoto(galeriaSection, miniImg) {
+    function ponerFoto($galeriaSection, $miniImg) {
 
-      galeriaSection.find(".mini-img").removeAttr("style");
-      miniImg.css("border", "solid 4px white");
+      $galeriaSection.find(".mini-img").removeAttr("style");
+      $miniImg.animate({"border-width": "3px"}, 300);
 
-      var index = miniImg.data("index");
-      var link = miniImg.data('foto');
-      var fotogrande = galeriaSection.find('.fotogrande-img');
-      var spinner = galeriaSection.find('.loading');
+      var index = $miniImg.data("index");
+      var link = $miniImg.data('foto');
+      var $fotogrande = $galeriaSection.find('.fotogrande-img');
+      var $spinner = $galeriaSection.find('.loading');
 
-      spinner.show().spin();
+      $spinner.show().spin();
 
-      fotogrande.css("opacity", 0);
+      $fotogrande.css("opacity", 0);
       var imgaux = $('<img />').attr('src', link).on("load", function() {
-        fotogrande.attr('src', imgaux.attr('src'));
-        fotogrande.animate({"opacity": 1}, 500);
-        fotogrande.data("index", index);
+        $fotogrande.attr('src', imgaux.attr('src'));
+        $fotogrande.animate({"opacity": 1}, 500);
+        $fotogrande.data("index", index);
 
-        spinner.hide().spin(false);
+        $spinner.hide().spin(false);
 
       });
       return false;

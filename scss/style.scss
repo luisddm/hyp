@@ -7,6 +7,9 @@
 
 .parrafos h1 {
     margin-bottom: 15px;
+    @media (max-width: $screen-xs-max) {
+      font-size: 26px;
+    }
     &:hover {
         color: lighten($color-titulos, 15%);
     }
@@ -178,13 +181,13 @@
     &.small {
         .obra {
             box-sizing: content-box;
-            height: 105px;
-            width: 18.55%;
+            height: 75px;
+            width: 23.9%;
             @media (max-width: $screen-md-max) {
-              width: 18.2%;
+              width: 23.6%;
             }
             @media (max-width: $screen-sm-max) {
-              width: 17.7%;
+              width: 23.3%;
             }
             @media (max-width: $screen-xs-max) {
               width: 100%;
@@ -200,12 +203,16 @@
             cursor: pointer;
             display: inline-block;
             float: left;
-            border: 8px solid rgba($black, 0);
+            border: 6px solid rgba($black, 0);
             margin: 0;
             padding: 0;
             transition: 0.5s;
             &.activo {
-                border: 8px solid $color-titulos;
+                h3 {
+                  background-color: rgba(0,0,0,0);
+
+                }
+                border: 6px solid $color-titulos;
                 @media (max-width: $screen-xs-max) {
                   border: 0;
                   background-color: $color-titulos;
@@ -232,23 +239,23 @@
                 height: 100%;
                 left: 0;
                 top: 0;
-                height: 105px;
                 @media (max-width: $screen-xs-max) {
                   height: 80px;
                 }
                 background-color: transparent;
                 display: table;
                 h3 {
+                    background-color: rgba(0,0,0,0.3);
                     color: $color-texto-blanco;
                     text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
                     text-align: center;
-                    height: 105px;
+                    height: 100%;
                     display: table-cell;
                     vertical-align: middle;
-                    padding: 0;
+                    padding: 0 10px;
                     margin: 0;
                     font-weight: 700;
-                    font-size: 22px;
+                    font-size: 20px;
                     @media (max-width: $screen-sm-max) {
                       font-size: 20px;
                     }
@@ -365,9 +372,9 @@
     }
 
     div {
-      height: 100px;
-      width: 100px;
-      margin: 3px;
+      height: 80px;
+      width: 80px;
+      margin: 1px;
       &.maquinaria {
         height: 80px;
         width: 80px;
@@ -377,8 +384,8 @@
       cursor: pointer;
       position: relative;
       @media (max-width: $screen-md-max) {
-        width: 90px;
-        height: 90px;
+        width: 69px;
+        height: 69px;
         margin: 0;
         &.maquinaria {
           height: 67px;
@@ -395,6 +402,9 @@
         }
       }
       .mini-img {
+        border-width: 0;
+        border-style: solid;
+        border-color: white;
         position: absolute;
         top: 0;
         left: 0;
