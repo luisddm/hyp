@@ -8,15 +8,14 @@
     {"index" : 0, "img" : "img/A66/A66_001.jpg", "thumbnail" : "img/A66/A66_001_mini.jpg"},
     {"index" : 1, "img" : "img/A66/A66_002.jpg", "thumbnail" : "img/A66/A66_002_mini.jpg"},
     {"index" : 2, "img" : "img/A66/A66_003.jpg", "thumbnail" : "img/A66/A66_003_mini.jpg"},
-    {"index" : 3, "img" : "img/A66/A66_004.jpg", "thumbnail" : "img/A66/A66_004_mini.jpg"},
-    {"index" : 4, "img" : "img/A66/A66_005.jpg", "thumbnail" : "img/A66/A66_005_mini.jpg"},
-    {"index" : 5, "img" : "img/A66/A66_006.jpg", "thumbnail" : "img/A66/A66_006_mini.jpg"},
-    {"index" : 6, "img" : "img/A66/A66_007.jpg", "thumbnail" : "img/A66/A66_007_mini.jpg"},
-    {"index" : 7, "img" : "img/A66/A66_008.jpg", "thumbnail" : "img/A66/A66_008_mini.jpg"},
-    {"index" : 8, "img" : "img/A66/A66_009.jpg", "thumbnail" : "img/A66/A66_009_mini.jpg"},
-    {"index" : 9, "img" : "img/A66/A66_010.jpg", "thumbnail" : "img/A66/A66_010_mini.jpg"},
-    {"index" : 10, "img" : "img/A66/A66_011.jpg", "thumbnail" : "img/A66/A66_011_mini.jpg"},
-    {"index" : 11, "img" : "img/A66/A66_012.jpg", "thumbnail" : "img/A66/A66_012_mini.jpg"}
+    {"index" : 3, "img" : "img/A66/A66_005.jpg", "thumbnail" : "img/A66/A66_005_mini.jpg"},
+    {"index" : 4, "img" : "img/A66/A66_006.jpg", "thumbnail" : "img/A66/A66_006_mini.jpg"},
+    {"index" : 5, "img" : "img/A66/A66_007.jpg", "thumbnail" : "img/A66/A66_007_mini.jpg"},
+    {"index" : 6, "img" : "img/A66/A66_008.jpg", "thumbnail" : "img/A66/A66_008_mini.jpg"},
+    {"index" : 7, "img" : "img/A66/A66_009.jpg", "thumbnail" : "img/A66/A66_009_mini.jpg"},
+    {"index" : 8, "img" : "img/A66/A66_010.jpg", "thumbnail" : "img/A66/A66_010_mini.jpg"},
+    {"index" : 9, "img" : "img/A66/A66_011.jpg", "thumbnail" : "img/A66/A66_011_mini.jpg"},
+    {"index" : 10, "img" : "img/A66/A66_012.jpg", "thumbnail" : "img/A66/A66_012_mini.jpg"}
   ]
 },
 {
@@ -25,20 +24,17 @@
   "description" : "<strong>Autovía VA-30. Circunvalación de Valladolid.</strong><br/>• Tramo: Ctra. CL-601. Autovía A-62 de Castilla (Valladolid).<br/>• Tramo: 1041. Conexión Ronda Sur - Ronda Este (Valladolid).",
   "images" : [
     {"index" : 0, "img" : "img/VA30/VA30_001.jpg", "thumbnail" : "img/VA30/VA30_001_mini.jpg"},
-    {"index" : 1, "img" : "img/VA30/VA30_002.jpg", "thumbnail" : "img/VA30/VA30_002_mini.jpg"},
-    {"index" : 2, "img" : "img/VA30/VA30_003.jpg", "thumbnail" : "img/VA30/VA30_003_mini.jpg"},
-    {"index" : 3, "img" : "img/VA30/VA30_004.jpg", "thumbnail" : "img/VA30/VA30_004_mini.jpg"},
-    {"index" : 4, "img" : "img/VA30/VA30_005.jpg", "thumbnail" : "img/VA30/VA30_005_mini.jpg"},
-    {"index" : 5, "img" : "img/VA30/VA30_006.jpg", "thumbnail" : "img/VA30/VA30_006_mini.jpg"},
-    {"index" : 6, "img" : "img/VA30/VA30_007.jpg", "thumbnail" : "img/VA30/VA30_007_mini.jpg"},
-    {"index" : 7, "img" : "img/VA30/VA30_008.jpg", "thumbnail" : "img/VA30/VA30_008_mini.jpg"},
-    {"index" : 8, "img" : "img/VA30/VA30_009.jpg", "thumbnail" : "img/VA30/VA30_009_mini.jpg"},
-    {"index" : 9, "img" : "img/VA30/VA30_010.jpg", "thumbnail" : "img/VA30/VA30_010_mini.jpg"},
-    {"index" : 10, "img" : "img/VA30/VA30_011.jpg", "thumbnail" : "img/VA30/VA30_011_mini.jpg"},
-    {"index" : 11, "img" : "img/VA30/VA30_012.jpg", "thumbnail" : "img/VA30/VA30_012_mini.jpg"},
-    {"index" : 12, "img" : "img/VA30/VA30_013.jpg", "thumbnail" : "img/VA30/VA30_013_mini.jpg"},
-    {"index" : 13, "img" : "img/VA30/VA30_014.jpg", "thumbnail" : "img/VA30/VA30_014_mini.jpg"},
-    {"index" : 14, "img" : "img/VA30/VA30_015.jpg", "thumbnail" : "img/VA30/VA30_015_mini.jpg"}
+    {"index" : 1, "img" : "img/VA30/VA30_003.jpg", "thumbnail" : "img/VA30/VA30_003_mini.jpg"},
+    {"index" : 2, "img" : "img/VA30/VA30_004.jpg", "thumbnail" : "img/VA30/VA30_004_mini.jpg"},
+    {"index" : 3, "img" : "img/VA30/VA30_005.jpg", "thumbnail" : "img/VA30/VA30_005_mini.jpg"},
+    {"index" : 4, "img" : "img/VA30/VA30_006.jpg", "thumbnail" : "img/VA30/VA30_006_mini.jpg"},
+    {"index" : 5, "img" : "img/VA30/VA30_007.jpg", "thumbnail" : "img/VA30/VA30_007_mini.jpg"},
+    {"index" : 6, "img" : "img/VA30/VA30_009.jpg", "thumbnail" : "img/VA30/VA30_009_mini.jpg"},
+    {"index" : 7, "img" : "img/VA30/VA30_011.jpg", "thumbnail" : "img/VA30/VA30_011_mini.jpg"},
+    {"index" : 8, "img" : "img/VA30/VA30_012.jpg", "thumbnail" : "img/VA30/VA30_012_mini.jpg"},
+    {"index" : 9, "img" : "img/VA30/VA30_013.jpg", "thumbnail" : "img/VA30/VA30_013_mini.jpg"},
+    {"index" : 10, "img" : "img/VA30/VA30_014.jpg", "thumbnail" : "img/VA30/VA30_014_mini.jpg"},
+    {"index" : 11, "img" : "img/VA30/VA30_015.jpg", "thumbnail" : "img/VA30/VA30_015_mini.jpg"}
   ]
 },
 {
@@ -64,7 +60,12 @@
     {"index" : 6, "img" : "img/CiudadRodrigo/ciudad_rodrigo_007.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_007_mini.jpg"},
     {"index" : 7, "img" : "img/CiudadRodrigo/ciudad_rodrigo_008.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_008_mini.jpg"},
     {"index" : 8, "img" : "img/CiudadRodrigo/ciudad_rodrigo_009.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_009_mini.jpg"},
-    {"index" : 9, "img" : "img/CiudadRodrigo/ciudad_rodrigo_010.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_010_mini.jpg"}
+    {"index" : 9, "img" : "img/CiudadRodrigo/ciudad_rodrigo_010.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_010_mini.jpg"},
+    {"index" : 10, "img" : "img/CiudadRodrigo/ciudad_rodrigo_011.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_011_mini.jpg"},
+    {"index" : 11, "img" : "img/CiudadRodrigo/ciudad_rodrigo_012.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_012_mini.jpg"},
+    {"index" : 12, "img" : "img/CiudadRodrigo/ciudad_rodrigo_013.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_013_mini.jpg"},
+    {"index" : 13, "img" : "img/CiudadRodrigo/ciudad_rodrigo_014.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_014_mini.jpg"},
+    {"index" : 14, "img" : "img/CiudadRodrigo/ciudad_rodrigo_015.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_015_mini.jpg"}
   ]
 },
 {
@@ -75,7 +76,11 @@
     {"index" : 0, "img" : "img/Payuelos/payuelos_001.jpg", "thumbnail" : "img/Payuelos/payuelos_001_mini.jpg"},
     {"index" : 1, "img" : "img/Payuelos/payuelos_002.jpg", "thumbnail" : "img/Payuelos/payuelos_002_mini.jpg"},
     {"index" : 2, "img" : "img/Payuelos/payuelos_003.jpg", "thumbnail" : "img/Payuelos/payuelos_003_mini.jpg"},
-    {"index" : 3, "img" : "img/Payuelos/payuelos_004.jpg", "thumbnail" : "img/Payuelos/payuelos_004_mini.jpg"}
+    {"index" : 3, "img" : "img/Payuelos/payuelos_004.jpg", "thumbnail" : "img/Payuelos/payuelos_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Payuelos/payuelos_005.jpg", "thumbnail" : "img/Payuelos/payuelos_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Payuelos/payuelos_006.jpg", "thumbnail" : "img/Payuelos/payuelos_006_mini.jpg"},
+    {"index" : 6, "img" : "img/Payuelos/payuelos_007.jpg", "thumbnail" : "img/Payuelos/payuelos_007_mini.jpg"},
+    {"index" : 7, "img" : "img/Payuelos/payuelos_008.jpg", "thumbnail" : "img/Payuelos/payuelos_008_mini.jpg"}
   ]
 },
 {
@@ -86,9 +91,7 @@
     {"index" : 0, "img" : "img/Palanquinos/palanquinos_001.jpg", "thumbnail" : "img/Palanquinos/palanquinos_001.jpg"},
     {"index" : 1, "img" : "img/Palanquinos/palanquinos_002.jpg", "thumbnail" : "img/Palanquinos/palanquinos_002.jpg"},
     {"index" : 2, "img" : "img/Palanquinos/palanquinos_003.jpg", "thumbnail" : "img/Palanquinos/palanquinos_003.jpg"},
-    {"index" : 3, "img" : "img/Palanquinos/palanquinos_004.jpg", "thumbnail" : "img/Palanquinos/palanquinos_004.jpg"},
-    {"index" : 4, "img" : "img/Palanquinos/palanquinos_005.jpg", "thumbnail" : "img/Palanquinos/palanquinos_005.jpg"},
-    {"index" : 5, "img" : "img/Palanquinos/palanquinos_006.jpg", "thumbnail" : "img/Palanquinos/palanquinos_006.jpg"}
+    {"index" : 3, "img" : "img/Palanquinos/palanquinos_006.jpg", "thumbnail" : "img/Palanquinos/palanquinos_006.jpg"}
   ]
 },
 {
@@ -111,11 +114,9 @@
   "imagenPrincipal" : "img/PinarAntequera/pinar_antequera_mini.jpg",
   "description" : "<strong>Nuevo acceso ferroviario norte-noroeste, línea Madrid - Segovia - Valladolid - Medina del Campo.</strong><br/>• Tramo: accesos a Valladolid e integración urbana de su RAF.<br/>• Subtramo: río Duero – túnel Pinar de Antequera.",
   "images" : [
-    {"index" : 0, "img" : "img/PinarAntequera/pinar_antequera_001.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_001_mini.jpg"},
-    {"index" : 1, "img" : "img/PinarAntequera/pinar_antequera_002.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_002_mini.jpg"},
-    {"index" : 2, "img" : "img/PinarAntequera/pinar_antequera_003.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_003_mini.jpg"},
-    {"index" : 3, "img" : "img/PinarAntequera/pinar_antequera_004.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_004_mini.jpg"},
-    {"index" : 4, "img" : "img/PinarAntequera/pinar_antequera_005.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_005_mini.jpg"}
+    {"index" : 0, "img" : "img/PinarAntequera/pinar_antequera_003.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_003_mini.jpg"},
+    {"index" : 1, "img" : "img/PinarAntequera/pinar_antequera_004.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_004_mini.jpg"},
+    {"index" : 2, "img" : "img/PinarAntequera/pinar_antequera_005.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_005_mini.jpg"}
   ]
 },
 {
@@ -125,11 +126,7 @@
   "images" : [
     {"index" : 0, "img" : "img/ParqueTecnologico/parque_tecnologico_001.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_001_mini.jpg"},
     {"index" : 1, "img" : "img/ParqueTecnologico/parque_tecnologico_002.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_002_mini.jpg"},
-    {"index" : 2, "img" : "img/ParqueTecnologico/parque_tecnologico_003.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_003_mini.jpg"},
-    {"index" : 3, "img" : "img/ParqueTecnologico/parque_tecnologico_004.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_004_mini.jpg"},
-    {"index" : 4, "img" : "img/ParqueTecnologico/parque_tecnologico_005.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_005_mini.jpg"},
-    {"index" : 5, "img" : "img/ParqueTecnologico/parque_tecnologico_006.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_006_mini.jpg"},
-    {"index" : 6, "img" : "img/ParqueTecnologico/parque_tecnologico_007.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_007_mini.jpg"}
+    {"index" : 2, "img" : "img/ParqueTecnologico/parque_tecnologico_003.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_003_mini.jpg"}
   ]
 },
 {
@@ -137,10 +134,8 @@
   "imagenPrincipal" : "img/RondaEste/ronda_este_mini.jpg",
   "description" : "<strong>Autovía VA-30. Circunvalación de Valladolid.</strong><br/>• Tramo: conexión Autovía del Duero (A-11) y Autovía de Castilla (A-62).",
   "images" : [
-    {"index" : 0, "img" : "img/RondaEste/ronda_este_001.jpg", "thumbnail" : "img/RondaEste/ronda_este_001_mini.jpg"},
-    {"index" : 1, "img" : "img/RondaEste/ronda_este_002.jpg", "thumbnail" : "img/RondaEste/ronda_este_002_mini.jpg"},
-    {"index" : 2, "img" : "img/RondaEste/ronda_este_003.jpg", "thumbnail" : "img/RondaEste/ronda_este_003_mini.jpg"},
-    {"index" : 3, "img" : "img/RondaEste/ronda_este_004.jpg", "thumbnail" : "img/RondaEste/ronda_este_004_mini.jpg"}
+    {"index" : 0, "img" : "img/RondaEste/ronda_este_002.jpg", "thumbnail" : "img/RondaEste/ronda_este_002_mini.jpg"},
+    {"index" : 1, "img" : "img/RondaEste/ronda_este_004.jpg", "thumbnail" : "img/RondaEste/ronda_este_004_mini.jpg"}
   ]
 },
 {
@@ -155,7 +150,11 @@
     {"index" : 4, "img" : "img/VillaDelPrado/villadelprado_005.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_005_mini.jpg"},
     {"index" : 5, "img" : "img/VillaDelPrado/villadelprado_006.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_006_mini.jpg"},
     {"index" : 6, "img" : "img/VillaDelPrado/villadelprado_007.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_007_mini.jpg"},
-    {"index" : 7, "img" : "img/VillaDelPrado/villadelprado_008.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_008_mini.jpg"}
+    {"index" : 7, "img" : "img/VillaDelPrado/villadelprado_008.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_008_mini.jpg"},
+    {"index" : 8, "img" : "img/VillaDelPrado/villadelprado_009.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_009_mini.jpg"},
+    {"index" : 9, "img" : "img/VillaDelPrado/villadelprado_010.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_010_mini.jpg"},
+    {"index" : 10, "img" : "img/VillaDelPrado/villadelprado_011.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_011_mini.jpg"},
+    {"index" : 11, "img" : "img/VillaDelPrado/villadelprado_012.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_012_mini.jpg"}
   ]
 }
 
