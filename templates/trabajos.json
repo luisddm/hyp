@@ -110,9 +110,9 @@
   ]
 },
 {
-  "name" : "Nuevo Acceso Ferroviario a Valladolid",
+  "name" : "Nuevo acceso ferroviario a Valladolid",
   "imagenPrincipal" : "img/PinarAntequera/pinar_antequera_mini.jpg",
-  "description" : "<strong>Nuevo acceso ferroviario norte-noroeste, línea Madrid - Segovia - Valladolid - Medina del Campo.</strong><br/>• Tramo: accesos a Valladolid e integración urbana de su RAF.<br/>• Subtramo: río Duero – túnel Pinar de Antequera.",
+  "description" : "<strong>Acceso norte-noroeste, línea Madrid-Segovia-Valladolid-Medina del Campo.</strong><br/>• Tramo: accesos a Valladolid e integración urbana de su RAF.<br/>• Subtramo: río Duero – túnel Pinar de Antequera.",
   "images" : [
     {"index" : 0, "img" : "img/PinarAntequera/pinar_antequera_003.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_003_mini.jpg"},
     {"index" : 1, "img" : "img/PinarAntequera/pinar_antequera_004.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_004_mini.jpg"},

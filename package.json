@@ -5,7 +5,7 @@
   "main": "Gulpfile.js",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^1.8.2",
+    "browser-sync": "^1.8.3",
     "del": "^1.1.1",
     "glob": "^4.3.2",
     "gulp": "^3.8.10",
@@ -29,7 +29,7 @@
   "keywords": [
     "hidrosiembras, plantaciones"
   ],
-  "author": "@Vynith",
+  "author": "@luisddm_",
   "license": "GNU GPL 2.0",
   "bugs": {
     "url": "https://github.com/luisddm/hyp/issues"
