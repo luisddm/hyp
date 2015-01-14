@@ -91,7 +91,9 @@
     {"index" : 0, "img" : "img/Palanquinos/palanquinos_001.jpg", "thumbnail" : "img/Palanquinos/palanquinos_001.jpg"},
     {"index" : 1, "img" : "img/Palanquinos/palanquinos_002.jpg", "thumbnail" : "img/Palanquinos/palanquinos_002.jpg"},
     {"index" : 2, "img" : "img/Palanquinos/palanquinos_003.jpg", "thumbnail" : "img/Palanquinos/palanquinos_003.jpg"},
-    {"index" : 3, "img" : "img/Palanquinos/palanquinos_006.jpg", "thumbnail" : "img/Palanquinos/palanquinos_006.jpg"}
+    {"index" : 3, "img" : "img/Palanquinos/palanquinos_004.jpg", "thumbnail" : "img/Palanquinos/palanquinos_004.jpg"},
+    {"index" : 4, "img" : "img/Palanquinos/palanquinos_005.jpg", "thumbnail" : "img/Palanquinos/palanquinos_005.jpg"},
+    {"index" : 5, "img" : "img/Palanquinos/palanquinos_006.jpg", "thumbnail" : "img/Palanquinos/palanquinos_006.jpg"}
   ]
 },
 {
@@ -106,7 +108,9 @@
     {"index" : 4, "img" : "img/Ponferrada/ponferrada_005.jpg", "thumbnail" : "img/Ponferrada/ponferrada_005_mini.jpg"},
     {"index" : 5, "img" : "img/Ponferrada/ponferrada_006.jpg", "thumbnail" : "img/Ponferrada/ponferrada_006_mini.jpg"},
     {"index" : 6, "img" : "img/Ponferrada/ponferrada_007.jpg", "thumbnail" : "img/Ponferrada/ponferrada_007_mini.jpg"},
-    {"index" : 7, "img" : "img/Ponferrada/ponferrada_008.jpg", "thumbnail" : "img/Ponferrada/ponferrada_008_mini.jpg"}
+    {"index" : 7, "img" : "img/Ponferrada/ponferrada_008.jpg", "thumbnail" : "img/Ponferrada/ponferrada_008_mini.jpg"},
+    {"index" : 8, "img" : "img/Ponferrada/ponferrada_009.jpg", "thumbnail" : "img/Ponferrada/ponferrada_009_mini.jpg"},
+    {"index" : 9, "img" : "img/Ponferrada/ponferrada_010.jpg", "thumbnail" : "img/Ponferrada/ponferrada_010_mini.jpg"}
   ]
 },
 {
@@ -114,9 +118,11 @@
   "imagenPrincipal" : "img/PinarAntequera/pinar_antequera_mini.jpg",
   "description" : "<strong>Acceso norte-noroeste, línea Madrid-Segovia-Valladolid-Medina del Campo.</strong><br/>• Tramo: accesos a Valladolid e integración urbana de su RAF.<br/>• Subtramo: río Duero – túnel Pinar de Antequera.",
   "images" : [
-    {"index" : 0, "img" : "img/PinarAntequera/pinar_antequera_003.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_003_mini.jpg"},
-    {"index" : 1, "img" : "img/PinarAntequera/pinar_antequera_004.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_004_mini.jpg"},
-    {"index" : 2, "img" : "img/PinarAntequera/pinar_antequera_005.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_005_mini.jpg"}
+    {"index" : 0, "img" : "img/PinarAntequera/pinar_antequera_001.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_001_mini.jpg"},
+    {"index" : 1, "img" : "img/PinarAntequera/pinar_antequera_002.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_002_mini.jpg"},
+    {"index" : 2, "img" : "img/PinarAntequera/pinar_antequera_003.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_003_mini.jpg"},
+    {"index" : 3, "img" : "img/PinarAntequera/pinar_antequera_004.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_004_mini.jpg"},
+    {"index" : 4, "img" : "img/PinarAntequera/pinar_antequera_005.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_005_mini.jpg"}
   ]
 },
 {
@@ -134,8 +140,9 @@
   "imagenPrincipal" : "img/RondaEste/ronda_este_mini.jpg",
   "description" : "<strong>Autovía VA-30. Circunvalación de Valladolid.</strong><br/>• Tramo: conexión Autovía del Duero (A-11) y Autovía de Castilla (A-62).",
   "images" : [
-    {"index" : 0, "img" : "img/RondaEste/ronda_este_002.jpg", "thumbnail" : "img/RondaEste/ronda_este_002_mini.jpg"},
-    {"index" : 1, "img" : "img/RondaEste/ronda_este_004.jpg", "thumbnail" : "img/RondaEste/ronda_este_004_mini.jpg"}
+    {"index" : 0, "img" : "img/RondaEste/ronda_este_001.jpg", "thumbnail" : "img/RondaEste/ronda_este_001_mini.jpg"},
+    {"index" : 1, "img" : "img/RondaEste/ronda_este_002.jpg", "thumbnail" : "img/RondaEste/ronda_este_002_mini.jpg"},
+    {"index" : 2, "img" : "img/RondaEste/ronda_este_004.jpg", "thumbnail" : "img/RondaEste/ronda_este_004_mini.jpg"}
   ]
 },
 {
