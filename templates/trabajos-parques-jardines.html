@@ -1,0 +1,58 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %}Trabajos{% endblock %}
+
+{% block content %}
+
+<section id="portada" class="background">
+
+    <div class="container fondo-obras">
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12 obras big">
+
+              {% for obra in obras %}
+              <div class="obra">
+                <img src="{{ obra.imagenPrincipal }}">
+                <div>
+                  <h3>{{ obra.name }}</h3>
+                  <p class="desc">{{ obra.description|raw }}</p>
+                  <p class="boton-seccion">Ver obra ></p>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="container parrafos galeria-section">
+
+    {% for obra in obras %}
+    <div class="row galeria-row">
+        <div class="col-lg-3 col-md-4 galeria">
+            <h1>{{ obra.name }}</h1>
+            <p>{{ obra.description|raw }}</p>
+            {% for image in obra.images %}
+            <div class="mini-div">
+                <img src="{{ image.thumbnail }}" class="mini-img" data-foto="{{ image.img }}" data-index="{{ image.index }}">
+                <div class="mini-maximize"></div>
+            </div>
+            {% endfor %}
+            <p><a href="#portada"><i class="fa fa-th"></i> Ver más obras</a></p>
+        </div>
+        <div class="col-lg-9 col-md-8 fotogrande-div">
+            <img src="img/placeholder.png" class="fotogrande-img" data-index="0">
+            <div>
+                <div class="loading"></div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{"obras": [
+
+{
+  "name" : "Castillo de Ponferrada",
+  "imagenPrincipal" : "img/Ponferrada/ponferrada_mini.jpg",
+  "description" : "<strong>Recuperación del entorno del castillo, foso y calle Gil y Carrasco en Ponferrada (León).</strong>",
+  "images" : [
+    {"index" : 0, "img" : "img/Ponferrada/ponferrada_001.jpg", "thumbnail" : "img/Ponferrada/ponferrada_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Ponferrada/ponferrada_002.jpg", "thumbnail" : "img/Ponferrada/ponferrada_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Ponferrada/ponferrada_003.jpg", "thumbnail" : "img/Ponferrada/ponferrada_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Ponferrada/ponferrada_004.jpg", "thumbnail" : "img/Ponferrada/ponferrada_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Ponferrada/ponferrada_005.jpg", "thumbnail" : "img/Ponferrada/ponferrada_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Ponferrada/ponferrada_006.jpg", "thumbnail" : "img/Ponferrada/ponferrada_006_mini.jpg"},
+    {"index" : 6, "img" : "img/Ponferrada/ponferrada_007.jpg", "thumbnail" : "img/Ponferrada/ponferrada_007_mini.jpg"},
+    {"index" : 7, "img" : "img/Ponferrada/ponferrada_008.jpg", "thumbnail" : "img/Ponferrada/ponferrada_008_mini.jpg"},
+    {"index" : 8, "img" : "img/Ponferrada/ponferrada_009.jpg", "thumbnail" : "img/Ponferrada/ponferrada_009_mini.jpg"},
+    {"index" : 9, "img" : "img/Ponferrada/ponferrada_010.jpg", "thumbnail" : "img/Ponferrada/ponferrada_010_mini.jpg"}
+  ]
+},
+{
+  "name" : "Parque Tecnológico de Boecillo",
+  "imagenPrincipal" : "img/ParqueTecnologico/parque_tecnologico_mini.jpg",
+  "description" : "<strong>Ampliación Parque Tecnológico de Boecillo.</strong><br/>Recinto III.",
+  "images" : [
+    {"index" : 0, "img" : "img/ParqueTecnologico/parque_tecnologico_001.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_001_mini.jpg"},
+    {"index" : 1, "img" : "img/ParqueTecnologico/parque_tecnologico_002.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_002_mini.jpg"},
+    {"index" : 2, "img" : "img/ParqueTecnologico/parque_tecnologico_003.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_003_mini.jpg"}
+  ]
+},
+{
+  "name" : "Villa del Prado",
+  "imagenPrincipal" : "img/VillaDelPrado/villadelprado_mini.jpg",
+  "description" : "<strong>Villa del Prado.</strong>",
+  "images" : [
+    {"index" : 0, "img" : "img/VillaDelPrado/villadelprado_002.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_002_mini.jpg"},
+    {"index" : 1, "img" : "img/VillaDelPrado/villadelprado_003.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_003_mini.jpg"},
+    {"index" : 2, "img" : "img/VillaDelPrado/villadelprado_004.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_004_mini.jpg"},
+    {"index" : 3, "img" : "img/VillaDelPrado/villadelprado_005.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_005_mini.jpg"},
+    {"index" : 4, "img" : "img/VillaDelPrado/villadelprado_006.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_006_mini.jpg"},
+    {"index" : 5, "img" : "img/VillaDelPrado/villadelprado_007.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_007_mini.jpg"},
+    {"index" : 6, "img" : "img/VillaDelPrado/villadelprado_008.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_008_mini.jpg"},
+    {"index" : 7, "img" : "img/VillaDelPrado/villadelprado_009.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_009_mini.jpg"},
+    {"index" : 8, "img" : "img/VillaDelPrado/villadelprado_010.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_010_mini.jpg"},
+    {"index" : 9, "img" : "img/VillaDelPrado/villadelprado_011.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_011_mini.jpg"},
+    {"index" : 10, "img" : "img/VillaDelPrado/villadelprado_012.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_012_mini.jpg"}
+  ]
+}
+
+]}
