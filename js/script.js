@@ -2,7 +2,22 @@
 
     "use strict";
 
-    jQuery(document).ready(function($){
+    jQuery(document).ready(function($) {
+
+      // Rotación de las imágenes de portada
+      var $diapos = $(".ppal");
+
+      $diapos.children("div:gt(0)").hide();
+
+      setInterval(function() {
+        $diapos.children("div:first")
+        .fadeOut(800)
+        .next()
+        .fadeIn(800)
+        .end()
+        .appendTo($diapos);
+      },  9000);
+
 
       // CLICK en una de las obras de la galería de obras
       $(".obra").on("click", function() {
@@ -49,11 +64,13 @@
         ponerFoto($actual, $actual.find(".mini-img").eq(0));
       });
 
+
       // CLICK en galería de imágenes
       $(".mini-div").on("click", function() {
         var $self = $(this).children(".mini-img");
         ponerFoto($self.closest(".galeria-row"), $self);
       });
+
 
       // SWIPE en imagen grande
       $(".fotogrande-div").swipe({
@@ -77,11 +94,13 @@
         }
       });
 
+
       // HASH
       var hash = window.location.search.substring(1);
       if(hash) {
         $(".obra").eq(hash).trigger("click");
       }
+
 
       // FORM
       $("#contact-form").validate({
@@ -126,6 +145,7 @@
         }
       });
 
+
       // SCROLL anchors
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -140,10 +160,12 @@
         }
       });
 
+
       // SHOW OR HIDE privacy message
       $("#show-privacy").click(function() {
         $(".alert").slideToggle("slow");
       });
+
 
       // SCROLL menubar
       menu();
@@ -151,6 +173,7 @@
       $(window).on("resize", function(){
         menu();
       });
+
 
       // GOOGLE MAPS loading
       google.maps.event.addDomListener(window, 'load', initialize);
