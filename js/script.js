@@ -4,14 +4,6 @@
 
     jQuery(document).ready(function($){
 
-      // DIAPOSITIVAS
-      setInterval(function(){
-        $(".ppal").find(".texto1").toggleClass("xxx");
-        $(".ppal").find(".texto2").toggleClass("yyy");
-
-        $(".ppal").toggleClass("diapo1 diapo2");
-      }, 10000);
-
       // CLICK en una de las obras de la galería de obras
       $(".obra").on("click", function() {
         var $self = $(this);

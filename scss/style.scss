@@ -5,58 +5,80 @@
 @import "menu";
 @import "form";
 
-.ppal .texto1 {
+.ppal .texto-diapo {
   transition: 1s;
   position: absolute;
   padding: 10px 20px;
-  text-align: right;
-  bottom: 0;
-  right: 0;
-  font-size: 40px;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 6vh;
   font-weight: 700;
   color: black;
-  background-color: rgba($color-texto-blanco, 0.7);
-}
-
-.ppal .texto2 {
-  transition: 1s;
-  position: absolute;
-  padding: 10px 20px;
-  text-align: left;
-  top: 0;
-  left: 0;
-  font-size: 40px;
-  font-weight: 700;
-  color: black;
-  background-color: rgba($color-texto-blanco, 0.7);
-}
-
-.ppal {
-  transition: 1s;
-  .container {
-    height: 500px;
-    position: relative;
+  &.texto-diapo3 {
+    text-align: center;
+    left: 37%;
+    bottom: 50px;
+  }
+  &.texto-diapo2 {
+    text-align: right;
+    bottom: 50px;
+    right: 50px;
+  }
+  &.texto-diapo1 {
+    text-align: left;
+    bottom: 50px;
+    left: 50px;
   }
 }
 
-.xxx {
-  transform: translate(0, -100px);
-  opacity: 0;
-}
-
-.yyy {
-  transform: translate(0, 100px);
-  opacity: 0;
+.ppal {
+  height: 93vh;
 }
 
 .diapo1 {
-  background-image: url('../img/portada-1.jpg');
+  position: absolute;
+  width: 100%;
+  height: 93vh;
+  background: url('../img/portada-1.jpg') no-repeat;
+  background-size: 100%;
+  animation: imageAnimation 24s linear infinite 0s;
 }
 
 .diapo2 {
-  background-image: url('../img/portada-2.jpg');
+  position: absolute;
+  width: 100%;
+  height: 93vh;
+  background: url('../img/portada-2.jpg') no-repeat;
+  background-size: 100%;
+  animation: imageAnimation 24s linear infinite 8s;
 }
 
+.diapo3 {
+  position: absolute;
+  width: 100%;
+  height: 93vh;
+  background: url('../img/portada-3.jpg') no-repeat;
+  background-size: 100%;
+  animation: imageAnimation 24s linear infinite 16s;
+}
+
+
+@keyframes imageAnimation {
+  0% { opacity: 1; }
+  30% { opacity: 1; }
+  35% { opacity: 0; }
+  95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.mas-arrow {
+  border-top: 1px solid white;
+  height: 7vh;
+  width: 100%;
+  p {
+    color: white;
+    text-align: center;
+  }
+}
 
 
 
@@ -591,3 +613,9 @@ img + p {
   display: none;
   padding-left: 15px;
 }
+
+
+
+
+.titulo-flecha { font-size: 18px; font-weight: 700; border-radius: 5px 0 0 5px; padding-left: 15px; width: 105%; z-index: 999; line-height: 40px; position: relative; background: #fff; color: #000 }
+.titulo-flecha:after { left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-left-color: #fff; border-width: 20px; margin-top: -20px; }
