@@ -10,23 +10,18 @@
       $diapos.children("div:gt(0)").hide();
 
       setInterval(function() {
-        $diapos.children("div:first")
-        .fadeOut(800)
-        .next()
-        .fadeIn(800)
-        .end()
-        .appendTo($diapos);
-      },  9000);
+        $diapos.children("div:first").fadeOut(800).next().fadeIn(800).end().appendTo($diapos);
+      },  10000);
 
 
       // CLICK en una de las obras de la galería de obras
       $(".obra").on("click", function() {
-        var $self = $(this);
-        var $obras = $self.parent();
-        var index = $self.index(".obra");
-        var $galeriaRow = $(".galeria-row");
-        var $fotogrande = $galeriaRow.find('.fotogrande-img');
-        var $actual = $galeriaRow.eq(index);
+        var $self = $(this),
+            $obras = $self.parent(),
+            index = $self.index(".obra"),
+            $galeriaRow = $(".galeria-row"),
+            $fotogrande = $galeriaRow.find('.fotogrande-img'),
+            $actual = $galeriaRow.eq(index);
 
         if($obras.hasClass("big")){
           if($(window).width() >= 768) {

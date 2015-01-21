@@ -5,33 +5,49 @@
 @import "menu";
 @import "form";
 
-.ppal .texto-diapo {
+.texto-diapo {
   transition: 1s;
-  position: absolute;
-  padding: 10px 20px;
-  background-color: rgba(255,255,255,0.4);
-  font-size: 6vh;
-  font-weight: 700;
-  color: black;
-  &.texto-diapo3 {
-    text-align: center;
-    left: 37%;
-    bottom: 50px;
+  margin-top: 200px;
+  h4 {
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px 20px 0 20px;
+    margin-bottom: 0px;
+    width: 100%;
+    font-size: 40px;
   }
-  &.texto-diapo2 {
-    text-align: right;
-    bottom: 50px;
-    right: 50px;
+  ul {
+    color: white;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+    padding: 15px 20px 20px 20px;
+    width: 100%;
+    font-size: 20px;
+    list-style: none;
+    li {
+      padding-left: 1em;
+      text-indent: -1em;
+      margin-top: 10px;
+      &:before {
+        content: "■ ";
+        color: $color-enlaces;
+      }
+    }
   }
-  &.texto-diapo1 {
-    text-align: left;
-    bottom: 50px;
-    left: 50px;
+  p {
+    margin-top: 0;
+    width: 100%;
+    background-color: rgba($color-enlaces, 0.7);
+    padding-left: 35px;
   }
 }
 
 .ppal {
   height: 93vh;
+  position: relative;
 }
 
 .diapo1 {
@@ -67,7 +83,6 @@
     text-align: center;
   }
 }
-
 
 
 .parrafos h1 {
