@@ -5,85 +5,120 @@
 @import "menu";
 @import "form";
 
-.texto-diapo {
-  transition: 1s;
-  margin-top: 200px;
-  h4 {
-    color: white;
-    font-weight: bold;
-    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
-    background-color: rgba(0,0,0,0.3);
-    padding: 20px 20px 0 20px;
-    margin-bottom: 0px;
-    width: 100%;
-    font-size: 40px;
-  }
-  ul {
-    color: white;
-    margin-bottom: 0;
-    background-color: rgba(0,0,0,0.3);
-    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
-    padding: 15px 20px 20px 20px;
-    width: 100%;
-    font-size: 20px;
-    list-style: none;
-    li {
-      padding-left: 1em;
-      text-indent: -1em;
-      margin-top: 10px;
-      &:before {
-        content: "■ ";
-        color: $color-enlaces;
-      }
-    }
-  }
-  p {
-    margin-top: 0;
-    width: 100%;
-    background-color: rgba($color-enlaces, 0.7);
-    padding-left: 35px;
-  }
-}
-
 .ppal {
-  height: 93vh;
+  height: 700px;
+  height: 100vh;
+  @media (max-width: $screen-xs-max) {
+    height: 500px;
+  }
   position: relative;
 }
 
-.diapo1 {
+.diapo {
   position: absolute;
   width: 100%;
-  height: 93vh;
-  background: url('../img/portada-1.jpg') no-repeat center;
-  background-size: 100%;
-}
-
-.diapo2 {
-  position: absolute;
-  width: 100%;
-  height: 93vh;
-  background: url('../img/portada-2.jpg') no-repeat center;
-  background-size: 100%;
-}
-
-.diapo3 {
-  position: absolute;
-  width: 100%;
-  height: 93vh;
-  background: url('../img/portada-3.jpg') no-repeat center;
-  background-size: 100%;
+  height: 700px;
+  height: 100vh;
+  @media (max-width: $screen-xs-max) {
+    height: 500px;
+  }
+  &.diapo1 {
+    background: url('../img/portada-1.jpg') no-repeat center fixed;
+    background-size: 100% 100%;
+    @media (max-width: $screen-xs-max) {
+      background-size: auto 100%;
+    }
+  }
+  &.diapo2 {
+    background: url('../img/portada-2.jpg') no-repeat center fixed;
+    background-size: 100% 100%;
+    @media (max-width: $screen-xs-max) {
+      background-size: auto 100%;
+    }
+  }
+  &.diapo3 {
+    background: url('../img/portada-3.jpg') no-repeat center fixed;
+    background-size: 100% 100%;
+    @media (max-width: $screen-xs-max) {
+      background-size: auto 100%;
+    }
+  }
+  .texto-diapo {
+    transition: 1s;
+    margin-top: 200px;
+    @media (max-width: $screen-xs-max) {
+      margin-top: 20px;
+    }
+    h4 {
+      color: $color-titulos;
+      font-weight: bold;
+      background-color: $color-texto; //fallback
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px 20px 0 20px;
+      margin-bottom: 0px;
+      width: 100%;
+      font-size: 40px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 28px;
+      }
+    }
+    ul {
+      color: $color-texto-blanco;
+      margin-bottom: 0;
+      background-color: $color-texto; //fallback
+      background-color: rgba(0,0,0,0.5);
+      text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+      padding: 15px 20px 20px 20px;
+      width: 100%;
+      font-size: 19px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 16px;
+      }
+      list-style: none;
+      li {
+        padding-left: 1em;
+        text-indent: -1em;
+        margin-top: 10px;
+        &:before {
+          content: "■ ";
+          color: $color-enlaces;
+        }
+      }
+    }
+    p {
+      margin-top: 0;
+      width: 100%;
+      padding: 10px 25px;
+      font-size: 16px;
+    }
+  }
 }
 
 .mas-arrow {
-  border-top: 1px solid white;
-  height: 7vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 99999;
   width: 100%;
   p {
     color: white;
     text-align: center;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
   }
 }
 
+.dots {
+  position: absolute;
+  right: 30px;
+  top: 45vh;
+  z-index: 99;
+  p {
+    cursor: pointer;
+    color: $color-texto-blanco;
+    clear: both;
+    text-align: center;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+  }
+}
 
 .parrafos h1 {
     margin-bottom: 15px;
@@ -98,6 +133,9 @@
   margin: 0 auto;
   text-align: center;
   height: 100px;
+  img {
+    height: 100px;
+  }
 }
 #portada {
     background-color: $color-titulos;
@@ -467,7 +505,10 @@
     p {
       margin: 15px 0 30px 0;
     }
-
+    a {
+      display: block;
+      clear: both;
+    }
     div {
       height: 80px;
       width: 80px;

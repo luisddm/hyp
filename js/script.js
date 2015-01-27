@@ -6,11 +6,14 @@
 
       // Rotación de las imágenes de portada
       var $diapos = $(".ppal");
+      var $dots = $(".dots");
 
-      $diapos.children("div:gt(0)").hide();
+      $diapos.find(".diapo:gt(0)").hide();
+      $dots.find(".fa").first().css("color", "#11aadd");
 
       setInterval(function() {
-        $diapos.children("div:first").fadeOut(800).next().fadeIn(800).end().appendTo($diapos);
+        $diapos.find(".diapo:first").fadeOut(800).next().fadeIn(800).end().appendTo($diapos);
+        $dots.find(".fa").css("color", "#eee").eq($diapos.find(".diapo:first").data("order")).css("color", "#11aadd");
       },  10000);
 
 
