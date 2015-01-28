@@ -106,6 +106,10 @@
   }
 }
 
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
 .dots {
   position: absolute;
   right: 30px;
@@ -661,5 +665,5 @@ img + p {
 
 
 
-.titulo-flecha { font-size: 18px; font-weight: 700; border-radius: 5px 0 0 5px; padding-left: 15px; width: 105%; z-index: 999; line-height: 40px; position: relative; background: #fff; color: #000 }
+.titulo-flecha { font-size: 18px; font-weight: 700; border-radius: 5px 0 0 5px; padding-left: 15px; width: 105%; z-index: 99; line-height: 40px; position: relative; background: #fff; color: #000 }
 .titulo-flecha:after { left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-left-color: #fff; border-width: 20px; margin-top: -20px; }
