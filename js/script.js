@@ -14,7 +14,7 @@
       setInterval(function() {
         $diapos.find(".diapo:first").fadeOut(800).next().fadeIn(800).end().appendTo($diapos);
         $dots.find(".fa").css("color", "#eee").eq($diapos.find(".diapo:first").data("order")).css("color", "#11aadd");
-      },  10000);
+      },  6000);
 
 
       // CLICK en una de las obras de la galería de obras
@@ -176,6 +176,11 @@
       // GOOGLE MAPS loading
       google.maps.event.addDomListener(window, 'load', initialize);
 
+      $("#drop").on("click", function() {
+        var posicion = document.getElementById("comoLlegar").value; //start y end son objetos de tipo coordenadas
+        calcularRuta(posicion);
+      });
+      
     });
 
 
@@ -235,28 +240,7 @@
           $logo.removeAttr("style").attr("src", "img/logo.png");
         }
     }
-
-
-    // GOOGLE MAPS initialize function
-    function initialize() {
-
-      var myLatlng = new google.maps.LatLng(41.542187, -4.663383);
-      var mapOptions = {
-        zoom: 15,
-        center: myLatlng,
-        scrollwheel: false,
-        mapTypeControlOptions: {
-          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-        }
-      };
-      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-      var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: 'Hello World!'
-      });
-    }
+  
 
     // CAMBIAR la foto grande en respuesta a loads, clicks o swipes
     function ponerFoto($galeriaSection, $miniImg) {
@@ -314,6 +298,99 @@
       // to prevent refreshing the whole page page
       return false;
     }
+  
+  /*
+    // GOOGLE MAPS initialize function
+    function initialize() {
+
+      var myLatlng = new google.maps.LatLng(41.542187, -4.663383);
+      var mapOptions = {
+        zoom: 15,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        }
+      };
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  */
+  
+  /*------------------*/
+  
+  
+  
+  var myLatlng = new google.maps.LatLng(41.542187, -4.663383);
+  var map;
+  var marker1;
+  var directionsDisplay;
+  var directionsService = new google.maps.DirectionsService();
+  
+  function initialize() //function initializes Google map
+  {
+
+    directionsDisplay = new google.maps.DirectionsRenderer();
+
+    var image = {
+        url: 'img/puntero-hoja.png',
+    };
+
+    var googleMapOptions =
+    {
+        center: myLatlng, // map center
+        zoom: 15, //zoom level, 0 = earth view to higher value
+        panControl: true, //enable pan Control
+        zoomControl: true, //enable zoom control
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.MEDIUM //zoom control size
+        },
+        scaleControl: true, // enable scale control
+        mapTypeId: google.maps.MapTypeId.ROADMAP // google map type
+    };
+
+    map = new google.maps.Map(document.getElementById("map-canvas"), googleMapOptions);
+
+    marker1 = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        icon: image,
+        animation: google.maps.Animation.DROP,
+    });
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+    var control = document.getElementById('control');
+    control.style.display = 'block';
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+  }
+
+  function calcularRuta(dondeEstoy) {
+    var start = dondeEstoy;  //start y end son objetos de tipo coordenadas
+    var end = myLatlng;
+    var request = {
+        origin: start,
+        destination: end,
+        travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, function (response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        }
+    });
+  }
+  
+
+  
+
+  
+  
+  
 
 
 })();

@@ -1,0 +1,20 @@
+{"obras": [
+
+{
+  "name" : "Parque Tecnológico de Boecillo",
+  "imagenPrincipal" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_mini.jpg",
+  "description" : "",
+  "images" : [
+    {"index" : 0, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_001.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_001_mini.jpg"},
+    {"index" : 1, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_002.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_002_mini.jpg"},
+    {"index" : 2, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_003.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_003_mini.jpg"},
+    {"index" : 3, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_004.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_004_mini.jpg"},
+    {"index" : 4, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_005.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_005_mini.jpg"},
+    {"index" : 5, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_006.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_006_mini.jpg"},
+    {"index" : 6, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_007.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_007_mini.jpg"},
+    {"index" : 7, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_008.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_008_mini.jpg"},
+    {"index" : 8, "img" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_009.jpg", "thumbnail" : "img/ParqueTecnologicoMantenimiento/parque_tecnologico_manten_009_mini.jpg"}
+  ]
+}
+
+]}

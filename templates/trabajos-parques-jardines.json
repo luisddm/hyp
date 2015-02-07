@@ -24,7 +24,16 @@
   "images" : [
     {"index" : 0, "img" : "img/ParqueTecnologico/parque_tecnologico_001.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_001_mini.jpg"},
     {"index" : 1, "img" : "img/ParqueTecnologico/parque_tecnologico_002.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_002_mini.jpg"},
-    {"index" : 2, "img" : "img/ParqueTecnologico/parque_tecnologico_003.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_003_mini.jpg"}
+    {"index" : 2, "img" : "img/ParqueTecnologico/parque_tecnologico_003.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_003_mini.jpg"},
+    {"index" : 3, "img" : "img/ParqueTecnologico/parque_tecnologico_004.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_004_mini.jpg"},
+    {"index" : 4, "img" : "img/ParqueTecnologico/parque_tecnologico_005.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_005_mini.jpg"},
+    {"index" : 5, "img" : "img/ParqueTecnologico/parque_tecnologico_011.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_011_mini.jpg"},
+    {"index" : 6, "img" : "img/ParqueTecnologico/parque_tecnologico_012.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_012_mini.jpg"},
+    {"index" : 7, "img" : "img/ParqueTecnologico/parque_tecnologico_008.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_008_mini.jpg"},
+    {"index" : 8, "img" : "img/ParqueTecnologico/parque_tecnologico_009.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_009_mini.jpg"},
+    {"index" : 9, "img" : "img/ParqueTecnologico/parque_tecnologico_010.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_010_mini.jpg"},
+    {"index" : 10, "img" : "img/ParqueTecnologico/parque_tecnologico_006.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_006_mini.jpg"},
+    {"index" : 11, "img" : "img/ParqueTecnologico/parque_tecnologico_007.jpg", "thumbnail" : "img/ParqueTecnologico/parque_tecnologico_007_mini.jpg"}
   ]
 },
 {
@@ -33,10 +42,10 @@
   "description" : "<strong>Villa del Prado.</strong>",
   "images" : [
     {"index" : 0, "img" : "img/VillaDelPrado/villadelprado_002.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_002_mini.jpg"},
-    {"index" : 1, "img" : "img/VillaDelPrado/villadelprado_003.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_003_mini.jpg"},
+    {"index" : 1, "img" : "img/VillaDelPrado/villadelprado_006.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_006_mini.jpg"},
     {"index" : 2, "img" : "img/VillaDelPrado/villadelprado_004.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_004_mini.jpg"},
     {"index" : 3, "img" : "img/VillaDelPrado/villadelprado_005.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_005_mini.jpg"},
-    {"index" : 4, "img" : "img/VillaDelPrado/villadelprado_006.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_006_mini.jpg"},
+    {"index" : 4, "img" : "img/VillaDelPrado/villadelprado_003.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_003_mini.jpg"},
     {"index" : 5, "img" : "img/VillaDelPrado/villadelprado_007.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_007_mini.jpg"},
     {"index" : 6, "img" : "img/VillaDelPrado/villadelprado_008.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_008_mini.jpg"},
     {"index" : 7, "img" : "img/VillaDelPrado/villadelprado_009.jpg", "thumbnail" : "img/VillaDelPrado/villadelprado_009_mini.jpg"},

@@ -8,10 +8,10 @@
 .ppal {
   height: 700px;
   height: 100vh;
-  @media (max-width: $screen-xs-max) {
-    height: 500px;
-  }
   position: relative;
+  @media (max-width: $screen-xs-max) {
+    height: 450px;
+  }
 }
 
 .diapo {
@@ -20,27 +20,27 @@
   height: 700px;
   height: 100vh;
   @media (max-width: $screen-xs-max) {
-    height: 500px;
+    height: 450px;
   }
   &.diapo1 {
-    background: url('../img/portada-1.jpg') no-repeat center fixed;
-    background-size: 100% 100%;
+    background: url('../img/portada-1.jpg') no-repeat center;
+    background-size: cover;
     @media (max-width: $screen-xs-max) {
-      background-size: auto 100%;
+      background-size: cover;
     }
   }
   &.diapo2 {
-    background: url('../img/portada-2.jpg') no-repeat center fixed;
-    background-size: 100% 100%;
+    background: url('../img/portada-2.jpg') no-repeat center;
+    background-size: cover;
     @media (max-width: $screen-xs-max) {
-      background-size: auto 100%;
+      background-size: cover;
     }
   }
   &.diapo3 {
-    background: url('../img/portada-3.jpg') no-repeat center fixed;
-    background-size: 100% 100%;
+    background: url('../img/portada-3.jpg') no-repeat center;
+    background-size: cover;
     @media (max-width: $screen-xs-max) {
-      background-size: auto 100%;
+      background-size: cover;
     }
   }
   .texto-diapo {
@@ -48,12 +48,13 @@
     margin-top: 200px;
     @media (max-width: $screen-xs-max) {
       margin-top: 20px;
+      height: auto;
     }
     h4 {
       color: $color-titulos;
       font-weight: bold;
       background-color: $color-texto; //fallback
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.6);
       padding: 20px 20px 0 20px;
       margin-bottom: 0px;
       width: 100%;
@@ -66,7 +67,7 @@
       color: $color-texto-blanco;
       margin-bottom: 0;
       background-color: $color-texto; //fallback
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.6);
       text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
       padding: 15px 20px 20px 20px;
       width: 100%;
@@ -97,12 +98,15 @@
 .mas-arrow {
   position: absolute;
   bottom: 0;
-  z-index: 99999;
+  z-index: 101;
   width: 100%;
   p {
     color: white;
     text-align: center;
     text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+  }
+  @media (max-width: $screen-xs-max) {
+    display: none;
   }
 }
 
@@ -115,16 +119,35 @@
   right: 30px;
   top: 45vh;
   z-index: 99;
+  @media (max-width: $screen-sm-max) {
+    top: auto;
+    bottom: 60px;
+    right: 44%;
+  }
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
   p {
     cursor: pointer;
     color: $color-texto-blanco;
     clear: both;
     text-align: center;
     text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+    @media (max-width: $screen-sm-max) {
+      display: inline-block;
+      padding: 7px;
+    }
   }
 }
 
-.parrafos h1 {
+.parrafos {
+  article {
+    margin-top: 10px;
+    @media (max-width: $screen-xs-max) {
+      margin-top: 40px;
+    }
+  }
+  h1 {
     margin-bottom: 15px;
     @media (max-width: $screen-xs-max) {
       font-size: 26px;
@@ -132,6 +155,7 @@
     &:hover {
         color: lighten($color-titulos, 15%);
     }
+  }
 }
 .area-icon {
   margin: 0 auto;
@@ -627,6 +651,10 @@
         background-color: $color-titulos;
         color: $black;
     }
+    &.boton-direccion {
+      width: 100%;
+      margin: 3px 0;
+    }
 }
 
 
@@ -667,3 +695,24 @@ img + p {
 
 .titulo-flecha { font-size: 18px; font-weight: 700; border-radius: 5px 0 0 5px; padding-left: 15px; width: 105%; z-index: 99; line-height: 40px; position: relative; background: #fff; color: #000 }
 .titulo-flecha:after { left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-left-color: #fff; border-width: 20px; margin-top: -20px; }
+
+
+#directions-panel {
+  .adp table {
+    color: $color-texto-blanco;
+    font-family: "Maven Pro", Arial, sans-serif;
+  }
+  .adp-placemark {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    .adp-text {
+      padding-left: 15px;
+    }
+  }
+  .adp-summary {
+    color: $color-titulos;
+    font-family: "Maven Pro", Arial, sans-serif;
+  }
+}
