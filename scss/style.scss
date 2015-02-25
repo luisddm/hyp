@@ -19,33 +19,31 @@
   width: 100%;
   height: 700px;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: $screen-xs-max) {
     height: 450px;
   }
   &.diapo1 {
     background: url('../img/portada-1.jpg') no-repeat center;
     background-size: cover;
-    @media (max-width: $screen-xs-max) {
-      background-size: cover;
-    }
   }
   &.diapo2 {
     background: url('../img/portada-2.jpg') no-repeat center;
     background-size: cover;
-    @media (max-width: $screen-xs-max) {
-      background-size: cover;
-    }
   }
   &.diapo3 {
     background: url('../img/portada-3.jpg') no-repeat center;
     background-size: cover;
-    @media (max-width: $screen-xs-max) {
-      background-size: cover;
-    }
   }
   .texto-diapo {
-    transition: 1s;
-    margin-top: 200px;
+    margin-top: 100px;
+    max-width: 1170px;
+    flex: 1 1 0%;
+    @media (max-width: $screen-md-max) {
+      max-width: 970px;
+    }
     @media (max-width: $screen-xs-max) {
       margin-top: 20px;
       height: auto;
@@ -121,8 +119,7 @@
   z-index: 99;
   @media (max-width: $screen-sm-max) {
     top: auto;
-    bottom: 60px;
-    right: 44%;
+    bottom: 10px;
   }
   @media (max-width: $screen-xs-max) {
     display: none;
