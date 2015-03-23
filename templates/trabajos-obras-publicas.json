@@ -2,59 +2,59 @@
 
 {
   "name" : "Autovía A-66",
-  "imagenPrincipal" : "img/A66/A66_mini.jpg",
+  "imagenPrincipal" : "img/Obras/Autovia_A_66/A_66_mini.jpg",
   "description" : "<strong>Autovía Ruta de la Plata (N-630). Gijón - Sevilla.</strong><br/>• Tramo: Salamanca Sur - Cuatro Calzadas (Salamanca).<br/>• Tramo: Cuatro Calzadas - Montejo (Salamanca).",
   "images" : [
-    {"index" : 0, "img" : "img/A66/A66_001.jpg", "thumbnail" : "img/A66/A66_001_mini.jpg"},
-    {"index" : 1, "img" : "img/A66/A66_002.jpg", "thumbnail" : "img/A66/A66_002_mini.jpg"},
-    {"index" : 2, "img" : "img/A66/A66_003.jpg", "thumbnail" : "img/A66/A66_003_mini.jpg"},
-    {"index" : 3, "img" : "img/A66/A66_005.jpg", "thumbnail" : "img/A66/A66_005_mini.jpg"},
-    {"index" : 4, "img" : "img/A66/A66_006.jpg", "thumbnail" : "img/A66/A66_006_mini.jpg"},
-    {"index" : 5, "img" : "img/A66/A66_007.jpg", "thumbnail" : "img/A66/A66_007_mini.jpg"},
-    {"index" : 6, "img" : "img/A66/A66_008.jpg", "thumbnail" : "img/A66/A66_008_mini.jpg"},
-    {"index" : 7, "img" : "img/A66/A66_009.jpg", "thumbnail" : "img/A66/A66_009_mini.jpg"},
-    {"index" : 8, "img" : "img/A66/A66_010.jpg", "thumbnail" : "img/A66/A66_010_mini.jpg"},
-    {"index" : 9, "img" : "img/A66/A66_011.jpg", "thumbnail" : "img/A66/A66_011_mini.jpg"},
-    {"index" : 10, "img" : "img/A66/A66_012.jpg", "thumbnail" : "img/A66/A66_012_mini.jpg"}
+    {"index" : 0, "img" : "img/Obras/Autovia_A_66/A_66_001.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Autovia_A_66/A_66_002.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Autovia_A_66/A_66_003.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Obras/Autovia_A_66/A_66_004.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Obras/Autovia_A_66/A_66_005.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Obras/Autovia_A_66/A_66_006.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_006_mini.jpg"},
+    {"index" : 6, "img" : "img/Obras/Autovia_A_66/A_66_007.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_007_mini.jpg"},
+    {"index" : 7, "img" : "img/Obras/Autovia_A_66/A_66_008.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_008_mini.jpg"},
+    {"index" : 8, "img" : "img/Obras/Autovia_A_66/A_66_009.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_009_mini.jpg"},
+    {"index" : 9, "img" : "img/Obras/Autovia_A_66/A_66_010.jpg", "thumbnail" : "img/Obras/Autovia_A_66/A_66_010_mini.jpg"}
   ]
 },
 {
   "name" : "Autovía VA-30",
-  "imagenPrincipal" : "img/VA30/VA30_mini.jpg",
+  "imagenPrincipal" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_mini.jpg",
   "description" : "<strong>Autovía VA-30. Circunvalación de Valladolid.</strong><br/>• Tramo: Ctra. CL-601. Autovía A-62 de Castilla (Valladolid).<br/>• Tramo: 1041. Conexión Ronda Sur - Ronda Este (Valladolid).",
   "images" : [
-    {"index" : 0, "img" : "img/VA30/VA30_001.jpg", "thumbnail" : "img/VA30/VA30_001_mini.jpg"},
-    {"index" : 1, "img" : "img/VA30/VA30_003.jpg", "thumbnail" : "img/VA30/VA30_003_mini.jpg"},
-    {"index" : 2, "img" : "img/VA30/VA30_004.jpg", "thumbnail" : "img/VA30/VA30_004_mini.jpg"},
-    {"index" : 4, "img" : "img/VA30/VA30_007.jpg", "thumbnail" : "img/VA30/VA30_007_mini.jpg"},
-    {"index" : 5, "img" : "img/VA30/VA30_009.jpg", "thumbnail" : "img/VA30/VA30_009_mini.jpg"},
-    {"index" : 6, "img" : "img/VA30/VA30_011.jpg", "thumbnail" : "img/VA30/VA30_011_mini.jpg"},
-    {"index" : 7, "img" : "img/VA30/VA30_012.jpg", "thumbnail" : "img/VA30/VA30_012_mini.jpg"},
-    {"index" : 8, "img" : "img/VA30/VA30_013.jpg", "thumbnail" : "img/VA30/VA30_013_mini.jpg"},
-    {"index" : 9, "img" : "img/VA30/VA30_014.jpg", "thumbnail" : "img/VA30/VA30_014_mini.jpg"},
-    {"index" : 10, "img" : "img/VA30/VA30_015.jpg", "thumbnail" : "img/VA30/VA30_015_mini.jpg"}
+    {"index" : 0, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_001.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_002.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_003.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_004.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_005.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_006.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_006_mini.jpg"},
+    {"index" : 6, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_007.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_007_mini.jpg"},
+    {"index" : 7, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_008.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_008_mini.jpg"},
+    {"index" : 8, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_009.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_009_mini.jpg"},
+    {"index" : 9, "img" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_010.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_CL601_1041/autovia_VA_30_010_mini.jpg"}
   ]
 },
 {
   "name" : "Autovía A-50",
-  "imagenPrincipal" : "img/A50/A50_mini.jpg",
+  "imagenPrincipal" : "img/Obras/Autovia_A_50/a_50_mini.jpg",
   "description" : "<strong>Autovía Ávila - Salamanca.</strong><br/>• Tramo: Narros del Castillo – Peñaranda de Bracamonte – Villar de Gallimazo.",
   "images" : [
-    {"index" : 0, "img" : "img/A50/A50_001.jpg", "thumbnail" : "img/A50/A50_001_mini.jpg"},
-    {"index" : 1, "img" : "img/A50/A50_002.jpg", "thumbnail" : "img/A50/A50_002_mini.jpg"}
+    {"index" : 0, "img" : "img/Obras/Autovia_A_50/a_50_001.jpg", "thumbnail" : "img/Obras/Autovia_A_50/a_50_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Autovia_A_50/a_50_002.jpg", "thumbnail" : "img/Obras/Autovia_A_50/a_50_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Autovia_A_50/a_50_003.jpg", "thumbnail" : "img/Obras/Autovia_A_50/a_50_003_mini.jpg"}
   ]
 },
 {
   "name" : "Autovía de Castilla",
-  "imagenPrincipal" : "img/CiudadRodrigo/ciudad_rodrigo_mini.jpg",
+  "imagenPrincipal" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_mini.jpg",
   "description" : "<strong>Autovía de Castilla (A-62).</strong><br/>• Tramo: Ciudad Rodrigo – Fuentes de Oñoro (Salamanca).",
   "images" : [
-    {"index" : 0, "img" : "img/CiudadRodrigo/ciudad_rodrigo_001.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_001_mini.jpg"},
-    {"index" : 1, "img" : "img/CiudadRodrigo/ciudad_rodrigo_002.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_002_mini.jpg"},
-    {"index" : 2, "img" : "img/CiudadRodrigo/ciudad_rodrigo_003.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_003_mini.jpg"},
-    {"index" : 3, "img" : "img/CiudadRodrigo/ciudad_rodrigo_004.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_004_mini.jpg"},
-    {"index" : 4, "img" : "img/CiudadRodrigo/ciudad_rodrigo_005.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_005_mini.jpg"},
-    {"index" : 5, "img" : "img/CiudadRodrigo/ciudad_rodrigo_006.jpg", "thumbnail" : "img/CiudadRodrigo/ciudad_rodrigo_006_mini.jpg"}
+    {"index" : 0, "img" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_001.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_002.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_003.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_004.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_005.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_006.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_A62/castilla_A_62_006_mini.jpg"}
   ]
 },
 {
@@ -62,52 +62,91 @@
   "imagenPrincipal" : "img/Payuelos/payuelos_mini.jpg",
   "description" : "<strong>Canal bajo de los Payuelos.</strong><br/>Fase II (León).",
   "images" : [
-    {"index" : 0, "img" : "img/Payuelos/payuelos_001.jpg", "thumbnail" : "img/Payuelos/payuelos_001_mini.jpg"},
-    {"index" : 1, "img" : "img/Payuelos/payuelos_002.jpg", "thumbnail" : "img/Payuelos/payuelos_002_mini.jpg"},
-    {"index" : 2, "img" : "img/Payuelos/payuelos_003.jpg", "thumbnail" : "img/Payuelos/payuelos_003_mini.jpg"},
-    {"index" : 3, "img" : "img/Payuelos/payuelos_004.jpg", "thumbnail" : "img/Payuelos/payuelos_004_mini.jpg"},
-    {"index" : 4, "img" : "img/Payuelos/payuelos_005.jpg", "thumbnail" : "img/Payuelos/payuelos_005_mini.jpg"},
-    {"index" : 5, "img" : "img/Payuelos/payuelos_006.jpg", "thumbnail" : "img/Payuelos/payuelos_006_mini.jpg"},
-    {"index" : 6, "img" : "img/Payuelos/payuelos_007.jpg", "thumbnail" : "img/Payuelos/payuelos_007_mini.jpg"},
-    {"index" : 7, "img" : "img/Payuelos/payuelos_008.jpg", "thumbnail" : "img/Payuelos/payuelos_008_mini.jpg"}
+    {"index" : 0, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_001.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_002.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_003.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_004.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_005.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_006.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_006_mini.jpg"},
+    {"index" : 6, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_007.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_007_mini.jpg"},
+    {"index" : 7, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_008.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_008_mini.jpg"}
   ]
 },
 {
   "name" : "Corredor Norte-Noroeste",
-  "imagenPrincipal" : "img/Palanquinos/palanquinos_mini.jpg",
+  "imagenPrincipal" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_mini.jpg",
   "description" : "<strong>Corredor norte-noroeste de alta velocidad.</strong><br/>• Tramo: Palencia - León<br/>• Subtramo: Palanquinos - Onzonilla (León).",
   "images" : [
-    {"index" : 0, "img" : "img/Palanquinos/palanquinos_001.jpg", "thumbnail" : "img/Palanquinos/palanquinos_001.jpg"},
-    {"index" : 1, "img" : "img/Palanquinos/palanquinos_002.jpg", "thumbnail" : "img/Palanquinos/palanquinos_002.jpg"},
-    {"index" : 2, "img" : "img/Palanquinos/palanquinos_003.jpg", "thumbnail" : "img/Palanquinos/palanquinos_003.jpg"},
-    {"index" : 3, "img" : "img/Palanquinos/palanquinos_004.jpg", "thumbnail" : "img/Palanquinos/palanquinos_004.jpg"},
-    {"index" : 4, "img" : "img/Palanquinos/palanquinos_005.jpg", "thumbnail" : "img/Palanquinos/palanquinos_005.jpg"}
-  ]
-},
-{
-  "name" : "Nuevo acceso ferroviario a Valladolid",
-  "imagenPrincipal" : "img/PinarAntequera/pinar_antequera_mini.jpg",
-  "description" : "<strong>Acceso norte-noroeste, línea Madrid-Segovia-Valladolid-Medina del Campo.</strong><br/>• Tramo: accesos a Valladolid e integración urbana de su RAF.<br/>• Subtramo: río Duero – túnel Pinar de Antequera.",
-  "images" : [
-    {"index" : 0, "img" : "img/PinarAntequera/pinar_antequera_001.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_001_mini.jpg"},
-    {"index" : 1, "img" : "img/PinarAntequera/pinar_antequera_002.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_002_mini.jpg"},
-    {"index" : 2, "img" : "img/PinarAntequera/pinar_antequera_003.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_003_mini.jpg"},
-    {"index" : 3, "img" : "img/PinarAntequera/pinar_antequera_004.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_004_mini.jpg"},
-    {"index" : 4, "img" : "img/PinarAntequera/pinar_antequera_005.jpg", "thumbnail" : "img/PinarAntequera/pinar_antequera_005_mini.jpg"}
+    {"index" : 0, "img" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_001.jpg", "thumbnail" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_002.jpg", "thumbnail" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_001_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_003.jpg", "thumbnail" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_001_mini.jpg"},
+    {"index" : 3, "img" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_004.jpg", "thumbnail" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_001_mini.jpg"},
+    {"index" : 4, "img" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_005.jpg", "thumbnail" : "img/Obras/Corredor_Norte_Noroeste/corredor_norte_noroeste_001_mini.jpg"}
   ]
 },
 {
   "name" : "Autovía VA-30",
-  "imagenPrincipal" : "img/RondaEste/ronda_este_mini.jpg",
+  "imagenPrincipal" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_mini.jpg",
   "description" : "<strong>Autovía VA-30. Circunvalación de Valladolid.</strong><br/>• Tramo: conexión Autovía del Duero (A-11) y Autovía de Castilla (A-62).",
   "images" : [
-    {"index" : 0, "img" : "img/RondaEste/ronda_este_001.jpg", "thumbnail" : "img/RondaEste/ronda_este_001_mini.jpg"},
-    {"index" : 1, "img" : "img/RondaEste/ronda_este_002.jpg", "thumbnail" : "img/RondaEste/ronda_este_002_mini.jpg"},
-    {"index" : 2, "img" : "img/RondaEste/ronda_este_003.jpg", "thumbnail" : "img/RondaEste/ronda_este_003_mini.jpg"},
-    {"index" : 3, "img" : "img/RondaEste/ronda_este_004.jpg", "thumbnail" : "img/RondaEste/ronda_este_004_mini.jpg"},
-    {"index" : 4, "img" : "img/RondaEste/ronda_este_005.jpg", "thumbnail" : "img/RondaEste/ronda_este_005_mini.jpg"},
-    {"index" : 5, "img" : "img/RondaEste/ronda_este_006.jpg", "thumbnail" : "img/RondaEste/ronda_este_006_mini.jpg"},
-    {"index" : 6, "img" : "img/RondaEste/ronda_este_007.jpg", "thumbnail" : "img/RondaEste/ronda_este_007_mini.jpg"}
+    {"index" : 0, "img" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_001.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_002.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_003.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_004.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_005.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_006.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_006_mini.jpg"},
+    {"index" : 6, "img" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_007.jpg", "thumbnail" : "img/Obras/Autovia_VA_30_Circunvalacion/VA_30_circunvalacion_007_mini.jpg"}
+  ]
+},
+{
+  "name" : "Autovía de Castilla",
+  "imagenPrincipal" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_mini.jpg",
+  "description" : "<strong>N-620</strong><br/>• Tramo: Aldehuela de la Bóveda - Martín de Yeltes - Ciudad Rodrigo (Salamanca).",
+  "images" : [
+    {"index" : 0, "img" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_001.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_001_mini.jpg"},
+		{"index" : 0, "img" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_002.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_002_mini.jpg"},
+		{"index" : 0, "img" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_003.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_003_mini.jpg"},
+		{"index" : 0, "img" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_004.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_004_mini.jpg"},
+		{"index" : 0, "img" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_005.jpg", "thumbnail" : "img/Obras/Autovia_de_Castilla_Aldehuela_CR/CN_620_005_mini.jpg"}
+  ]
+},
+{
+  "name" : "Autovía de la Plata",
+  "imagenPrincipal" : "img/Obras/Autovia_Plata_Villamanan/villamanan_mini.jpg",
+  "description" : "<strong>N-630, LE-412</strong><br/>• Tramo: Villamañán (León).",
+  "images" : [
+    {"index" : 0, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_001.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_001_mini.jpg"},
+		{"index" : 1, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_002.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_002_mini.jpg"},
+		{"index" : 2, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_003.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_003_mini.jpg"},
+		{"index" : 3, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_004.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_004_mini.jpg"},
+		{"index" : 4, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_005.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_005_mini.jpg"},
+		{"index" : 5, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_006.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_006_mini.jpg"},
+		{"index" : 6, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_007.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_007_mini.jpg"},
+		{"index" : 7, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_008.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_008_mini.jpg"},
+		{"index" : 8, "img" : "img/Obras/Autovia_Plata_Villamanan/villamanan_009.jpg", "thumbnail" : "img/Obras/Autovia_Plata_Villamanan/villamanan_009_mini.jpg"}
+  ]
+},
+{
+  "name" : "Autovía del Duero",
+  "imagenPrincipal" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_mini.jpg",
+  "description" : "<strong>Plantaciones.</strong><br/>• Tramo: Cistérniga.",
+  "images" : [
+    {"index" : 0, "img" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_001.jpg", "thumbnail" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_002.jpg", "thumbnail" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_003.jpg", "thumbnail" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_004.jpg", "thumbnail" : "img/Obras/Plantaciones_Autovia_Duero/autovia_del_duero_004_mini.jpg"}
+  ]
+},
+{
+  "name" : "Nuevo acceso ferroviario a Valladolid",
+  "imagenPrincipal" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_mini.jpg",
+  "description" : "<strong>Acceso norte-noroeste, línea Madrid-Segovia-Valladolid-Medina del Campo.</strong><br/>• Tramo: accesos a Valladolid e integración urbana de su RAF.<br/>• Subtramo: río Duero – túnel Pinar de Antequera.",
+  "images" : [
+    {"index" : 0, "img" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_001.jpg", "thumbnail" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_001.jpg"},
+    {"index" : 1, "img" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_002.jpg", "thumbnail" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_002.jpg"},
+    {"index" : 2, "img" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_003.jpg", "thumbnail" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_003.jpg"},
+    {"index" : 3, "img" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_004.jpg", "thumbnail" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_004.jpg"},
+    {"index" : 4, "img" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_005.jpg", "thumbnail" : "img/Obras/Nuevo_Acceso_Ferroviario/ferroviario_005.jpg"}
   ]
 }
 
