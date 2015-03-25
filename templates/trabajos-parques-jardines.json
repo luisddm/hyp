@@ -121,6 +121,19 @@
     {"index" : 6, "img" : "img/Parques/Poligono_Industrial_de_Villadangos/villadangos_del_paramo_007.jpg", "thumbnail" : "img/Parques/Poligono_Industrial_de_Villadangos/villadangos_del_paramo_007_mini.jpg"},
     {"index" : 7, "img" : "img/Parques/Poligono_Industrial_de_Villadangos/villadangos_del_paramo_008.jpg", "thumbnail" : "img/Parques/Poligono_Industrial_de_Villadangos/villadangos_del_paramo_008_mini.jpg"}
   ]
+},
+{
+  "name" : "Valdelasfuentes",
+  "imagenPrincipal" : "img/Parques/Valdelasfuentes/valdelasfuentes_mini.jpg",
+  "description" : "<strong>Alcobendas (Madrid).</strong>",
+  "images" : [
+    {"index" : 0, "img" : "img/Parques/Valdelasfuentes/valdelasfuentes_001.jpg", "thumbnail" : "img/Parques/Valdelasfuentes/valdelasfuentes_001_mini.jpg"},
+    {"index" : 1, "img" : "img/Parques/Valdelasfuentes/valdelasfuentes_002.jpg", "thumbnail" : "img/Parques/Valdelasfuentes/valdelasfuentes_002_mini.jpg"},
+    {"index" : 2, "img" : "img/Parques/Valdelasfuentes/valdelasfuentes_003.jpg", "thumbnail" : "img/Parques/Valdelasfuentes/valdelasfuentes_003_mini.jpg"},
+    {"index" : 3, "img" : "img/Parques/Valdelasfuentes/valdelasfuentes_004.jpg", "thumbnail" : "img/Parques/Valdelasfuentes/valdelasfuentes_004_mini.jpg"},
+    {"index" : 4, "img" : "img/Parques/Valdelasfuentes/valdelasfuentes_005.jpg", "thumbnail" : "img/Parques/Valdelasfuentes/valdelasfuentes_005_mini.jpg"},
+    {"index" : 5, "img" : "img/Parques/Valdelasfuentes/valdelasfuentes_006.jpg", "thumbnail" : "img/Parques/Valdelasfuentes/valdelasfuentes_006_mini.jpg"}
+  ]
 }
 
 ]}
