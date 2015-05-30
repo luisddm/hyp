@@ -59,7 +59,7 @@
 },
 {
   "name" : "Canal Bajo de los Payuelos",
-  "imagenPrincipal" : "img/Payuelos/payuelos_mini.jpg",
+  "imagenPrincipal" : "img/Obras/Canal_Bajo_Payuelos/payuelos_mini.jpg",
   "description" : "<strong>Canal bajo de los Payuelos.</strong><br/>Fase II (León).",
   "images" : [
     {"index" : 0, "img" : "img/Obras/Canal_Bajo_Payuelos/payuelos_001.jpg", "thumbnail" : "img/Obras/Canal_Bajo_Payuelos/payuelos_001_mini.jpg"},

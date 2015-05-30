@@ -1,6 +1,6 @@
 (function() {
 
-    "use strict";
+    'use strict';
 
     var gulp = require('gulp'),
         sass = require('gulp-sass'),
@@ -10,60 +10,53 @@
         uglify = require('gulp-uglify'),
         swig = require('gulp-swig'),
         concat = require('gulp-concat'),
-        uncss = require('gulp-uncss'),
-        glob = require('glob'),
         changed = require('gulp-changed'),
         del = require('del'),
         plumber = require('gulp-plumber'),
         autoprefixer = require('gulp-autoprefixer');
 
+    var config = {
+        sassPath: 'scss',
+        bowerDir: 'bower_components'
+    };
 
-    // Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a build
+    // Convierto SCSS a CSS, minimizo, concateno y copio el archivo style.css a dist
     gulp.task('scss', function () {
-        gulp.src('scss/style.scss')
-            .pipe(plumber())
-            .pipe(sass({
-                includePaths: [
-                    'scss',
-                    'bower_components/bootstrap-sass-official/assets/stylesheets',
-                    'bower_components/fontawesome/scss'
-                ]
-            }))
-            .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-            .pipe(minifyCss({
-                keepSpecialComments: 0
-            }))
-            .pipe(concat('style.css'))
-            .pipe(gulp.dest('build/css'));
-    });
-
-    // Elimino los estilos CSS que no se usan (OJO, esto tarda mucho en ejecutarse)
-    gulp.task('uncss', function() {
-      gulp.src('build/css/style.css')
-      .pipe(uncss({
-        html: glob.sync('build/*.html')
+      gulp.src('scss/style.scss')
+      .pipe(plumber())
+      .pipe(sass({
+        includePaths: [
+          config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
+          config.bowerDir + '/fontawesome/scss',
+          config.sassPath
+        ]
       }))
-      .pipe(gulp.dest('build/css'));
+      .pipe(autoprefixer())
+      .pipe(minifyCss({
+        keepSpecialComments: 0
+      }))
+      .pipe(concat('style.css'))
+      .pipe(gulp.dest('dist/css'));
     });
 
-    // Minimizo el javascript, lo concateno en app.js y lo copio a build
+    // Minimizo el javascript, lo concateno en app.js y lo copio a dist
     gulp.task('javascript', function () {
         gulp.src([
-            "bower_components/jquery/dist/jquery.js",
-            //"bower_components/jqueryui/jquery-ui.js",
-            "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
-            "bower_components/spinjs/spin.js",
-            "bower_components/spinjs/jquery.spin.js",
-            "bower_components/jquery-validation/dist/jquery.validate.min.js",
-            "bower_components/jquery-touchswipe/jquery.touchSwipe.min.js",
-            "js/*.js"
+            config.bowerDir + '/jquery/dist/jquery.js',
+            //'bower_components/jqueryui/jquery-ui.js',
+            config.bowerDir + '/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+            config.bowerDir + '/spinjs/spin.js',
+            config.bowerDir + '/spinjs/jquery.spin.js',
+            config.bowerDir + '/jquery-validation/dist/jquery.validate.min.js',
+            config.bowerDir + '/jquery-touchswipe/jquery.touchSwipe.min.js',
+            'js/*.js'
         ])
             .pipe(uglify())
             .pipe(concat('app.js'))
-            .pipe(gulp.dest('build/js'));
+            .pipe(gulp.dest('dist/js'));
     });
 
-    // Construyo los HTML a partir de las plantillas Swig y las copio a build
+    // Construyo los HTML a partir de las plantillas Swig y las copio a dist
     gulp.task('templates', function () {
         gulp.src('templates/*.html')
             .pipe(swig({
@@ -73,45 +66,45 @@
                     cache: false
                 }
             }))
-            .pipe(gulp.dest('build'));
+            .pipe(gulp.dest('dist'));
     });
 
-    // Copio las imágenes a build
+    // Copio las imágenes a dist
     gulp.task('images', function () {
         gulp.src('img/**')
-            .pipe(changed('build/img/**'))
-            .pipe(gulp.dest('build/img'));
+            .pipe(changed('dist/img/**'))
+            .pipe(gulp.dest('dist/img'));
     });
 
-    // Copio las fuentes a build
+    // Copio las fuentes a dist
     gulp.task('fonts', function () {
-      gulp.src('bower_components/fontawesome/fonts/**')
-      .pipe(changed('build/fonts/**'))
-      .pipe(gulp.dest('build/fonts'));
+      gulp.src(config.bowerDir + '/fontawesome/fonts/**')
+      .pipe(changed('dist/fonts/**'))
+      .pipe(gulp.dest('dist/fonts'));
     });
 
     // Mantengo un servidor httpd que hace que el navegador se recargue cuando detecta cambios
     gulp.task('browser-sync', function () {
-        browserSync.init(["build/css/*.css", "build/js/*.js", "build/*.html", "build/img/**"], {
+        browserSync.init(['dist/css/*.css', 'dist/js/*.js', 'dist/*.html', 'dist/img/**'], {
             server: {
-                baseDir: "build"
+                baseDir: 'dist'
             }
         });
     });
 
-    // Elimino el contenido de la carpeta build
+    // Elimino el contenido de la carpeta dist
     gulp.task('clean', function () {
-        del(['build/**']);
+        del(['dist/**']);
     });
 
     // Tarea por defecto para desarrollo
-    gulp.task('default', ['scss', 'javascript', 'templates', 'images', 'browser-sync'], function () {
-        gulp.watch("scss/*.scss", ['scss']);
-        gulp.watch("js/*.js", ['javascript']);
-        gulp.watch("templates/**", ['templates']);
+    gulp.task('default', ['fonts', 'scss', 'javascript', 'templates', 'browser-sync'], function () {
+        gulp.watch('scss/*.scss', ['scss']);
+        gulp.watch('js/*.js', ['javascript']);
+        gulp.watch('templates/**', ['templates']);
     });
 
-    // Tarea para generar el codigo en build que se enviará al FTP
-    gulp.task('build', ['clean', 'scss-uncss', 'javascript', 'templates', 'images']);
+    // Tarea para generar el codigo en dist que se enviará al FTP
+    gulp.task('dist', ['clean', 'fonts', 'scss', 'javascript', 'templates', 'images']);
 
 })();
