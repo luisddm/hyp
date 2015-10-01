@@ -1,8 +1,8 @@
-(function() {
+(function () {
 
   'use strict';
 
-  jQuery(document).ready(function($) {
+  jQuery(document).ready(function ($) {
 
     // Rotación de las imágenes de portada
     var $diapos = $('.ppal');
@@ -12,14 +12,14 @@
     $diapos.find('.diapo:gt(0)').hide();
     $dots.find('.fa').first().css('color', '#11aadd');
 
-    setInterval(function() {
+    setInterval(function () {
       $diapos.find('.diapo:first').fadeOut(800).next().fadeIn(800).end().appendTo($diapos);
       $dots.find('.fa').css('color', '#eee').eq($diapos.find('.diapo:first').data('order')).css('color', '#11aadd');
     }, 6000);
 
 
     // CLICK en una de las obras de la galería de obras
-    $obra.on('click', function() {
+    $obra.on('click', function () {
       var $self = $(this),
         $obras = $self.parent(),
         index = $self.index('.obra'),
@@ -29,11 +29,11 @@
 
       if ($obras.hasClass('big')) {
         if ($(window).width() >= 768) {
-          $obras.hide(500, function() {
+          $obras.hide(500, function () {
             $('body,html').animate({
               scrollTop: 0
-            }, 0, function() {
-              $obras.addClass('small').removeClass('big').show(500, function() {
+            }, 0, function () {
+              $obras.addClass('small').removeClass('big').show(500, function () {
                 $('body,html').animate({
                   scrollTop: 430
                 }, 500);
@@ -41,7 +41,7 @@
             });
           });
         } else {
-          $obras.addClass('small').removeClass('big').show(500, function() {
+          $obras.addClass('small').removeClass('big').show(500, function () {
             $('body,html').animate({
               scrollTop: 1200
             }, 500);
@@ -75,7 +75,7 @@
 
 
     // CLICK en galería de imágenes
-    $('.mini-div').on('click', function() {
+    $('.mini-div').on('click', function () {
       var $self = $(this).children('.mini-img');
       ponerFoto($self.closest('.galeria-row'), $self);
     });
@@ -83,7 +83,7 @@
 
     // SWIPE en imagen grande
     $('.fotogrande-div').swipe({
-      swipeLeft: function() {
+      swipeLeft: function () {
         var $galeria = $(this).closest('.galeria-row');
         var $fotograndeImg = $(this).find('.fotogrande-img');
         var maxIndex = $galeria.find('.mini-img').length - 1;
@@ -92,7 +92,7 @@
         if (nextIndex < 0) nextIndex = maxIndex;
         ponerFoto($galeria, $galeria.find('.mini-img').eq(nextIndex));
       },
-      swipeRight: function() {
+      swipeRight: function () {
         var $galeria = $(this).closest('.galeria-row');
         var $fotograndeImg = $(this).find('.fotogrande-img');
         var maxIndex = $galeria.find('.mini-img').length - 1;
@@ -113,17 +113,17 @@
 
     // FORM
     $('#contact-form').validate({
-      highlight: function(element) {
+      highlight: function (element) {
         $(element).css({
           'background-color': '#ecc'
         });
       },
-      unhighlight: function(element) {
+      unhighlight: function (element) {
         $(element).css({
           'background-color': '#ddd'
         });
       },
-      errorPlacement: function(error, element) {
+      errorPlacement: function (error, element) {
         var $label = element.parent('div').find('label');
         error.insertAfter($label);
       },
@@ -153,14 +153,14 @@
           required: 'Acepta la política de privacidad'
         }
       },
-      submitHandler: function(form) {
+      submitHandler: function (form) {
         submitForm($('form').serialize());
       }
     });
 
 
     // SCROLL anchors
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*=#]:not([href=#])').click(function () {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -175,7 +175,7 @@
 
 
     // SHOW OR HIDE privacy message
-    $('#show-privacy').click(function() {
+    $('#show-privacy').click(function () {
       $('.alert').slideToggle('slow');
     });
 
@@ -183,7 +183,7 @@
     // SCROLL menubar
     menu();
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
       menu();
     });
 
@@ -191,7 +191,7 @@
     // GOOGLE MAPS loading
     google.maps.event.addDomListener(window, 'load', initialize);
 
-    $('#drop').on('click', function() {
+    $('#drop').on('click', function () {
       var posicion = document.getElementById('comoLlegar').value; //start y end son objetos de tipo coordenadas
       calcularRuta(posicion);
     });
@@ -207,7 +207,7 @@
 
     if ($(window).width() >= 768) {
 
-      $(window).on('scroll', function() {
+      $(window).on('scroll', function () {
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop < 20) {
@@ -302,7 +302,7 @@
     $spinner.show().spin();
 
     $fotogrande.css('opacity', 0);
-    var imgaux = $('<img />').attr('src', link).on('load', function() {
+    var imgaux = $('<img />').attr('src', link).on('load', function () {
       $fotogrande.attr('src', imgaux.attr('src'));
       $fotogrande.animate({
         'opacity': 1
@@ -329,14 +329,14 @@
         dataType: 'json',
         url: 'mail.php',
         data: form
-      }).done(function(data) {
+      }).done(function (data) {
 
         // show the response
         $enviarMsg.html('<i class="fa fa-check"></i> Enviado');
         $enviarBoton.attr('disabled', 'disabled');
 
       })
-      .fail(function() {
+      .fail(function () {
 
         // just in case posting your form failed
         $enviarMsg.html('¡Error!');
@@ -397,7 +397,7 @@
       destination: end,
       travelMode: google.maps.TravelMode.DRIVING
     };
-    directionsService.route(request, function(response, status) {
+    directionsService.route(request, function (response, status) {
       if (status == google.maps.DirectionsStatus.OK) {
         directionsDisplay.setDirections(response);
       }

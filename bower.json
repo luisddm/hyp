@@ -21,8 +21,8 @@
     "fancybox": "~2.1",
     "spinjs": "~2",
     "jquery": "~1",
-    "jquery-validation": "~1.13",
+    "jquery-validation": "~1.14",
     "jquery-touchswipe": "~1.6",
-    "fontawesome": "~4.3"
+    "fontawesome": "~4.4"
   }
 }
