@@ -1,203 +1,200 @@
-(function () {
-
+(function() {
   'use strict';
 
-  jQuery(document).ready(function ($) {
+  // Rotación de las imágenes de portada
+  var $diapos = $('.ppal');
+  var $dots = $('.dots');
+  var $obra = $('.obra');
 
-    // Rotación de las imágenes de portada
-    var $diapos = $('.ppal');
-    var $dots = $('.dots');
-    var $obra = $('.obra');
+  $diapos.find('.diapo:gt(0)').hide();
+  $dots.find('.fa').first().css('color', '#11aadd');
 
-    $diapos.find('.diapo:gt(0)').hide();
-    $dots.find('.fa').first().css('color', '#11aadd');
+  setInterval(function() {
+    $diapos.find('.diapo:first').fadeOut(800).next().fadeIn(800).end().appendTo($diapos);
+    $dots.find('.fa').css('color', '#eee').eq($diapos.find('.diapo:first').data('order')).css('color', '#11aadd');
+  }, 6000);
 
-    setInterval(function () {
-      $diapos.find('.diapo:first').fadeOut(800).next().fadeIn(800).end().appendTo($diapos);
-      $dots.find('.fa').css('color', '#eee').eq($diapos.find('.diapo:first').data('order')).css('color', '#11aadd');
-    }, 6000);
+  // CLICK en una de las obras de la galería de obras
+  $obra.on('click', function() {
+    var $self = $(this);
+    var $obras = $self.parent();
+    var index = $self.index('.obra');
+    var $galeriaRow = $('.galeria-row');
+    var $fotogrande = $galeriaRow.find('.fotogrande-img');
+    var $actual = $galeriaRow.eq(index);
 
-
-    // CLICK en una de las obras de la galería de obras
-    $obra.on('click', function () {
-      var $self = $(this),
-        $obras = $self.parent(),
-        index = $self.index('.obra'),
-        $galeriaRow = $('.galeria-row'),
-        $fotogrande = $galeriaRow.find('.fotogrande-img'),
-        $actual = $galeriaRow.eq(index);
-
-      if ($obras.hasClass('big')) {
-        if ($(window).width() >= 768) {
-          $obras.hide(500, function () {
-            $('body,html').animate({
-              scrollTop: 0
-            }, 0, function () {
-              $obras.addClass('small').removeClass('big').show(500, function () {
-                $('body,html').animate({
-                  scrollTop: 430
-                }, 500);
-              });
+    if ($obras.hasClass('big')) {
+      if ($(window).width() >= 768) {
+        $obras.hide(500, function() {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 0, function() {
+            $obras.addClass('small').removeClass('big').show(500, function() {
+              $('body,html').animate({
+                scrollTop: 430
+              }, 500);
             });
           });
-        } else {
-          $obras.addClass('small').removeClass('big').show(500, function () {
-            $('body,html').animate({
-              scrollTop: 1200
-            }, 500);
-          });
-        }
-      }
-
-      if ($(window).width() >= 768) {
-        $('body,html').animate({
-          scrollTop: 430
-        }, 500);
+        });
       } else {
-        $('body,html').animate({
-          scrollTop: 1200
-        }, 500);
+        $obras.addClass('small').removeClass('big').show(500, function() {
+          $('body,html').animate({
+            scrollTop: 1200
+          }, 500);
+        });
       }
-
-      $galeriaRow.hide();
-      $actual.show();
-
-      // Mostrar sección de galerías
-      $('.galeria-section').show();
-
-      $('.obra').removeClass('activo');
-      $self.addClass('activo');
-
-      $fotogrande.attr('src', 'img/placeholder.png');
-
-      ponerFoto($actual, $actual.find('.mini-img').eq(0));
-    });
-
-
-    // CLICK en galería de imágenes
-    $('.mini-div').on('click', function () {
-      var $self = $(this).children('.mini-img');
-      ponerFoto($self.closest('.galeria-row'), $self);
-    });
-
-
-    // SWIPE en imagen grande
-    $('.fotogrande-div').swipe({
-      swipeLeft: function () {
-        var $galeria = $(this).closest('.galeria-row');
-        var $fotograndeImg = $(this).find('.fotogrande-img');
-        var maxIndex = $galeria.find('.mini-img').length - 1;
-
-        var nextIndex = +$fotograndeImg.data('index') - 1;
-        if (nextIndex < 0) nextIndex = maxIndex;
-        ponerFoto($galeria, $galeria.find('.mini-img').eq(nextIndex));
-      },
-      swipeRight: function () {
-        var $galeria = $(this).closest('.galeria-row');
-        var $fotograndeImg = $(this).find('.fotogrande-img');
-        var maxIndex = $galeria.find('.mini-img').length - 1;
-
-        var nextIndex = +$fotograndeImg.data('index') + 1;
-        if (nextIndex > maxIndex) nextIndex = 0;
-        ponerFoto($galeria, $galeria.find('.mini-img').eq(nextIndex));
-      }
-    });
-
-
-    // HASH
-    var hash = window.location.search.substring(1);
-    if (hash) {
-      $obra.eq(hash).trigger('click');
     }
 
+    if ($(window).width() >= 768) {
+      $('body,html').animate({
+        scrollTop: 430
+      }, 500);
+    } else {
+      $('body,html').animate({
+        scrollTop: 1200
+      }, 500);
+    }
 
-    // FORM
-    $('#contact-form').validate({
-      highlight: function (element) {
-        $(element).css({
-          'background-color': '#ecc'
-        });
-      },
-      unhighlight: function (element) {
-        $(element).css({
-          'background-color': '#ddd'
-        });
-      },
-      errorPlacement: function (error, element) {
-        var $label = element.parent('div').find('label');
-        error.insertAfter($label);
-      },
-      rules: {
-        telefono: {
-          number: true
-        },
-        condiciones: {
-          required: true
-        }
-      },
-      messages: {
-        nombre: {
-          required: 'Introduce tu nombre o el de tu empresa'
-        },
-        texto: {
-          required: 'Introduce tu consulta o sugerencia'
-        },
-        telefono: {
-          number: 'Introduce un teléfono válido o deja el campo vacío'
-        },
-        email: {
-          required: 'Introduce tu email',
-          email: 'Email inválido'
-        },
-        condiciones: {
-          required: 'Acepta la política de privacidad'
-        }
-      },
-      submitHandler: function (form) {
-        submitForm($('form').serialize());
-      }
-    });
+    $galeriaRow.hide();
+    $actual.show();
 
+    // Mostrar sección de galerías
+    $('.galeria-section').show();
 
-    // SCROLL anchors
-    $('a[href*=#]:not([href=#])').click(function () {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 600);
-          return false;
-        }
-      }
-    });
+    $('.obra').removeClass('activo');
+    $self.addClass('activo');
 
+    $fotogrande.attr('src', 'img/placeholder.png');
 
-    // SHOW OR HIDE privacy message
-    $('#show-privacy').click(function () {
-      $('.alert').slideToggle('slow');
-    });
-
-
-    // SCROLL menubar
-    menu();
-
-    $(window).on('resize', function () {
-      menu();
-    });
-
-
-    // GOOGLE MAPS loading
-    google.maps.event.addDomListener(window, 'load', initialize);
-
-    $('#drop').on('click', function () {
-      var posicion = document.getElementById('comoLlegar').value; //start y end son objetos de tipo coordenadas
-      calcularRuta(posicion);
-    });
-
+    ponerFoto($actual, $actual.find('.mini-img').eq(0));
   });
 
+  // CLICK en galería de imágenes
+  $('.mini-div').on('click', function() {
+    var $self = $(this).children('.mini-img');
+    ponerFoto($self.closest('.galeria-row'), $self);
+  });
+
+  // SWIPE en imagen grande
+  $('.fotogrande-div').swipe({
+    swipeLeft: function() {
+      var $galeria = $(this).closest('.galeria-row');
+      var $fotograndeImg = $(this).find('.fotogrande-img');
+      var maxIndex = $galeria.find('.mini-img').length - 1;
+
+      var nextIndex = +$fotograndeImg.data('index') - 1;
+      if (nextIndex < 0) {
+        nextIndex = maxIndex;
+      }
+
+      ponerFoto($galeria, $galeria.find('.mini-img').eq(nextIndex));
+    },
+
+    swipeRight: function() {
+      var $galeria = $(this).closest('.galeria-row');
+      var $fotograndeImg = $(this).find('.fotogrande-img');
+      var maxIndex = $galeria.find('.mini-img').length - 1;
+
+      var nextIndex = +$fotograndeImg.data('index') + 1;
+      if (nextIndex > maxIndex) {
+        nextIndex = 0;
+      }
+
+      ponerFoto($galeria, $galeria.find('.mini-img').eq(nextIndex));
+    }
+  });
+
+  // HASH
+  var hash = window.location.search.substring(1);
+  if (hash) {
+    $obra.eq(hash).trigger('click');
+  }
+
+  // FORM
+  $('#contact-form').validate({
+    highlight: function(element) {
+      $(element).css({
+        'background-color': '#ecc'
+      });
+    },
+
+    unhighlight: function(element) {
+      $(element).css({
+        'background-color': '#ddd'
+      });
+    },
+
+    errorPlacement: function(error, element) {
+      var $label = element.parent('div').find('label');
+      error.insertAfter($label);
+    },
+
+    rules: {
+      telefono: {
+        number: true
+      },
+      condiciones: {
+        required: true
+      }
+    },
+
+    messages: {
+      nombre: {
+        required: 'Introduce tu nombre o el de tu empresa'
+      },
+      texto: {
+        required: 'Introduce tu consulta o sugerencia'
+      },
+      telefono: {
+        number: 'Introduce un teléfono válido o deja el campo vacío'
+      },
+      email: {
+        required: 'Introduce tu email',
+        email: 'Email inválido'
+      },
+      condiciones: {
+        required: 'Acepta la política de privacidad'
+      }
+    },
+
+    submitHandler: function() {
+      submitForm($('form').serialize());
+    }
+  });
+
+  // SCROLL anchors
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 600);
+        return false;
+      }
+    }
+  });
+
+  // SHOW OR HIDE privacy message
+  $('#show-privacy').click(function() {
+    $('.alert').slideToggle('slow');
+  });
+
+  // SCROLL menubar
+  menu();
+
+  $(window).on('resize', function() {
+    menu();
+  });
+
+  // GOOGLE MAPS loading
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  $('#drop').on('click', function() {
+    var posicion = document.getElementById('comoLlegar').value; //start y end son objetos de tipo coordenadas
+    calcularRuta(posicion);
+  });
 
   // MENU behaviour with scroll
   function menu() {
@@ -207,7 +204,7 @@
 
     if ($(window).width() >= 768) {
 
-      $(window).on('scroll', function () {
+      $(window).on('scroll', function() {
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop < 20) {
@@ -229,7 +226,6 @@
               'height': 111
             })
             .attr('src', 'img/logo.png');
-
 
         } else if (scrollTop > 20 && scrollTop < 90) {
 
@@ -285,7 +281,6 @@
     }
   }
 
-
   // CAMBIAR la foto grande en respuesta a loads, clicks o swipes
   function ponerFoto($galeriaSection, $miniImg) {
 
@@ -302,7 +297,7 @@
     $spinner.show().spin();
 
     $fotogrande.css('opacity', 0);
-    var imgaux = $('<img />').attr('src', link).on('load', function () {
+    var imgaux = $('<img />').attr('src', link).on('load', function() {
       $fotogrande.attr('src', imgaux.attr('src'));
       $fotogrande.animate({
         'opacity': 1
@@ -310,38 +305,37 @@
       $fotogrande.data('index', index);
 
       $spinner.hide().spin(false);
-
     });
+
     return false;
   }
-
 
   // SUBMIT form
   function submitForm(form) {
 
     var $enviarMsg = $('.enviar-msg');
     var $enviarBoton = $('.enviar-boton');
+
     // show that something is loading
     $enviarMsg.show();
 
     $.ajax({
-        type: 'POST',
-        dataType: 'json',
-        url: 'mail.php',
-        data: form
-      }).done(function (data) {
+      type: 'POST',
+      dataType: 'json',
+      url: 'mail.php',
+      data: form
+    }).done(function() {
 
-        // show the response
-        $enviarMsg.html('<i class="fa fa-check"></i> Enviado');
-        $enviarBoton.attr('disabled', 'disabled');
+      // show the response
+      $enviarMsg.html('<i class="fa fa-check"></i> Enviado');
+      $enviarBoton.attr('disabled', 'disabled');
 
-      })
-      .fail(function () {
+    }).fail(function() {
 
-        // just in case posting your form failed
-        $enviarMsg.html('¡Error!');
+      // just in case posting your form failed
+      $enviarMsg.html('¡Error!');
 
-      });
+    });
 
     // to prevent refreshing the whole page page
     return false;
@@ -397,8 +391,8 @@
       destination: end,
       travelMode: google.maps.TravelMode.DRIVING
     };
-    directionsService.route(request, function (response, status) {
-      if (status == google.maps.DirectionsStatus.OK) {
+    directionsService.route(request, function(response, status) {
+      if (status === google.maps.DirectionsStatus.OK) {
         directionsDisplay.setDirections(response);
       }
     });
