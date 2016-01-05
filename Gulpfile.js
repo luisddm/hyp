@@ -13,7 +13,7 @@
   let plumber = require('gulp-plumber');
   let autoprefixer = require('gulp-autoprefixer');
 
-  const dir = {
+  const DIR = {
     sass: 'scss',
     lib: 'node_modules',
   };
@@ -24,9 +24,9 @@
       .pipe(plumber())
       .pipe(sass({
         includePaths: [
-          dir.lib + '/bootstrap-sass/assets/stylesheets',
-          dir.lib + '/font-awesome/scss',
-          dir.sass,
+          DIR.lib + '/bootstrap-sass/assets/stylesheets',
+          DIR.lib + '/font-awesome/scss',
+          DIR.sass,
         ],
       }))
       .pipe(autoprefixer())
@@ -40,12 +40,12 @@
   // Minimizo el javascript, lo concateno en app.js y lo copio a dist
   gulp.task('javascript', () => {
     gulp.src([
-        dir.lib + '/jquery/dist/jquery.js',
-        dir.lib + '/bootstrap-sass/assets/javascripts/bootstrap.js',
-        dir.lib + '/spin.js/spin.js',
-        dir.lib + '/spin.js/jquery.spin.js',
-        dir.lib + '/jquery-validation/dist/jquery.validate.js',
-        dir.lib + '/jquery-touchswipe/jquery.touchSwipe.js',
+        DIR.lib + '/jquery/dist/jquery.js',
+        DIR.lib + '/bootstrap-sass/assets/javascripts/bootstrap.js',
+        DIR.lib + '/spin.js/spin.js',
+        DIR.lib + '/spin.js/jquery.spin.js',
+        DIR.lib + '/jquery-validation/dist/jquery.validate.js',
+        DIR.lib + '/jquery-touchswipe/jquery.touchSwipe.js',
         'js/*.js',
       ])
       .pipe(uglify())
@@ -75,7 +75,7 @@
 
   // Copio las fuentes a dist
   gulp.task('fonts', () => {
-    gulp.src(dir.lib + '/font-awesome/fonts/**')
+    gulp.src(DIR.lib + '/font-awesome/fonts/**')
       .pipe(changed('dist/fonts/**'))
       .pipe(gulp.dest('dist/fonts'));
   });

@@ -1,28 +1,30 @@
 body {
-    font-family: 'Maven Pro', Arial, sans-serif;
-    background-color: $black;
-    font-size: 16px;
-    text-rendering: optimizeLegibility;
+  font-family: 'Maven Pro', Arial, sans-serif;
+  background-color: $black;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
 }
-
 h1 {
-    color: $color-titulos;
+  color: $color-titulos;
 }
-a, a:active, a:visited, a:focus {
-    cursor: pointer;
-    color: $color-enlaces;
+a,
+a:active,
+a:visited,
+a:focus {
+  cursor: pointer;
+  color: $color-enlaces;
+  text-decoration: none;
+  &:hover {
+    color: lighten($color-enlaces, 20%);
     text-decoration: none;
-    &:hover {
-        color: lighten($color-enlaces, 20%);
-        text-decoration: none;
-    }
+  }
 }
 .w100 {
-    width: 100%;
-    margin: 10px 0;
-    @media (max-width: $screen-sm-max) {
-        margin-top: 20px;
-    }
+  width: 100%;
+  margin: 10px 0;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 20px;
+  }
 }
 .margin-img {
   margin-top: 20px;
@@ -38,9 +40,9 @@ a, a:active, a:visited, a:focus {
   }
 }
 .pull-right-sm {
-    @media (max-width: $screen-sm-max) {
-        float: right;
-    }
+  @media (max-width: $screen-sm-max) {
+    float: right;
+  }
 }
 .container-fluid {
   @media (max-width: $screen-xs-max) {
@@ -48,31 +50,28 @@ a, a:active, a:visited, a:focus {
     padding: 0;
   }
 }
-
 .container {
   @media (max-width: $screen-xs-max) {
     margin: 0;
   }
 }
-
 .square-separator {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 footer {
-    background-color: $black;
-    color: $color-texto-blanco;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: solid 10px $color-titulos;
+  background-color: $black;
+  color: $color-texto-blanco;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: solid 10px $color-titulos;
+  @media (max-width: $screen-xs-max) {
+    text-align: center;
+  }
+  .line {
     @media (max-width: $screen-xs-max) {
-      text-align: center;
+      clear: both;
+      display: block;
     }
-    .line {
-      @media (max-width: $screen-xs-max) {
-        clear: both;
-        display: block;
-      }
-    }
+  }
 }

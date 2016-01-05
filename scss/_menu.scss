@@ -13,86 +13,87 @@ header {
     padding: 0 20px;
   }
 }
-
 .navbar {
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    margin-top: 35px;
-    margin-bottom: 35px;
-    @media (max-width: $screen-xs-max) {
-        background-color: $color-texto;
-        border-radius: 4px;
-        border: 1px solid $color-texto-blanco;
-    }
-    .navbar-brand, .dropdown a {
-        color: $color-texto-blanco;
-    }
-    .navbar-header {
-        cursor: pointer;
-    }
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  @media (max-width: $screen-xs-max) {
+    background-color: $color-texto;
+    border-radius: 4px;
+    border: 1px solid $color-texto-blanco;
+  }
+  .navbar-brand,
+  .dropdown a {
+    color: $color-texto-blanco;
+  }
+  .navbar-header {
+    cursor: pointer;
+  }
 }
 .dropdown-menu > li > a {
-    @media (max-width: $screen-xs-max) {
-        white-space: normal;
-    }
+  @media (max-width: $screen-xs-max) {
+    white-space: normal;
+  }
 }
 .navbar-default .navbar-toggle {
-    border: none;
-    margin-right: 0;
-    &:hover {
-        background-color: $color-texto;
-    }
-    .icon-bar {
-        background-color: $color-texto-blanco;
-    }
+  border: none;
+  margin-right: 0;
+  &:hover {
+    background-color: $color-texto;
+  }
+  .icon-bar {
+    background-color: $color-texto-blanco;
+  }
 }
 .navbar-default .navbar-nav {
+  > li > a {
+    color: #ccc;
+    font-size: 1.5em;
+    transition: 0.5s;
+    @media (max-width: $screen-xs-max) {
+      color: $color-texto-blanco;
+      &:focus {
+        color: $color-texto-blanco;
+      }
+    }
+    &:focus {
+      color: darken($color-texto-blanco, 20%);
+    }
+    &:hover {
+      color: $color-texto-blanco;
+    }
+  }
+  > .open {
+    background-color: $color-titulos;
+    color: $color-texto;
+    border-radius: 4px 4px 0 0;
+    > a,
+    > a:hover,
+    > a:focus {
+      background-color: transparent;
+      color: $color-texto;
+    }
+  }
+  > li > .dropdown-menu {
+    right: auto;
+    left: 0;
+    background-color: lighten($color-titulos, 10%);
+    border: none;
+    border-radius: 0 4px 4px 4px;
     > li > a {
-        color: #ccc;
-        font-size: 1.5em;
-        transition: 0.5s;
-        @media (max-width: $screen-xs-max) {
-            color: $color-texto-blanco;
-            &:focus {
-                color: $color-texto-blanco;
-            }
-        }
-        &:focus {
-            color: darken($color-texto-blanco, 20%);
-        }
-        &:hover {
-            color: $color-texto-blanco;
-        }
-    }
-    > .open {
-        background-color: $color-titulos;
+      color: $color-texto;
+      font-size: 1.2em;
+      &:hover,
+      &:focus {
         color: $color-texto;
-        border-radius: 4px 4px 0 0;
-        > a,
-        > a:hover,
-        > a:focus {
-            background-color: transparent;
-            color: $color-texto;
-        }
+        text-decoration: none;
+        background-color: $color-texto-blanco;
+      }
     }
-    > li > .dropdown-menu {
-        right: auto;
-        left: 0;
-        background-color: lighten($color-titulos, 10%);
-        border: none;
-        border-radius: 0 4px 4px 4px;
-        > li > a {
-            color: $color-texto;
-            font-size: 1.2em;
-            &:hover, &:focus {
-                color: $color-texto;
-                text-decoration: none;
-                background-color: $color-texto-blanco;
-            }
-        }
-    }
+  }
 }
 .logo {
-    height: 111px;
+  height: 111px;
 }
