@@ -19,44 +19,34 @@
     var $self = $(this);
     var $obras = $self.parent();
     var index = $self.index('.obra');
-    var $galeriaRow = $('.galeria-row');
-    var $fotogrande = $galeriaRow.find('.fotogrande-img');
-    var $actual = $galeriaRow.eq(index);
+    var $galleryRow = $('.galeria-row');
+    var $bigPicture = $galleryRow.find('.fotogrande-img');
+    var $currentPicture = $galleryRow.eq(index);
 
     if ($obras.hasClass('big')) {
       if ($(window).width() >= 768) {
         $obras.hide(500, function() {
-          $('body,html').animate({
-            scrollTop: 0
-          }, 0, function() {
+          $('body,html').animate({ scrollTop: 0 }, 0, function() {
             $obras.addClass('small').removeClass('big').show(500, function() {
-              $('body,html').animate({
-                scrollTop: 430
-              }, 500);
+              $('body,html').animate({ scrollTop: 430 }, 500);
             });
           });
         });
       } else {
         $obras.addClass('small').removeClass('big').show(500, function() {
-          $('body,html').animate({
-            scrollTop: 1200
-          }, 500);
+          $('body,html').animate({ scrollTop: 1200 }, 500);
         });
       }
     }
 
     if ($(window).width() >= 768) {
-      $('body,html').animate({
-        scrollTop: 430
-      }, 500);
+      $('body,html').animate({ scrollTop: 430 }, 500);
     } else {
-      $('body,html').animate({
-        scrollTop: 1200
-      }, 500);
+      $('body,html').animate({ scrollTop: 1200 }, 500);
     }
 
-    $galeriaRow.hide();
-    $actual.show();
+    $galleryRow.hide();
+    $currentPicture.show();
 
     // Mostrar sección de galerías
     $('.galeria-section').show();
@@ -64,43 +54,43 @@
     $('.obra').removeClass('activo');
     $self.addClass('activo');
 
-    $fotogrande.attr('src', 'img/placeholder.png');
+    $bigPicture.attr('src', 'img/placeholder.png');
 
-    ponerFoto($actual, $actual.find('.mini-img').eq(0));
+    showPicture($currentPicture, $currentPicture.find('.mini-img').eq(0));
   });
 
   // CLICK en galería de imágenes
   $('.mini-div').on('click', function() {
     var $self = $(this).children('.mini-img');
-    ponerFoto($self.closest('.galeria-row'), $self);
+    showPicture($self.closest('.galeria-row'), $self);
   });
 
   // SWIPE en imagen grande
   $('.fotogrande-div').swipe({
     swipeLeft: function() {
-      var $galeria = $(this).closest('.galeria-row');
-      var $fotograndeImg = $(this).find('.fotogrande-img');
-      var maxIndex = $galeria.find('.mini-img').length - 1;
+      var $gallery = $(this).closest('.galeria-row');
+      var $bigPictureImg = $(this).find('.fotogrande-img');
+      var maxIndex = $gallery.find('.mini-img').length - 1;
 
-      var nextIndex = +$fotograndeImg.data('index') - 1;
+      var nextIndex = +$bigPictureImg.data('index') - 1;
       if (nextIndex < 0) {
         nextIndex = maxIndex;
       }
 
-      ponerFoto($galeria, $galeria.find('.mini-img').eq(nextIndex));
+      showPicture($gallery, $gallery.find('.mini-img').eq(nextIndex));
     },
 
     swipeRight: function() {
-      var $galeria = $(this).closest('.galeria-row');
-      var $fotograndeImg = $(this).find('.fotogrande-img');
-      var maxIndex = $galeria.find('.mini-img').length - 1;
+      var $gallery = $(this).closest('.galeria-row');
+      var $bigPictureImg = $(this).find('.fotogrande-img');
+      var maxIndex = $gallery.find('.mini-img').length - 1;
 
-      var nextIndex = +$fotograndeImg.data('index') + 1;
+      var nextIndex = +$bigPictureImg.data('index') + 1;
       if (nextIndex > maxIndex) {
         nextIndex = 0;
       }
 
-      ponerFoto($galeria, $galeria.find('.mini-img').eq(nextIndex));
+      showPicture($gallery, $gallery.find('.mini-img').eq(nextIndex));
     }
   });
 
@@ -113,15 +103,11 @@
   // FORM
   $('#contact-form').validate({
     highlight: function(element) {
-      $(element).css({
-        'background-color': '#ecc'
-      });
+      $(element).css('background-color', '#ecc');
     },
 
     unhighlight: function(element) {
-      $(element).css({
-        'background-color': '#ddd'
-      });
+      $(element).css('background-color', '#ddd');
     },
 
     errorPlacement: function(error, element) {
@@ -163,7 +149,7 @@
   });
 
   // SCROLL anchors
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('a[href*=\'#\']:not([href=\'#\']').click(function() {
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -184,16 +170,15 @@
   // SCROLL menubar
   menu();
 
-  $(window).on('resize', function() {
-    menu();
-  });
+  // Re-execute menu whehn resizing window
+  $(window).on('resize', menu);
 
   // GOOGLE MAPS loading
   google.maps.event.addDomListener(window, 'load', initialize);
 
   $('#drop').on('click', function() {
     var posicion = document.getElementById('comoLlegar').value; //start y end son objetos de tipo coordenadas
-    calcularRuta(posicion);
+    calculateRoute(posicion);
   });
 
   // MENU behaviour with scroll
@@ -222,9 +207,7 @@
             });
 
           $logo
-            .css({
-              'height': 111
-            })
+            .css('height', 111)
             .attr('src', 'img/logo.png');
 
         } else if (scrollTop > 20 && scrollTop < 90) {
@@ -246,9 +229,7 @@
             });
 
           $logo
-            .css({
-              'height': 140 - scrollTop
-            })
+            .css('height', 140 - scrollTop)
             .attr('src', 'img/logo.png');
 
         } else if (scrollTop > 90) {
@@ -266,9 +247,7 @@
             });
 
           $logo
-            .css({
-              'height': 50
-            })
+            .css('height', 50)
             .attr('src', 'img/hoja.png');
 
         }
@@ -282,27 +261,23 @@
   }
 
   // CAMBIAR la foto grande en respuesta a loads, clicks o swipes
-  function ponerFoto($galeriaSection, $miniImg) {
+  function showPicture($gallerySection, $miniImg) {
 
-    $galeriaSection.find('.mini-img').removeAttr('style');
-    $miniImg.animate({
-      'border-width': '3px'
-    }, 300);
+    $gallerySection.find('.mini-img').removeAttr('style');
+    $miniImg.animate({ 'border-width': '3px' }, 300);
 
     var index = $miniImg.data('index');
     var link = $miniImg.data('foto');
-    var $fotogrande = $galeriaSection.find('.fotogrande-img');
-    var $spinner = $galeriaSection.find('.loading');
+    var $bigPicture = $gallerySection.find('.fotogrande-img');
+    var $spinner = $gallerySection.find('.loading');
 
     $spinner.show().spin();
 
-    $fotogrande.css('opacity', 0);
+    $bigPicture.css('opacity', 0);
     var imgaux = $('<img />').attr('src', link).on('load', function() {
-      $fotogrande.attr('src', imgaux.attr('src'));
-      $fotogrande.animate({
-        'opacity': 1
-      }, 500);
-      $fotogrande.data('index', index);
+      $bigPicture.attr('src', imgaux.attr('src'));
+      $bigPicture.animate({ opacity: 1 }, 500);
+      $bigPicture.data('index', index);
 
       $spinner.hide().spin(false);
     });
@@ -313,11 +288,11 @@
   // SUBMIT form
   function submitForm(form) {
 
-    var $enviarMsg = $('.enviar-msg');
-    var $enviarBoton = $('.enviar-boton');
+    var $sendMessage = $('.enviar-msg');
+    var $sendButton = $('.enviar-boton');
 
     // show that something is loading
-    $enviarMsg.show();
+    $sendMessage.show();
 
     $.ajax({
       type: 'POST',
@@ -327,13 +302,13 @@
     }).done(function() {
 
       // show the response
-      $enviarMsg.html('<i class="fa fa-check"></i> Enviado');
-      $enviarBoton.attr('disabled', 'disabled');
+      $sendMessage.html('<i class="fa fa-check"></i> Enviado');
+      $sendButton.attr('disabled', 'disabled');
 
     }).fail(function() {
 
       // just in case posting your form failed
-      $enviarMsg.html('¡Error!');
+      $sendMessage.html('¡Error!');
 
     });
 
@@ -383,8 +358,8 @@
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
   }
 
-  function calcularRuta(dondeEstoy) {
-    var start = dondeEstoy; //start y end son objetos de tipo coordenadas
+  function calculateRoute(whereAmI) {
+    var start = whereAmI; //start y end son objetos de tipo coordenadas
     var end = myLatlng;
     var request = {
       origin: start,

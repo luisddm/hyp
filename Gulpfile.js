@@ -1,17 +1,17 @@
 (function() {
   'use strict';
 
-  let gulp = require('gulp');
-  let sass = require('gulp-sass');
-  let cssnano = require('gulp-cssnano');
-  let browserSync = require('browser-sync');
-  let uglify = require('gulp-uglify');
-  let swig = require('gulp-swig');
-  let concat = require('gulp-concat');
-  let changed = require('gulp-changed');
-  let del = require('del');
-  let plumber = require('gulp-plumber');
-  let autoprefixer = require('gulp-autoprefixer');
+  const gulp = require('gulp');
+  const sass = require('gulp-sass');
+  const cssnano = require('gulp-cssnano');
+  const browserSync = require('browser-sync');
+  const uglify = require('gulp-uglify');
+  const swig = require('gulp-swig');
+  const concat = require('gulp-concat');
+  const changed = require('gulp-changed');
+  const del = require('del');
+  const plumber = require('gulp-plumber');
+  const autoprefixer = require('gulp-autoprefixer');
 
   const DIR = {
     sass: 'scss',
